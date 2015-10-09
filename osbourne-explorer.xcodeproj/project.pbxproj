@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		46F665105151A05FD8C705C1 /* libPods-osbourne-explorer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81967E7DBFC9DFA8B2B4CDEE /* libPods-osbourne-explorer.a */; };
+		F30368F51BC7FE63002AECA8 /* NavigationMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30368F41BC7FE62002AECA8 /* NavigationMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F30368F81BC8009E002AECA8 /* MapOverlayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F30368F71BC8009E002AECA8 /* MapOverlayTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		F32ABF391BC7A3430070C1F2 /* MapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = F32ABF381BC7A3430070C1F2 /* MapOverlay.m */; settings = {ASSET_TAGS = (); }; };
 		F32ABF3C1BC7A3CB0070C1F2 /* MapOverlayStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F32ABF3B1BC7A3CB0070C1F2 /* MapOverlayStore.m */; settings = {ASSET_TAGS = (); }; };
 		F349FE131BC69F7600B1F54F /* NavigationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F349FE121BC69F7600B1F54F /* NavigationMapViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -26,6 +28,10 @@
 		3D8E1B462C66FA6DB21F53AA /* Pods-osbourne-explorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osbourne-explorer.release.xcconfig"; path = "Pods/Target Support Files/Pods-osbourne-explorer/Pods-osbourne-explorer.release.xcconfig"; sourceTree = "<group>"; };
 		81967E7DBFC9DFA8B2B4CDEE /* libPods-osbourne-explorer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osbourne-explorer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9695166B5EE6D7D651241E /* Pods-osbourne-explorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osbourne-explorer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-osbourne-explorer/Pods-osbourne-explorer.debug.xcconfig"; sourceTree = "<group>"; };
+		F30368F31BC7FE62002AECA8 /* NavigationMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationMenuViewController.h; sourceTree = "<group>"; };
+		F30368F41BC7FE62002AECA8 /* NavigationMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationMenuViewController.m; sourceTree = "<group>"; };
+		F30368F61BC8009E002AECA8 /* MapOverlayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlayTableViewCell.h; sourceTree = "<group>"; };
+		F30368F71BC8009E002AECA8 /* MapOverlayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlayTableViewCell.m; sourceTree = "<group>"; };
 		F32ABF371BC7A3430070C1F2 /* MapOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlay.h; sourceTree = "<group>"; };
 		F32ABF381BC7A3430070C1F2 /* MapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlay.m; sourceTree = "<group>"; };
 		F32ABF3A1BC7A3CB0070C1F2 /* MapOverlayStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlayStore.h; sourceTree = "<group>"; };
@@ -78,6 +84,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F30368F91BC800A2002AECA8 /* NavigationMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F30368F31BC7FE62002AECA8 /* NavigationMenuViewController.h */,
+				F30368F41BC7FE62002AECA8 /* NavigationMenuViewController.m */,
+				F30368F61BC8009E002AECA8 /* MapOverlayTableViewCell.h */,
+				F30368F71BC8009E002AECA8 /* MapOverlayTableViewCell.m */,
+			);
+			name = NavigationMenu;
+			sourceTree = "<group>";
+		};
 		F32ABF3D1BC7B2CD0070C1F2 /* MapOverlay */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +136,7 @@
 				F349FE121BC69F7600B1F54F /* NavigationMapViewController.m */,
 				F3EA41591BC69F0D00897633 /* OverlayViewController.h */,
 				F3EA415A1BC69F0D00897633 /* OverlayViewController.m */,
+				F30368F91BC800A2002AECA8 /* NavigationMenu */,
 				F3EA415B1BC69F0D00897633 /* OverlayViewController.xib */,
 				F380B1311BC69DBC00C5090A /* Main.storyboard */,
 				F380B1281BC69DBC00C5090A /* Supporting Files */,
@@ -250,7 +268,9 @@
 				F380B12D1BC69DBC00C5090A /* AppDelegate.m in Sources */,
 				F349FE181BC6A75700B1F54F /* NavigationViewController.m in Sources */,
 				F380B12A1BC69DBC00C5090A /* main.m in Sources */,
+				F30368F81BC8009E002AECA8 /* MapOverlayTableViewCell.m in Sources */,
 				F3EA415C1BC69F0D00897633 /* OverlayViewController.m in Sources */,
+				F30368F51BC7FE63002AECA8 /* NavigationMenuViewController.m in Sources */,
 				F349FE1B1BC6B36500B1F54F /* ForcedNavbarViewController.m in Sources */,
 				F32ABF391BC7A3430070C1F2 /* MapOverlay.m in Sources */,
 			);

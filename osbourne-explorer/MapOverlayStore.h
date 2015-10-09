@@ -35,7 +35,9 @@
 
 - (void) registerDelegate:(id<MapOverlayStoreDelegate>) delegate;
 - (void) removeDelegate:(id<MapOverlayStoreDelegate>) delegate;
+
 - (void) didUpdatedOverlay:(MapOverlay *) overlay;
+- (void) requestSharedResourcesLoading;
 
 + (instancetype) sharedInstance;
 + (instancetype) singleobjectInstanceWith:(MapOverlay *) overlay;

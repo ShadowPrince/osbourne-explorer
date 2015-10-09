@@ -26,7 +26,7 @@
     [self.drawer setRightDrawerViewController:v2];
 
     [self.drawer setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
-    [self.drawer setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    [self.drawer setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeTapCenterView];
 }
 
 @end

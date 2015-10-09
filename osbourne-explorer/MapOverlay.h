@@ -13,6 +13,8 @@ typedef void (^MapOverlayLoadCallback)(void);
 
 @interface MapOverlay : NSObject<NSCoding, NSCopying>
 @property (assign) double lat1, lon1, lat2, lon2, bearing;
+@property NSString *title;
+@property BOOL sharedResourcesLoaded;
 
 - (void) loadSharedResourcesCallback:(MapOverlayLoadCallback) cb;
 @end
@@ -23,5 +25,6 @@ typedef void (^MapOverlayLoadCallback)(void);
 @end
 
 @interface MarkerOverlay : MapOverlay
-@property NSString *title;
+@property NSString *iconName;
+@property (readonly) UIImage *icon;
 @end

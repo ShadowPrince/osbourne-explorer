@@ -111,12 +111,6 @@
 #pragma mark - overlays
 
 - (NSArray<MapOverlay *> *) allOverlays {
-    [self.mapOverlays enumerateObjectsUsingBlock:^(MapOverlay * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [obj loadSharedResourcesCallback:^{
-            [self fireDidUpdatedOverlay:obj];
-        }];
-    }];
-
     return self.mapOverlays;
 }
 
@@ -150,6 +144,14 @@
 
 - (void) didUpdatedOverlay:(MapOverlay *)overlay {
     [self fireDidUpdatedOverlay:overlay];
+}
+
+- (void) requestSharedResourcesLoading {
+    [self.mapOverlays enumerateObjectsUsingBlock:^(MapOverlay * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj loadSharedResourcesCallback:^{
+            [self fireDidUpdatedOverlay:obj];
+        }];
+    }];
 }
 
 @end
