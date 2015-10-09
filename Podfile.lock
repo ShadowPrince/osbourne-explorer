@@ -1,0 +1,24 @@
+PODS:
+  - GoogleMaps (1.10.3)
+  - MMDrawerController (0.6.0):
+    - MMDrawerController/Core (= 0.6.0)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
+    - MMDrawerController/MMDrawerVisualStates (= 0.6.0)
+    - MMDrawerController/Subclass (= 0.6.0)
+  - MMDrawerController/Core (0.6.0)
+  - MMDrawerController/MMDrawerBarButtonItem (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.6.0):
+    - MMDrawerController/Core
+
+DEPENDENCIES:
+  - GoogleMaps
+  - MMDrawerController
+
+SPEC CHECKSUMS:
+  GoogleMaps: 945e4ac3b74bcca3ddada51df256eb7beddb474d
+  MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
+
+COCOAPODS: 0.38.2

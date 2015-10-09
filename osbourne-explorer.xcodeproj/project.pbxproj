@@ -7,25 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46F665105151A05FD8C705C1 /* libPods-osbourne-explorer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81967E7DBFC9DFA8B2B4CDEE /* libPods-osbourne-explorer.a */; };
+		F32ABF391BC7A3430070C1F2 /* MapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = F32ABF381BC7A3430070C1F2 /* MapOverlay.m */; settings = {ASSET_TAGS = (); }; };
+		F32ABF3C1BC7A3CB0070C1F2 /* MapOverlayStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F32ABF3B1BC7A3CB0070C1F2 /* MapOverlayStore.m */; settings = {ASSET_TAGS = (); }; };
+		F349FE131BC69F7600B1F54F /* NavigationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F349FE121BC69F7600B1F54F /* NavigationMapViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F349FE181BC6A75700B1F54F /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F349FE171BC6A75700B1F54F /* NavigationViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F349FE1B1BC6B36500B1F54F /* ForcedNavbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F349FE1A1BC6B36500B1F54F /* ForcedNavbarViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F380B12A1BC69DBC00C5090A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F380B1291BC69DBC00C5090A /* main.m */; };
 		F380B12D1BC69DBC00C5090A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F380B12C1BC69DBC00C5090A /* AppDelegate.m */; };
-		F380B1301BC69DBC00C5090A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F380B12F1BC69DBC00C5090A /* ViewController.m */; };
 		F380B1331BC69DBC00C5090A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F380B1311BC69DBC00C5090A /* Main.storyboard */; };
 		F380B1351BC69DBC00C5090A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F380B1341BC69DBC00C5090A /* Assets.xcassets */; };
 		F380B1381BC69DBC00C5090A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F380B1361BC69DBC00C5090A /* LaunchScreen.storyboard */; };
+		F3EA415C1BC69F0D00897633 /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EA415A1BC69F0D00897633 /* OverlayViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F3EA415D1BC69F0D00897633 /* OverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3EA415B1BC69F0D00897633 /* OverlayViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D8E1B462C66FA6DB21F53AA /* Pods-osbourne-explorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osbourne-explorer.release.xcconfig"; path = "Pods/Target Support Files/Pods-osbourne-explorer/Pods-osbourne-explorer.release.xcconfig"; sourceTree = "<group>"; };
+		81967E7DBFC9DFA8B2B4CDEE /* libPods-osbourne-explorer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osbourne-explorer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB9695166B5EE6D7D651241E /* Pods-osbourne-explorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osbourne-explorer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-osbourne-explorer/Pods-osbourne-explorer.debug.xcconfig"; sourceTree = "<group>"; };
+		F32ABF371BC7A3430070C1F2 /* MapOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlay.h; sourceTree = "<group>"; };
+		F32ABF381BC7A3430070C1F2 /* MapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlay.m; sourceTree = "<group>"; };
+		F32ABF3A1BC7A3CB0070C1F2 /* MapOverlayStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlayStore.h; sourceTree = "<group>"; };
+		F32ABF3B1BC7A3CB0070C1F2 /* MapOverlayStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlayStore.m; sourceTree = "<group>"; };
+		F349FE111BC69F7600B1F54F /* NavigationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationMapViewController.h; sourceTree = "<group>"; };
+		F349FE121BC69F7600B1F54F /* NavigationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationMapViewController.m; sourceTree = "<group>"; };
+		F349FE161BC6A75700B1F54F /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		F349FE171BC6A75700B1F54F /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		F349FE191BC6B36500B1F54F /* ForcedNavbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForcedNavbarViewController.h; sourceTree = "<group>"; };
+		F349FE1A1BC6B36500B1F54F /* ForcedNavbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForcedNavbarViewController.m; sourceTree = "<group>"; };
 		F380B1251BC69DBC00C5090A /* osbourne-explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "osbourne-explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F380B1291BC69DBC00C5090A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F380B12B1BC69DBC00C5090A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F380B12C1BC69DBC00C5090A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F380B12E1BC69DBC00C5090A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F380B12F1BC69DBC00C5090A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F380B1321BC69DBC00C5090A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F380B1341BC69DBC00C5090A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F380B1371BC69DBC00C5090A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F380B1391BC69DBC00C5090A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3EA41591BC69F0D00897633 /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayViewController.h; sourceTree = "<group>"; };
+		F3EA415A1BC69F0D00897633 /* OverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayViewController.m; sourceTree = "<group>"; };
+		F3EA415B1BC69F0D00897633 /* OverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +54,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46F665105151A05FD8C705C1 /* libPods-osbourne-explorer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82608236DBC486A4DAD8F79B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB9695166B5EE6D7D651241E /* Pods-osbourne-explorer.debug.xcconfig */,
+				3D8E1B462C66FA6DB21F53AA /* Pods-osbourne-explorer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D7A265B0663BE3094800B2C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81967E7DBFC9DFA8B2B4CDEE /* libPods-osbourne-explorer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F32ABF3D1BC7B2CD0070C1F2 /* MapOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				F32ABF371BC7A3430070C1F2 /* MapOverlay.h */,
+				F32ABF381BC7A3430070C1F2 /* MapOverlay.m */,
+				F32ABF3A1BC7A3CB0070C1F2 /* MapOverlayStore.h */,
+				F32ABF3B1BC7A3CB0070C1F2 /* MapOverlayStore.m */,
+			);
+			name = MapOverlay;
+			sourceTree = "<group>";
+		};
 		F380B11C1BC69DBC00C5090A = {
 			isa = PBXGroup;
 			children = (
 				F380B1271BC69DBC00C5090A /* osbourne-explorer */,
 				F380B1261BC69DBC00C5090A /* Products */,
+				82608236DBC486A4DAD8F79B /* Pods */,
+				D7A265B0663BE3094800B2C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +110,17 @@
 		F380B1271BC69DBC00C5090A /* osbourne-explorer */ = {
 			isa = PBXGroup;
 			children = (
+				F32ABF3D1BC7B2CD0070C1F2 /* MapOverlay */,
 				F380B12B1BC69DBC00C5090A /* AppDelegate.h */,
 				F380B12C1BC69DBC00C5090A /* AppDelegate.m */,
-				F380B12E1BC69DBC00C5090A /* ViewController.h */,
-				F380B12F1BC69DBC00C5090A /* ViewController.m */,
+				F349FE161BC6A75700B1F54F /* NavigationViewController.h */,
+				F349FE171BC6A75700B1F54F /* NavigationViewController.m */,
+				F349FE111BC69F7600B1F54F /* NavigationMapViewController.h */,
+				F349FE121BC69F7600B1F54F /* NavigationMapViewController.m */,
+				F3EA41591BC69F0D00897633 /* OverlayViewController.h */,
+				F3EA415A1BC69F0D00897633 /* OverlayViewController.m */,
+				F3EA415B1BC69F0D00897633 /* OverlayViewController.xib */,
 				F380B1311BC69DBC00C5090A /* Main.storyboard */,
-				F380B1341BC69DBC00C5090A /* Assets.xcassets */,
-				F380B1361BC69DBC00C5090A /* LaunchScreen.storyboard */,
-				F380B1391BC69DBC00C5090A /* Info.plist */,
 				F380B1281BC69DBC00C5090A /* Supporting Files */,
 			);
 			path = "osbourne-explorer";
@@ -74,6 +129,11 @@
 		F380B1281BC69DBC00C5090A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F349FE191BC6B36500B1F54F /* ForcedNavbarViewController.h */,
+				F349FE1A1BC6B36500B1F54F /* ForcedNavbarViewController.m */,
+				F380B1341BC69DBC00C5090A /* Assets.xcassets */,
+				F380B1361BC69DBC00C5090A /* LaunchScreen.storyboard */,
+				F380B1391BC69DBC00C5090A /* Info.plist */,
 				F380B1291BC69DBC00C5090A /* main.m */,
 			);
 			name = "Supporting Files";
@@ -86,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F380B13C1BC69DBC00C5090A /* Build configuration list for PBXNativeTarget "osbourne-explorer" */;
 			buildPhases = (
+				70CBABAF117158E70BC806C7 /* Check Pods Manifest.lock */,
 				F380B1211BC69DBC00C5090A /* Sources */,
 				F380B1221BC69DBC00C5090A /* Frameworks */,
 				F380B1231BC69DBC00C5090A /* Resources */,
+				3EBC61B993508EB6E0C974FE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,19 +201,58 @@
 				F380B1381BC69DBC00C5090A /* LaunchScreen.storyboard in Resources */,
 				F380B1351BC69DBC00C5090A /* Assets.xcassets in Resources */,
 				F380B1331BC69DBC00C5090A /* Main.storyboard in Resources */,
+				F3EA415D1BC69F0D00897633 /* OverlayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EBC61B993508EB6E0C974FE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-osbourne-explorer/Pods-osbourne-explorer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70CBABAF117158E70BC806C7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F380B1211BC69DBC00C5090A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F380B1301BC69DBC00C5090A /* ViewController.m in Sources */,
+				F349FE131BC69F7600B1F54F /* NavigationMapViewController.m in Sources */,
+				F32ABF3C1BC7A3CB0070C1F2 /* MapOverlayStore.m in Sources */,
 				F380B12D1BC69DBC00C5090A /* AppDelegate.m in Sources */,
+				F349FE181BC6A75700B1F54F /* NavigationViewController.m in Sources */,
 				F380B12A1BC69DBC00C5090A /* main.m in Sources */,
+				F3EA415C1BC69F0D00897633 /* OverlayViewController.m in Sources */,
+				F349FE1B1BC6B36500B1F54F /* ForcedNavbarViewController.m in Sources */,
+				F32ABF391BC7A3430070C1F2 /* MapOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,9 +362,12 @@
 		};
 		F380B13D1BC69DBC00C5090A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB9695166B5EE6D7D651241E /* Pods-osbourne-explorer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "osbourne-explorer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.shdwprince.osbourne-explorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,9 +376,12 @@
 		};
 		F380B13E1BC69DBC00C5090A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D8E1B462C66FA6DB21F53AA /* Pods-osbourne-explorer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "osbourne-explorer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.shdwprince.osbourne-explorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +407,7 @@
 				F380B13E1BC69DBC00C5090A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
