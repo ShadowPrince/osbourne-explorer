@@ -12,5 +12,6 @@
 #import "MapOverlayStore.h"
 
 @interface OverlayViewController : UIViewController <MapOverlayStoreDelegate>
+@property (nonatomic) MapOverlayStore *store;
 
 @end

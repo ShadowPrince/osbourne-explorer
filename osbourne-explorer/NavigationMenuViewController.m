@@ -185,4 +185,12 @@
     return result;
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"overlayInfo"]) {
+        [(GroundOverlayInfoViewController *) segue.destinationViewController setOverlay:(GroundOverlay *) sender];
+    }
+
+    [super prepareForSegue:segue sender:sender];
+}
+
 @end

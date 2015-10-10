@@ -8,6 +8,17 @@
 
 #import "MapOverlayStore.h"
 
+@implementation NSMutableArray (WeakReferences)
++ (id)mutableArrayUsingWeakReferences {
+    return [self mutableArrayUsingWeakReferencesWithCapacity:0];
+}
+
++ (id)mutableArrayUsingWeakReferencesWithCapacity:(NSUInteger)capacity {
+    CFArrayCallBacks callbacks = {0, NULL, NULL, CFCopyDescription, CFEqual};
+    return (id)CFBridgingRelease(CFArrayCreateMutable(0, capacity, &callbacks));
+}
+@end
+
 @interface MapOverlayDelegateRespondStatus : NSObject
 @property BOOL didInsertedOverlay, didRemovedOverlay, didUpdatedOverlay, didMoveOverlay;
 @end@implementation MapOverlayDelegateRespondStatus@end
@@ -27,15 +38,42 @@
     self = [super init];
     self.mapOverlays = [NSMutableArray new];
     self.mapOverlaySettings = [NSMutableDictionary new];
-    self.delegates = [NSMutableArray new];
+    self.delegates = [NSMutableArray mutableArrayUsingWeakReferences];
     self.delegateRespondStatuses = [NSMutableArray new];
     return self;
 }
 
 + (instancetype) sharedInstance {
     static MapOverlayStore *instance = nil;
-    if (!instance)
+    if (!instance) {
         instance = [self new];
+
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+
+        GroundOverlay *overlay2 = [GroundOverlay new];
+        overlay2.lat1 = 5;
+        overlay2.lon1 = 5;
+        overlay2.lat2 = 12;
+        overlay2.lon2 = 20;
+        overlay2.title = @"IMG_0014.JPG";
+        overlay2.imageSrc = [documentsDirectory stringByAppendingString:@"/IMG_0014.JPG"];
+        [instance insertMapOverlay:overlay2];
+
+        MarkerOverlay *overlay1 = [MarkerOverlay new];
+        overlay1.lat1 = 5;
+        overlay1.lon1 = 5;
+        overlay1.title = @"foobar";
+        overlay1.iconName = @"green_marker";
+        [instance insertMapOverlay:overlay1];
+
+        MarkerOverlay *overlay3 = [MarkerOverlay new];
+        overlay3.lat1 = 10;
+        overlay3.lon1 = 10;
+        overlay3.title = @"marker 3";
+        [instance insertMapOverlay:overlay3];
+
+    }
 
     return instance;
 }

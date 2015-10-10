@@ -16,4 +16,11 @@
 
 @end@implementation NavigationMapViewController
 
+- (void) viewDidLoad {
+    [super viewDidLoad];
+
+    self.overlayController = (OverlayViewController *) self.childViewControllers.lastObject;
+    self.overlayController.store = [MapOverlayStore sharedInstance];
+}
+
 @end

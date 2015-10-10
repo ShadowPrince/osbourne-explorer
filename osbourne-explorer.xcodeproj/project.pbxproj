@@ -20,6 +20,7 @@
 		F380B1331BC69DBC00C5090A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F380B1311BC69DBC00C5090A /* Main.storyboard */; };
 		F380B1351BC69DBC00C5090A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F380B1341BC69DBC00C5090A /* Assets.xcassets */; };
 		F380B1381BC69DBC00C5090A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F380B1361BC69DBC00C5090A /* LaunchScreen.storyboard */; };
+		F3A4246A1BC92ECF00566BE8 /* GroundOverlayInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A424691BC92ECF00566BE8 /* GroundOverlayInfoViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F3EA415C1BC69F0D00897633 /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EA415A1BC69F0D00897633 /* OverlayViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F3EA415D1BC69F0D00897633 /* OverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3EA415B1BC69F0D00897633 /* OverlayViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -50,6 +51,8 @@
 		F380B1341BC69DBC00C5090A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F380B1371BC69DBC00C5090A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F380B1391BC69DBC00C5090A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3A424681BC92ECF00566BE8 /* GroundOverlayInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroundOverlayInfoViewController.h; sourceTree = "<group>"; };
+		F3A424691BC92ECF00566BE8 /* GroundOverlayInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundOverlayInfoViewController.m; sourceTree = "<group>"; };
 		F3EA41591BC69F0D00897633 /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayViewController.h; sourceTree = "<group>"; };
 		F3EA415A1BC69F0D00897633 /* OverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayViewController.m; sourceTree = "<group>"; };
 		F3EA415B1BC69F0D00897633 /* OverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayViewController.xib; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				F30368F41BC7FE62002AECA8 /* NavigationMenuViewController.m */,
 				F30368F61BC8009E002AECA8 /* MapOverlayTableViewCell.h */,
 				F30368F71BC8009E002AECA8 /* MapOverlayTableViewCell.m */,
+				F3A424681BC92ECF00566BE8 /* GroundOverlayInfoViewController.h */,
+				F3A424691BC92ECF00566BE8 /* GroundOverlayInfoViewController.m */,
 			);
 			name = NavigationMenu;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				F30368F51BC7FE63002AECA8 /* NavigationMenuViewController.m in Sources */,
 				F349FE1B1BC6B36500B1F54F /* ForcedNavbarViewController.m in Sources */,
 				F32ABF391BC7A3430070C1F2 /* MapOverlay.m in Sources */,
+				F3A4246A1BC92ECF00566BE8 /* GroundOverlayInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

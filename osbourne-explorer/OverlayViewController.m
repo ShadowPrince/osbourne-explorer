@@ -11,51 +11,24 @@
 @interface OverlayViewController ()
 @property (weak, nonatomic) IBOutlet GMSMapView *gMapView;
 
-@property MapOverlayStore *store;
 @property NSMutableDictionary<MapOverlay *, GMSOverlay *> *gMapOverlays;
 
 @property BOOL overlaysHidden, overlaysSemitransparent;
 
 @end@implementation OverlayViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void) setStore:(MapOverlayStore *) store {
+    _store = store;
+
+    [self.gMapOverlays enumerateKeysAndObjectsUsingBlock:^(MapOverlay * _Nonnull key, GMSOverlay * _Nonnull obj, BOOL * _Nonnull stop) {
+        obj.map = nil;
+    }];
     self.gMapOverlays = [NSMutableDictionary new];
 
-    self.store = [MapOverlayStore sharedInstance];
     [self.store registerDelegate:self];
-
-
-    /* sample */
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-
-    GroundOverlay *overlay2 = [GroundOverlay new];
-    overlay2.lat1 = 5;
-    overlay2.lon1 = 5;
-    overlay2.lat2 = 12;
-    overlay2.lon2 = 20;
-    overlay2.title = @"IMG_0014.JPG";
-    overlay2.imageSrc = [documentsDirectory stringByAppendingString:@"/IMG_0014.JPG"];
-    [self.store insertMapOverlay:overlay2];
-
-    MarkerOverlay *overlay1 = [MarkerOverlay new];
-    overlay1.lat1 = 5;
-    overlay1.lon1 = 5;
-    overlay1.title = @"foobar";
-    overlay1.iconName = @"green_marker";
-    [self.store insertMapOverlay:overlay1];
-
-    MarkerOverlay *overlay3 = [MarkerOverlay new];
-    overlay3.lat1 = 10;
-    overlay3.lon1 = 10;
-    overlay3.title = @"marker 3";
-    [self.store insertMapOverlay:overlay3];
-
-    /* /sample */
-
     [self.store requestSharedResourcesLoading];
     [self.store.allOverlays enumerateObjectsUsingBlock:^(MapOverlay * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self insertGOverlay:obj];
         [self updateGOverlayForOverlay:obj withSettings:[self.store settingsForOverlay:obj]];
     }];
 }
@@ -63,6 +36,18 @@
 - (void) addMarketAt:(CLLocationCoordinate2D) coord {
     GMSMarker *marker = [GMSMarker markerWithPosition:coord];
     marker.map = self.gMapView;
+}
+
+- (void) insertGOverlay:(MapOverlay *) overlay {
+    GMSOverlay *gOverlay;
+
+    if ([overlay isKindOfClass:[GroundOverlay class]]) {
+        gOverlay = [GMSGroundOverlay new];
+    } else if ([overlay isKindOfClass:[MarkerOverlay class]]) {
+        gOverlay = [GMSMarker new];
+    }
+
+    self.gMapOverlays[overlay] = gOverlay;
 }
 
 - (void) updateGOverlayForOverlay:(MapOverlay *) uncasted_overlay withSettings:(MapOverlaySettings *) settings {
@@ -107,15 +92,7 @@
 #pragma mark - store delegate
 
 - (void) didInsertedOverlay:(MapOverlay *)overlay withSettings:(MapOverlaySettings *)settings atPosition:(NSUInteger)position {
-    GMSOverlay *gOverlay;
-
-    if ([overlay isKindOfClass:[GroundOverlay class]]) {
-        gOverlay = [GMSGroundOverlay new];
-    } else if ([overlay isKindOfClass:[MarkerOverlay class]]) {
-        gOverlay = [GMSMarker new];
-    }
-
-    self.gMapOverlays[overlay] = gOverlay;
+    [self insertGOverlay:overlay];
     // @TODO: positioning
 
     [self updateGOverlayForOverlay:overlay
@@ -159,6 +136,10 @@
     } else {
         self.gMapView.mapType = kGMSTypeNormal;
     }
+}
+
+- (void) dealloc {
+    NSLog(@"%@ dealloc", self);
 }
 
 @end
