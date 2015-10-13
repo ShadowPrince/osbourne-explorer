@@ -8,17 +8,6 @@
 
 #import "MapOverlayStore.h"
 
-@implementation NSMutableArray (WeakReferences)
-+ (id)mutableArrayUsingWeakReferences {
-    return [self mutableArrayUsingWeakReferencesWithCapacity:0];
-}
-
-+ (id)mutableArrayUsingWeakReferencesWithCapacity:(NSUInteger)capacity {
-    CFArrayCallBacks callbacks = {0, NULL, NULL, CFCopyDescription, CFEqual};
-    return (id)CFBridgingRelease(CFArrayCreateMutable(0, capacity, &callbacks));
-}
-@end
-
 @interface MapOverlayDelegateRespondStatus : NSObject
 @property BOOL didInsertedOverlay, didRemovedOverlay, didUpdatedOverlay, didMoveOverlay;
 @end@implementation MapOverlayDelegateRespondStatus@end

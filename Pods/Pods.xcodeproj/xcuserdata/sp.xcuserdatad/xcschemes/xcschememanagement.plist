@@ -14,15 +14,55 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RMUniversalAlert.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UIActionSheet+Blocks.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UIAlertController+Blocks.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UIAlertView+Blocks.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>E960EB5208F8D3164B07778A1D6F4307</key>
+		<key>3CE5D85348602DCA18FF3DDB1E82A570</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FD669D1662C885F5F46199E82FA3CDC0</key>
+		<key>44E1033186CB2AD99AFB43372E7842DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>68E4D9547002CB114427668A9167E206</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>91CE01D9C05AE211FC3D6E341DB95BFD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACA39E0C8C610ED17D1EED33F06C685F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D51604217FD9306BA054A000F88CE4FE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

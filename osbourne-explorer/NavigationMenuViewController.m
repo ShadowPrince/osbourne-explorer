@@ -188,6 +188,8 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"overlayInfo"]) {
         [(GroundOverlayInfoViewController *) segue.destinationViewController setOverlay:(GroundOverlay *) sender];
+    } else if ([segue.identifier isEqualToString:@"markerInfo"]) {
+        [(MarkerOverlayInfoViewController *) segue.destinationViewController setMarker:(MarkerOverlay *) sender];
     }
 
     [super prepareForSegue:segue sender:sender];

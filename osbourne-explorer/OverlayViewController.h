@@ -12,6 +12,7 @@
 #import "MapOverlayStore.h"
 
 @interface OverlayViewController : UIViewController <MapOverlayStoreDelegate>
+@property (weak, nonatomic) IBOutlet GMSMapView *gMapView;
 @property (nonatomic) MapOverlayStore *store;
 
 @end

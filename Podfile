@@ -4,5 +4,6 @@
 target 'osbourne-explorer' do
     pod 'MMDrawerController'
     pod 'GoogleMaps'
+    pod 'RMUniversalAlert'
 end
 

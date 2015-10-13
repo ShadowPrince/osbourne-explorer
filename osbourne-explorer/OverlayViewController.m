@@ -9,7 +9,6 @@
 #import "OverlayViewController.h"
 
 @interface OverlayViewController ()
-@property (weak, nonatomic) IBOutlet GMSMapView *gMapView;
 
 @property NSMutableDictionary<MapOverlay *, GMSOverlay *> *gMapOverlays;
 
