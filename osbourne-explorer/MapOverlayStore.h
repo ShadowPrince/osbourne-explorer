@@ -20,12 +20,13 @@
 }
 @end
 
-@interface MapOverlaySettings : NSObject
+@interface MapOverlaySettings : NSObject <NSCoding>
 @property BOOL hidden;
 @property BOOL semiTransparent;
 @end
 
 @protocol MapOverlayStoreDelegate <NSObject>
+@optional
 - (void) didInsertedOverlay:(MapOverlay *) overlay
                withSettings:(MapOverlaySettings *) settings
                  atPosition:(NSUInteger) position;
@@ -49,6 +50,9 @@
 
 - (void) didUpdatedOverlay:(MapOverlay *) overlay;
 - (void) requestSharedResourcesLoading;
+
+- (void) save;
+- (void) loadFrom:(NSString *) path;
 
 + (instancetype) sharedInstance;
 + (instancetype) singleobjectInstanceWith:(MapOverlay *) overlay;

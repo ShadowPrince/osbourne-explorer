@@ -44,6 +44,8 @@
     }
 }
 
+- (void) cleanup {}
+
 @end
 
 @implementation MarkerOverlay
@@ -106,8 +108,10 @@
     [super loadSharedResourcesCallback:^{
         if (self.imageSrc) {
             [MapOverlayStore.sharedResourcesLoadingQueue addOperationWithBlock:^{
-                image = [UIImage imageWithContentsOfFile:self.imageSrc];
-                semitransparentImage = [self generateSemitransparentImage:self.image alpha:0.5f];
+                NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+                NSString *documentsDirectory = [paths objectAtIndex:0];
+                image = [UIImage imageWithContentsOfFile:[documentsDirectory stringByAppendingString:self.imageSrc]];
+                semitransparentImage = [self generateSemitransparentImage:self.image alpha:0.3f];
 
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                     cb();
@@ -115,7 +119,13 @@
             }];
         }
     }];
+}
 
+- (void) cleanup {
+    NSString *filename = [self.imageSrc componentsSeparatedByString:@"/"].lastObject;
+    if ([filename hasPrefix:@"._"]) {
+        [[NSFileManager defaultManager] removeItemAtPath:self.imageSrc error:nil];
+    }
 }
 
 - (UIImage *) generateSemitransparentImage:(UIImage *) x alpha:(CGFloat) alpha {

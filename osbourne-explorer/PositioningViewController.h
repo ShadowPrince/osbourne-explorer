@@ -16,4 +16,10 @@
 @property NSArray<PositioningStageViewController *> *stages;
 
 - (void) didFinishedPositioning;
+- (void) didCanceledPositioning;
+- (void) willMoveFrom:(PositioningStageViewController *) current to:(PositioningStageViewController *) next;
+- (void) didMovedFrom:(PositioningStageViewController *) prev to:(PositioningStageViewController *) current;
+
+- (NSArray<NSString *> *) validationErrors;
+
 @end

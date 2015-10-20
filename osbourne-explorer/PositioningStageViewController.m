@@ -9,26 +9,33 @@
 #import "PositioningStageViewController.h"
 
 @interface PositioningStageViewController ()
-@property CGPoint point;
+@property CLLocationCoordinate2D point;
+@property BOOL pointSet;
 @end@implementation PositioningStageViewController
 
-- (void) movePositionAbsolute:(CGPoint)p {
+- (void) movePositionAbsolute:(CLLocationCoordinate2D)p {
     self.point = p;
+    self.pointSet = YES;
 
     if (self.delegate)
         [self.delegate didMovePositionTo:[self absolutePosition]];
 }
 
-- (void) movePositionRelative:(CGPoint)p {
-    [self movePositionAbsolute:CGPointMake(p.x + self.point.x, p.y + self.point.y)];
+- (void) movePositionRelative:(CLLocationCoordinate2D)p {
+    [self movePositionAbsolute:CLLocationCoordinate2DMake(p.latitude * self.relativeMoveSteps[0].doubleValue + self.point.latitude,
+                                                          p.longitude * self.relativeMoveSteps[1].doubleValue + self.point.longitude)];
 }
 
-- (CGPoint) absolutePosition {
+- (NSArray<NSNumber *> *) relativeMoveSteps {
+    return @[@1.0f, @1.0f];
+}
+
+- (CLLocationCoordinate2D) absolutePosition {
     return self.point;
 }
 
 - (BOOL) isValid {
-    return NO;
+    return self.pointSet;
 }
 
 @end

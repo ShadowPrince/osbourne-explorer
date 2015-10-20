@@ -34,6 +34,10 @@
     [self.tableView reloadRowsAtIndexPaths:@[[self indexPathOfMapOverlay:overlay]] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+- (void) didInsertedOverlay:(MapOverlay *)overlay withSettings:(MapOverlaySettings *)settings atPosition:(NSUInteger)position {
+    [self.tableView reloadData];
+}
+
 #pragma mark - table view
 #pragma mark datasource
 

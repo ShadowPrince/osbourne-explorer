@@ -7,6 +7,7 @@
 //
 
 #import "MapPositioningStageViewController.h"
+#define CURSOR_STEP 0.000002
 
 @interface MapPositioningStageViewController ()
 @property IBOutlet GMSMapView *mapView;
@@ -22,30 +23,45 @@
     self.mapView.delegate = self;
 }
 
-- (void) createOrUpdateMarkerFor:(CGPoint) pos {
-    if (!self.pointMarker) {
-        self.pointMarker = [GMSMarker new];
-        self.pointMarker.map = self.mapView;
-    }
+#pragma mark - api
 
-    self.pointMarker.position = CLLocationCoordinate2DMake(pos.y, pos.x);
-}
-
-- (void) movePositionAbsolute:(CGPoint)p {
+- (void) movePositionAbsolute:(CLLocationCoordinate2D)p {
     [super movePositionAbsolute:p];
     [self createOrUpdateMarkerFor:p];
 }
 
-- (void) mapView:(GMSMapView *)mapView didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
-    [self movePositionAbsolute:CGPointMake(coordinate.longitude, coordinate.latitude)];
+- (NSArray<NSNumber *> *) relativeMoveSteps {
+    return @[@-CURSOR_STEP, @-CURSOR_STEP];
 }
 
-- (BOOL) isValid {
-    return self.pointMarker != nil;
+- (void) mapView:(GMSMapView *)mapView didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
+    [self movePositionAbsolute:coordinate];
 }
 
 - (NSString *) description {
     return NSLocalizedString(@"Select corresponding point", @"SVC title");
 }
+
+#pragma mark - public
+
+- (GMSCameraPosition *) camera {
+    return self.mapView.camera;
+}
+
+- (void) setCamera:(GMSCameraPosition *)camera {
+    self.mapView.camera = camera;
+}
+
+#pragma mark - helper
+
+- (void) createOrUpdateMarkerFor:(CLLocationCoordinate2D) pos {
+    if (!self.pointMarker) {
+        self.pointMarker = [GMSMarker new];
+        self.pointMarker.map = self.mapView;
+    }
+
+    self.pointMarker.position = pos;
+}
+
 
 @end

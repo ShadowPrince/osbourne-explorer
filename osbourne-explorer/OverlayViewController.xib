@@ -34,7 +34,7 @@
                     </connections>
                 </button>
                 <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIn-Sh-KdM">
-                    <rect key="frame" x="264" y="404" width="48" height="30"/>
+                    <rect key="frame" x="264" y="412" width="48" height="30"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="48" id="g7v-5p-3CE"/>
@@ -57,6 +57,18 @@
                         <action selector="mapTypeToggleAction:" destination="-1" eventType="touchUpInside" id="hhS-iZ-40L"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N48-9l-KRF">
+                    <rect key="frame" x="8" y="412" width="30" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="gDG-Hx-AMK"/>
+                        <constraint firstAttribute="width" constant="30" id="nWo-rn-iXW"/>
+                    </constraints>
+                    <state key="normal" title="GPS"/>
+                    <connections>
+                        <action selector="gpsAction:" destination="-1" eventType="touchUpInside" id="ts2-6S-vhp"/>
+                    </connections>
+                </button>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -64,10 +76,12 @@
                 <constraint firstAttribute="bottom" secondItem="FYL-RX-t7o" secondAttribute="bottom" constant="8" id="WKU-Ee-9IQ"/>
                 <constraint firstItem="FYL-RX-t7o" firstAttribute="trailing" secondItem="TIn-Sh-KdM" secondAttribute="trailing" id="WmF-7U-Sbf"/>
                 <constraint firstAttribute="bottom" secondItem="38N-Bs-FRR" secondAttribute="bottom" id="Yps-MB-290"/>
-                <constraint firstItem="npg-Ag-0YH" firstAttribute="top" secondItem="TIn-Sh-KdM" secondAttribute="bottom" constant="8" id="dnu-Ez-weJ"/>
+                <constraint firstItem="npg-Ag-0YH" firstAttribute="top" secondItem="TIn-Sh-KdM" secondAttribute="bottom" id="dnu-Ez-weJ"/>
                 <constraint firstAttribute="trailing" secondItem="38N-Bs-FRR" secondAttribute="trailing" id="gZp-QZ-bOw"/>
                 <constraint firstAttribute="trailing" secondItem="FYL-RX-t7o" secondAttribute="trailing" constant="8" id="hUB-bE-zME"/>
                 <constraint firstItem="38N-Bs-FRR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="o6v-Aj-2Hs"/>
+                <constraint firstItem="N48-9l-KRF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="pLd-cX-wBW"/>
+                <constraint firstItem="TIn-Sh-KdM" firstAttribute="centerY" secondItem="N48-9l-KRF" secondAttribute="centerY" id="pVS-JY-5Zd"/>
                 <constraint firstItem="FYL-RX-t7o" firstAttribute="bottom" secondItem="npg-Ag-0YH" secondAttribute="bottom" id="rs8-Yw-bn8"/>
                 <constraint firstItem="38N-Bs-FRR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tPV-wE-BN1"/>
                 <constraint firstItem="FYL-RX-t7o" firstAttribute="leading" secondItem="npg-Ag-0YH" secondAttribute="trailing" constant="8" id="xE1-Ob-p4h"/>

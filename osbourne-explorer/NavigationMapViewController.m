@@ -19,8 +19,15 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
 
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSLog(@"%@", documentsDirectory);
+
+    MapOverlayStore *store = [MapOverlayStore sharedInstance];
+    [store loadFrom:[documentsDirectory stringByAppendingString:@"/database"]];
+
     self.overlayController = (OverlayViewController *) self.childViewControllers.lastObject;
-    self.overlayController.store = [MapOverlayStore sharedInstance];
+    self.overlayController.store = store;
 }
 
 @end

@@ -137,6 +137,10 @@
     }
 }
 
+- (IBAction)gpsAction:(id)sender {
+    self.gMapView.camera = [GMSCameraPosition cameraWithLatitude:51.280 longitude:32.555 zoom:11.442];
+}
+
 - (void) dealloc {
     NSLog(@"%@ dealloc", self);
 }

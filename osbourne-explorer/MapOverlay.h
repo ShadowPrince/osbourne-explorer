@@ -17,6 +17,7 @@ typedef void (^MapOverlayLoadCallback)(void);
 @property BOOL sharedResourcesLoaded;
 
 - (void) loadSharedResourcesCallback:(MapOverlayLoadCallback) cb;
+- (void) cleanup;
 @end
 
 @interface GroundOverlay : MapOverlay

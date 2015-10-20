@@ -16,7 +16,6 @@
 
 - (BOOL) application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
     [GMSServices provideAPIKey:@"AIzaSyDtHMS51p_ihmIOKWLDT8_GOyRtyXpL0cg"];
-
     return YES;
 }
 

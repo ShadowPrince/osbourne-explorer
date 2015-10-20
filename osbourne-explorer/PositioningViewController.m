@@ -6,7 +6,7 @@
 //  Copyright © 2015 shdwprince. All rights reserved.
 //
 
-#define CURSOR_STEP 0.000002
+#define CURSOR_STEP 1
 
 #import "PositioningViewController.h"
 
@@ -74,6 +74,16 @@
     @throw [NSError errorWithDomain:@"abstract method call" code:0 userInfo:0];
 }
 
+- (void) didCanceledPositioning {
+    @throw [NSError errorWithDomain:@"abstract method call" code:0 userInfo:0];
+}
+
+- (void) willMoveFrom:(PositioningStageViewController *)c1 to:(PositioningStageViewController *)p2 {}
+- (void) didMovedFrom:(PositioningStageViewController *)prev to:(PositioningStageViewController *)current {}
+- (NSArray<NSString *> *) validationErrors {
+    return nil;
+}
+
 - (void) presentStageAt:(NSUInteger) idx {
     if (self.activePSVC) {
         self.activePSVC.delegate = nil;
@@ -83,6 +93,8 @@
     }
 
     PositioningStageViewController *controller = self.stages[idx];
+    [self willMoveFrom:self.activePSVC to:controller];
+
     [self addChildViewController:controller];
     controller.view.frame = self.stageView.frame;
     [self.stageView addSubview:controller.view];
@@ -90,6 +102,7 @@
     controller.delegate = self;
     self.activePSVCTitleLabel.text = [NSString stringWithFormat:@"№%d/%d: %@", idx+1, self.stages.count, controller];
 
+    [self didMovedFrom:self.activePSVC to:controller];
     self.activePSVC = controller;
 
     if (idx == 0) {
@@ -103,13 +116,16 @@
     } else {
         [self.nextButton setTitle:NSLocalizedString(@"Next", @"PVC button") forState:UIControlStateNormal];
     }
+
+    self.activePointXTextField.text = @"";
+    self.activePointYTextField.text = @"";
 }
 
 #pragma mark - stage delegate
 
-- (void) didMovePositionTo:(CGPoint)p {
-    self.activePointXTextField.text = [NSString stringWithFormat:@"%f", p.x];
-    self.activePointYTextField.text = [NSString stringWithFormat:@"%f", p.y];
+- (void) didMovePositionTo:(CLLocationCoordinate2D)p {
+    self.activePointXTextField.text = [NSString stringWithFormat:@"%f", p.longitude];
+    self.activePointYTextField.text = [NSString stringWithFormat:@"%f", p.latitude];
 }
 
 #pragma mark - actions
@@ -122,8 +138,30 @@
 }
 
 - (IBAction)nextButtonAction:(id)sender {
-    if ([self.activePSVC isValid]) {
-        if (self.stageIdx < self.stages.count - 1) {
+    if (![self.activePSVC isValid]) {
+        [RMUniversalAlert showAlertInViewController:self
+                                          withTitle:NSLocalizedString(@"Error", @"alert")
+                                            message:NSLocalizedString(@"Select point", @"alert")
+                                  cancelButtonTitle:NSLocalizedString(@"Ok", @"alert")
+                             destructiveButtonTitle:nil
+                                  otherButtonTitles:nil
+                                           tapBlock:nil];
+    } else {
+        if (self.stageIdx == 0) {
+            [RMUniversalAlert showActionSheetInViewController:self
+                                                    withTitle:NSLocalizedString(@"Notice", @"PVC finish alert")
+                                                      message:NSLocalizedString(@"Are you sure you want to abort positioning?", @"PVC cancel alert")
+                                            cancelButtonTitle:NSLocalizedString(@"Cancel", @"PVC finish alert")
+                                       destructiveButtonTitle:NSLocalizedString(@"Abort", @"PVC finish alert")
+                                            otherButtonTitles:nil
+                                                  popoverRect:CGRectMake(10, self.view.frame.size.height - 10, 0, 0)
+                           popoverPresentationControllerBlock:nil
+                                                     tapBlock:^(RMUniversalAlert * _Nonnull alert, NSInteger buttonIndex) {
+                                                         if (buttonIndex == alert.destructiveButtonIndex) {
+                                                             [self cancelAction];
+                                                         }
+                                                     }];
+        } else if (self.stageIdx < self.stages.count - 1) {
             self.stageIdx++;
             [self presentStageAt:self.stageIdx];
         } else {
@@ -131,36 +169,52 @@
                                                     withTitle:NSLocalizedString(@"Notice", @"PVC finish alert")
                                                       message:NSLocalizedString(@"Are you sure you want to finish positioning?", @"PVC finish alert")
                                             cancelButtonTitle:NSLocalizedString(@"Cancel", @"PVC finish alert")
-                                       destructiveButtonTitle:@"proceed"
+                                       destructiveButtonTitle:NSLocalizedString(@"Proceed", @"PVC finish alert")
                                             otherButtonTitles:nil
+                                                  popoverRect:CGRectMake(self.view.frame.size.width - 10, self.view.frame.size.height - 10, 0, 0)
                            popoverPresentationControllerBlock:nil
                                                      tapBlock:^(RMUniversalAlert * _Nonnull alert, NSInteger buttonIndex) {
-
+                                                         if (buttonIndex == alert.destructiveButtonIndex) {
+                                                             [self finishAction];
+                                                         }
                                                      }];
         }
+    }
+}
+
+- (void) finishAction {
+    NSArray<NSString *> *errors = self.validationErrors;
+
+    if (!errors) {
+        [self didFinishedPositioning];
     } else {
-         [RMUniversalAlert showAlertInViewController:self
+        [RMUniversalAlert showAlertInViewController:self
                                           withTitle:NSLocalizedString(@"Error", @"alert")
-                                            message:NSLocalizedString(@"Select point", @"alert")
+                                            message:[errors componentsJoinedByString:@"\n"]
                                   cancelButtonTitle:NSLocalizedString(@"Ok", @"alert")
                              destructiveButtonTitle:nil
                                   otherButtonTitles:nil
                                            tapBlock:nil];
     }
+
+}
+
+- (void) cancelAction {
+    [self didCanceledPositioning];
 }
 
 #pragma mark cursor movement
 - (IBAction)upButtonAction:(id)sender {
-    [self.activePSVC movePositionRelative:CGPointMake(0, CURSOR_STEP)];
+    [self.activePSVC movePositionRelative:CLLocationCoordinate2DMake(-CURSOR_STEP, 0)];
 }
 - (IBAction)downButtonAction:(id)sender {
-    [self.activePSVC movePositionRelative:CGPointMake(0, -CURSOR_STEP)];
+    [self.activePSVC movePositionRelative:CLLocationCoordinate2DMake(CURSOR_STEP, 0)];
 }
 - (IBAction)righButtonAction:(id)sender {
-    [self.activePSVC movePositionRelative:CGPointMake(CURSOR_STEP, 0)];
+    [self.activePSVC movePositionRelative:CLLocationCoordinate2DMake(0, -CURSOR_STEP)];
 }
 - (IBAction)leftButtonAction:(id)sender {
-    [self.activePSVC movePositionRelative:CGPointMake(-CURSOR_STEP, 0)];
+    [self.activePSVC movePositionRelative:CLLocationCoordinate2DMake(0, +CURSOR_STEP)];
 }
 
 #pragma mark coordinate textfields
@@ -169,8 +223,8 @@
 }
 
 #pragma mark - helper methods
-- (CGPoint) pointFromTextfields {
-    return CGPointMake(self.activePointXTextField.text.doubleValue, self.activePointYTextField.text.doubleValue);
+- (CLLocationCoordinate2D) pointFromTextfields {
+    return CLLocationCoordinate2DMake(self.activePointYTextField.text.doubleValue, self.activePointXTextField.text.doubleValue);
 }
 
 #pragma mark - keyboard

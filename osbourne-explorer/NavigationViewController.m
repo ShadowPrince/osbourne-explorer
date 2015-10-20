@@ -29,4 +29,8 @@
     [self.drawer setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeTapCenterView];
 }
 
+- (IBAction) unwindFromNewOverlay:(UIStoryboardSegue *) segue {
+
+}
+
 @end

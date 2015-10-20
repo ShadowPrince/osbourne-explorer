@@ -14,4 +14,7 @@
 
 @interface MapPositioningStageViewController : PositioningStageViewController <GMSMapViewDelegate>
 
+- (GMSCameraPosition *) camera;
+- (void) setCamera:(GMSCameraPosition *) camera;
+
 @end

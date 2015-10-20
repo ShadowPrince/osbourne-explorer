@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@import GoogleMaps;
+
 @protocol PositioningStageDelegate <NSObject>
 
-- (void) didMovePositionTo:(CGPoint) p;
+- (void) didMovePositionTo:(CLLocationCoordinate2D) p;
 
 @end
 
@@ -19,8 +21,9 @@
 @property (weak) NSObject<PositioningStageDelegate> *delegate;
 
 - (BOOL) isValid;
-- (CGPoint) absolutePosition;
-- (void) movePositionRelative:(CGPoint) p;
-- (void) movePositionAbsolute:(CGPoint) p;
+- (CLLocationCoordinate2D) absolutePosition;
+- (void) movePositionRelative:(CLLocationCoordinate2D) p;
+- (void) movePositionAbsolute:(CLLocationCoordinate2D) p;
+- (NSArray<NSNumber *> *) relativeMoveSteps;
 
 @end
