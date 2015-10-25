@@ -20,7 +20,10 @@
 @interface PositioningStageViewController : UIViewController
 @property (weak) NSObject<PositioningStageDelegate> *delegate;
 
+- (BOOL) prefersControlBarHidden;
+
 - (BOOL) isValid;
+
 - (CLLocationCoordinate2D) absolutePosition;
 - (void) movePositionRelative:(CLLocationCoordinate2D) p;
 - (void) movePositionAbsolute:(CLLocationCoordinate2D) p;

@@ -9,7 +9,7 @@
 #import "MapOverlayStore.h"
 
 @interface MapOverlayDelegateRespondStatus : NSObject
-@property BOOL didInsertedOverlay, didRemovedOverlay, didUpdatedOverlay, didMoveOverlay;
+@property BOOL didInsertedOverlay, didRemovedOverlay, didUpdatedOverlay, didMoveOverlay, requestSharedResourcesUnloading, requestSharedResourcesLoading;
 @end@implementation MapOverlayDelegateRespondStatus@end
 
 @implementation MapOverlaySettings
@@ -52,34 +52,6 @@
     static MapOverlayStore *instance = nil;
     if (!instance) {
         instance = [self new];
-
-        /*
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSLog(@"%@", documentsDirectory);
-
-        GroundOverlay *overlay2 = [GroundOverlay new];
-        overlay2.lat1 = 5;
-        overlay2.lon1 = 5;
-        overlay2.lat2 = 12;
-        overlay2.lon2 = 12;
-        overlay2.title = @"IMG_0014.JPG";
-        overlay2.imageSrc = [documentsDirectory stringByAppendingString:@"/IMG_0013.PNG"];
-        [instance insertMapOverlay:overlay2];
-
-        MarkerOverlay *overlay1 = [MarkerOverlay new];
-        overlay1.lat1 = 5;
-        overlay1.lon1 = 5;
-        overlay1.title = @"foobar";
-        [instance insertMapOverlay:overlay1];
-
-        MarkerOverlay *overlay3 = [MarkerOverlay new];
-        overlay3.lat1 = 12;
-        overlay3.lon1 = 12;
-        overlay3.title = @"marker 3";
-        [instance insertMapOverlay:overlay3];
-
-         */
     }
 
     return instance;
@@ -107,6 +79,9 @@
     respondStatus.didRemovedOverlay = [delegate respondsToSelector:@selector(didRemovedOverlay:)];
     respondStatus.didUpdatedOverlay = [delegate respondsToSelector:@selector(didUpdatedOverlay:)];
     respondStatus.didMoveOverlay = [delegate respondsToSelector:@selector(didMoveOverlay:toPosition:)];
+    respondStatus.requestSharedResourcesUnloading = [delegate respondsToSelector:@selector(requestSharedResourcesUnloading)];
+    respondStatus.requestSharedResourcesLoading = [delegate respondsToSelector:@selector(requestSharedResourcesLoading)];
+
 
     [self.delegates addObject:delegate];
     [self.delegateRespondStatuses addObject:respondStatus];
@@ -153,6 +128,21 @@
     }];
 }
 
+- (void) fireRequestSharedResourcesUnloading {
+    [self.delegateRespondStatuses enumerateObjectsUsingBlock:^(MapOverlayDelegateRespondStatus * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        id<MapOverlayStoreDelegate> key = self.delegates[idx];
+        if (obj.requestSharedResourcesUnloading)
+            [key requestSharedResourcesUnloading];
+    }];
+}
+
+- (void) fireRequestSharedResourcesLoading {
+    [self.delegateRespondStatuses enumerateObjectsUsingBlock:^(MapOverlayDelegateRespondStatus * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        id<MapOverlayStoreDelegate> key = self.delegates[idx];
+        if (obj.requestSharedResourcesLoading)
+            [key requestSharedResourcesLoading];
+    }];
+}
 #pragma mark - overlays
 
 - (NSArray<MapOverlay *> *) allOverlays {
@@ -177,12 +167,13 @@
 }
 
 - (void) removeMapOverlay:(MapOverlay *)overlay {
-    [self fireDidRemovedOverlay:overlay];
-
     [overlay cleanup];
     NSUInteger idx = [self.mapOverlays indexOfObject:overlay];
     [self.mapOverlays removeObject:overlay];
     [self.mapOverlaySettings removeObjectAtIndex:idx];
+
+    [self fireDidRemovedOverlay:overlay];
+    [self save];
 }
 
 - (void) moveOverlayFrom:(NSUInteger) from to:(NSUInteger) to {
@@ -194,15 +185,36 @@
 
 - (void) didUpdatedOverlay:(MapOverlay *)overlay {
     [self fireDidUpdatedOverlay:overlay];
+
+    if (![self settingsForOverlay:overlay].hidden) {
+        [overlay loadSharedResourcesCallback:^{
+            [self fireDidUpdatedOverlay:overlay];
+        }];
+    }
+
     [self save];
 }
 
 - (void) requestSharedResourcesLoading {
+    [self fireRequestSharedResourcesLoading];
+
     [self.mapOverlays enumerateObjectsUsingBlock:^(MapOverlay * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [obj loadSharedResourcesCallback:^{
-            [self fireDidUpdatedOverlay:obj];
-        }];
+        MapOverlaySettings *settings = [self settingsForOverlay:obj];
+        if (!settings.hidden) {
+            [obj loadSharedResourcesCallback:^{
+                [self fireDidUpdatedOverlay:obj];
+            }];
+        }
     }];
+}
+
+- (void) requestSharedResourcesUnloading {
+    @autoreleasepool {
+        [self fireRequestSharedResourcesUnloading];
+        [self.mapOverlays enumerateObjectsUsingBlock:^(MapOverlay * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [obj unloadSharedResources];
+        }];
+    }
 }
 
 #pragma mark - persistence
@@ -210,8 +222,10 @@
 - (void) save {
     NSString *path = self.databasePath;
 
-    [NSKeyedArchiver archiveRootObject:self.mapOverlays toFile:[path stringByAppendingString:@".overlays"]];
-    [NSKeyedArchiver archiveRootObject:self.mapOverlaySettings toFile:[path stringByAppendingString:@".overlay-settings"]];
+    if (path) {
+        [NSKeyedArchiver archiveRootObject:self.mapOverlays toFile:[path stringByAppendingString:@".overlays"]];
+        [NSKeyedArchiver archiveRootObject:self.mapOverlaySettings toFile:[path stringByAppendingString:@".overlay-settings"]];
+    }
 }
 
 - (void) loadFrom:(NSString *)path {
@@ -224,9 +238,6 @@
         self.mapOverlays = [NSMutableArray new];
         self.mapOverlaySettings = [NSMutableArray new];
     }
-
-    NSLog(@"%@ %@", self.mapOverlays.firstObject, self.mapOverlaySettings);
-
 }
 
 @end

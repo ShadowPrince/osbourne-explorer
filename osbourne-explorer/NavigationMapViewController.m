@@ -19,15 +19,32 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
 
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSLog(@"%@", documentsDirectory);
-
     MapOverlayStore *store = [MapOverlayStore sharedInstance];
-    [store loadFrom:[documentsDirectory stringByAppendingString:@"/database"]];
+    [store loadFrom:[DocumentsDirectory pathFor:@"/database"]];
 
     self.overlayController = (OverlayViewController *) self.childViewControllers.lastObject;
     self.overlayController.store = store;
+}
+
+- (void) decodeRestorableStateWithCoder:(NSCoder *)coder {
+    GMSCameraPosition *gCamera = [GMSCameraPosition cameraWithLatitude:[coder decodeDoubleForKey:@"camera_lat"]
+                                                             longitude:[coder decodeDoubleForKey:@"camera_lon"]
+                                                                  zoom:[coder decodeFloatForKey:@"camera_zoom"]
+                                                               bearing:[coder decodeDoubleForKey:@"camera_bearing"]
+                                                          viewingAngle:[coder decodeDoubleForKey:@"camera_angle"]];
+
+
+    self.overlayController.gMapView.camera = gCamera;
+}
+
+- (void) encodeRestorableStateWithCoder:(NSCoder *)coder {
+    GMSCameraPosition *gCamera = self.overlayController.gMapView.camera;
+
+    [coder encodeDouble:gCamera.target.latitude forKey:@"camera_lat"];
+    [coder encodeDouble:gCamera.target.longitude forKey:@"camera_lon"];
+    [coder encodeDouble:gCamera.bearing forKey:@"camera_bearing"];
+    [coder encodeFloat:gCamera.zoom forKey:@"camera_zoom"];
+    [coder encodeDouble:gCamera.viewingAngle forKey:@"camera_angle"];
 }
 
 @end

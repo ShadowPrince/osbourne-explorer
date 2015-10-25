@@ -20,10 +20,6 @@ static NSInteger const RMUniversalAlertFirstOtherButtonIndex = 2;
 
 @interface RMUniversalAlert ()
 
-@property (nonatomic) UIAlertController *alertController;
-@property (nonatomic) UIAlertView *alertView;
-@property (nonatomic) UIActionSheet *actionSheet;
-
 @property (nonatomic, assign) BOOL hasCancelButton;
 @property (nonatomic, assign) BOOL hasDestructiveButton;
 @property (nonatomic, assign) BOOL hasOtherButtons;
@@ -45,52 +41,17 @@ static NSInteger const RMUniversalAlertFirstOtherButtonIndex = 2;
     alert.hasCancelButton = cancelButtonTitle != nil;
     alert.hasDestructiveButton = destructiveButtonTitle != nil;
     alert.hasOtherButtons = otherButtonTitles.count > 0;
-    
-    if ([UIAlertController class]) {
-        alert.alertController = [UIAlertController showAlertInViewController:viewController
-                                                                   withTitle:title message:message
-                                                           cancelButtonTitle:cancelButtonTitle
-                                                      destructiveButtonTitle:destructiveButtonTitle
-                                                           otherButtonTitles:otherButtonTitles
-                                                                    tapBlock:^(UIAlertController *controller, UIAlertAction *action, NSInteger buttonIndex){
-                                                                        if (tapBlock) {
-                                                                            tapBlock(alert, buttonIndex);
-                                                                        }
-                                                                    }];
-    } else {
-        NSMutableArray *other = [NSMutableArray array];
-        
-        if (destructiveButtonTitle) {
-            [other addObject:destructiveButtonTitle];
-        }
-        
-        if (otherButtonTitles) {
-            [other addObjectsFromArray:otherButtonTitles];
-        }
-        
-        alert.alertView =  [UIAlertView showWithTitle:title
-                                              message:message
-                                    cancelButtonTitle:cancelButtonTitle
-                                    otherButtonTitles:other
-                                             tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex){
-                                                 if (tapBlock) {
-                                                     if (buttonIndex == alertView.cancelButtonIndex) {
-                                                         tapBlock(alert, RMUniversalAlertCancelButtonIndex);
-                                                     } else if (destructiveButtonTitle) {
-                                                         if (buttonIndex == alertView.firstOtherButtonIndex) {
-                                                             tapBlock(alert, RMUniversalAlertDestructiveButtonIndex);
-                                                         } else if (otherButtonTitles.count) {
-                                                             NSInteger otherOffset = buttonIndex - alertView.firstOtherButtonIndex;
-                                                             tapBlock(alert, RMUniversalAlertFirstOtherButtonIndex + otherOffset - 1);
-                                                         }
-                                                     } else if (otherButtonTitles.count) {
-                                                         NSInteger otherOffset = buttonIndex - alertView.firstOtherButtonIndex;
-                                                         tapBlock(alert, RMUniversalAlertFirstOtherButtonIndex + otherOffset);
-                                                     }
-                                                 }
-                                             }];
-    }
-    
+
+    alert.alertController = [UIAlertController showAlertInViewController:viewController
+                                                               withTitle:title message:message
+                                                       cancelButtonTitle:cancelButtonTitle
+                                                  destructiveButtonTitle:destructiveButtonTitle
+                                                       otherButtonTitles:otherButtonTitles
+                                                                tapBlock:^(UIAlertController *controller, UIAlertAction *action, NSInteger buttonIndex){
+                                                                    if (tapBlock) {
+                                                                        tapBlock(alert, buttonIndex);
+                                                                    }
+                                                                }];
     return alert;
 }
 
@@ -100,95 +61,65 @@ static NSInteger const RMUniversalAlertFirstOtherButtonIndex = 2;
                               cancelButtonTitle:(NSString *)cancelButtonTitle
                          destructiveButtonTitle:(NSString *)destructiveButtonTitle
                               otherButtonTitles:(NSArray *)otherButtonTitles
+                                    popoverRect:(CGRect)rekt
              popoverPresentationControllerBlock:(void(^)(RMPopoverPresentationController *popover))popoverPresentationControllerBlock
                                        tapBlock:(RMUniversalAlertCompletionBlock)tapBlock
 {
     RMUniversalAlert *alert = [[RMUniversalAlert alloc] init];
-    
+
     alert.hasCancelButton = cancelButtonTitle != nil;
     alert.hasDestructiveButton = destructiveButtonTitle != nil;
     alert.hasOtherButtons = otherButtonTitles.count > 0;
-    
-    if ([UIAlertController class]) {
-        
-        alert.alertController = [UIAlertController showActionSheetInViewController:viewController
-                                                                         withTitle:title
-                                                                           message:message
-                                                                 cancelButtonTitle:cancelButtonTitle
-                                                            destructiveButtonTitle:destructiveButtonTitle
-                                                                 otherButtonTitles:otherButtonTitles
-                                                popoverPresentationControllerBlock:^(UIPopoverPresentationController *popover){
-                                                    if (popoverPresentationControllerBlock) {
-                                                        RMPopoverPresentationController *configuredPopover = [RMPopoverPresentationController new];
-                                                        
-                                                        popoverPresentationControllerBlock(configuredPopover);
-                                                        
-                                                        popover.sourceView = configuredPopover.sourceView;
-                                                        popover.sourceRect = configuredPopover.sourceRect;
-                                                        popover.barButtonItem = configuredPopover.barButtonItem;
-                                                    }
+
+    alert.alertController = [UIAlertController showActionSheetInViewController:viewController
+                                                                     withTitle:title
+                                                                       message:message
+                                                             cancelButtonTitle:cancelButtonTitle
+                                                        destructiveButtonTitle:destructiveButtonTitle
+                                                             otherButtonTitles:otherButtonTitles
+                                            popoverPresentationControllerBlock:^(UIPopoverPresentationController *popover){
+                                                if (popoverPresentationControllerBlock) {
+                                                    RMPopoverPresentationController *configuredPopover = [RMPopoverPresentationController new];
+
+                                                    popoverPresentationControllerBlock(configuredPopover);
+
+                                                    popover.sourceView = configuredPopover.sourceView;
+                                                    popover.sourceRect = configuredPopover.sourceRect;
+                                                    popover.barButtonItem = configuredPopover.barButtonItem;
                                                 }
-                                                                          tapBlock:^(UIAlertController *controller, UIAlertAction *action, NSInteger buttonIndex){
-                                                                              if (tapBlock) {
-                                                                                  tapBlock(alert, buttonIndex);
-                                                                              }
-                                                                          }];
-    } else {
-        
-        void(^actionSheetTapBlock)(UIActionSheet *actionSheet, NSInteger buttonIndex) = ^(UIActionSheet *actionSheet, NSInteger buttonIndex){
-            if (tapBlock) {
-                if (buttonIndex == actionSheet.cancelButtonIndex) {
-                    tapBlock(alert, RMUniversalAlertCancelButtonIndex);
-                } else if (buttonIndex == actionSheet.destructiveButtonIndex) {
-                    tapBlock(alert, RMUniversalAlertDestructiveButtonIndex);
-                } else if (otherButtonTitles.count) {
-                    NSInteger otherOffset = buttonIndex - actionSheet.firstOtherButtonIndex;
-                    tapBlock(alert, RMUniversalAlertFirstOtherButtonIndex + otherOffset);
-                }
-            }
-        };
-        
-        void (^standardActionSheetBlock)(void) = ^{
-            alert.actionSheet =  [UIActionSheet showInView:viewController.view
-                                                 withTitle:title
-                                         cancelButtonTitle:cancelButtonTitle
-                                    destructiveButtonTitle:destructiveButtonTitle
-                                         otherButtonTitles:otherButtonTitles
-                                                  tapBlock:actionSheetTapBlock];
-        };
-        
-        if (popoverPresentationControllerBlock) {
-            
-            RMPopoverPresentationController *configuredPopover = [RMPopoverPresentationController new];
-            
-            popoverPresentationControllerBlock(configuredPopover);
-            
-            if (configuredPopover.barButtonItem) {
-                alert.actionSheet = [UIActionSheet showFromBarButtonItem:configuredPopover.barButtonItem
-                                                                animated:YES
-                                                               withTitle:title
-                                                       cancelButtonTitle:cancelButtonTitle
-                                                  destructiveButtonTitle:destructiveButtonTitle
-                                                       otherButtonTitles:otherButtonTitles
-                                                                tapBlock:actionSheetTapBlock];
-            } else if (configuredPopover.sourceView) {
-                alert.actionSheet = [UIActionSheet showFromRect:configuredPopover.sourceRect
-                                                         inView:configuredPopover.sourceView
-                                                       animated:YES
-                                                      withTitle:title
-                                              cancelButtonTitle:cancelButtonTitle
-                                         destructiveButtonTitle:destructiveButtonTitle
-                                              otherButtonTitles:otherButtonTitles
-                                                       tapBlock:actionSheetTapBlock];
-            } else {
-                standardActionSheetBlock();
-            }
-        } else {
-            standardActionSheetBlock();
-        }
-    }
-    
+                                            }
+                                                                      tapBlock:^(UIAlertController *controller, UIAlertAction *action, NSInteger buttonIndex){
+                                                                          if (tapBlock) {
+                                                                              tapBlock(alert, buttonIndex);
+                                                                          }
+                                                                      }];
+    alert.alertController.popoverPresentationController.sourceView = viewController.view;
+    alert.alertController.popoverPresentationController.sourceRect = rekt;
+
     return alert;
+}
+
+- (void) presentViewController:(UIViewController *) c expandHeightTo:(CGFloat) height {
+    UIAlertController *alert = self.alertController;
+
+    CGRect frame = alert.view.frame;
+    frame.size.height *= 2;
+    alert.view.frame = frame;
+
+    CGFloat x = 10;
+    CGFloat y = 40;
+    c.view.frame = CGRectMake(x, y, alert.view.frame.size.width - x, alert.view.frame.size.height - y);
+    [alert.view addSubview:c.view];
+    [alert addChildViewController:c];
+
+    [alert.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[x(height)]"
+                                                                       options:0
+                                                                       metrics:@{@"height": [NSNumber numberWithFloat:height]}
+                                                                         views:@{@"x": alert.view}]];
+}
+
+- (void) presentViewController:(UIViewController *)c {
+    [self presentViewController:c expandHeightTo:90.f];
 }
 
 #pragma mark -

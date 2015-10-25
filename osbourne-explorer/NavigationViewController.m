@@ -22,6 +22,7 @@
     UIViewController *v = [self.storyboard instantiateViewControllerWithIdentifier:@"navigationMap"];
     UIViewController *v2 = [self.storyboard instantiateViewControllerWithIdentifier:@"navigationMenu"];
 
+    v.restorationClass = self.class;
     [self.drawer setCenterViewController:v];
     [self.drawer setRightDrawerViewController:v2];
 
@@ -31,6 +32,18 @@
 
 - (IBAction) unwindFromNewOverlay:(UIStoryboardSegue *) segue {
 
+}
+
+- (void) encodeRestorableStateWithCoder:(NSCoder *)coder {
+    [super encodeRestorableStateWithCoder:coder];
+
+    [(NavigationMapViewController *) self.drawer.centerViewController encodeRestorableStateWithCoder:coder];
+}
+
+- (void) decodeRestorableStateWithCoder:(NSCoder *)coder {
+    [super decodeRestorableStateWithCoder:coder];
+
+    [(NavigationMapViewController *) self.drawer.centerViewController decodeRestorableStateWithCoder:coder];
 }
 
 @end

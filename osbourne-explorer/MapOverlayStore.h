@@ -33,6 +33,8 @@
 - (void) didRemovedOverlay:(MapOverlay *) overlay;
 - (void) didUpdatedOverlay:(MapOverlay *) overlay;
 - (void) didMoveOverlay:(MapOverlay *) overlay toPosition:(NSUInteger) pos;
+- (void) requestSharedResourcesUnloading;
+- (void) requestSharedResourcesLoading;
 
 @end
 
@@ -49,7 +51,9 @@
 - (void) removeDelegate:(id<MapOverlayStoreDelegate>) delegate;
 
 - (void) didUpdatedOverlay:(MapOverlay *) overlay;
+
 - (void) requestSharedResourcesLoading;
+- (void) requestSharedResourcesUnloading;
 
 - (void) save;
 - (void) loadFrom:(NSString *) path;

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 @import GoogleMaps;
 
+#import "RMUniversalAlert.h"
+
 #import "MapOverlayStore.h"
 
 @interface OverlayViewController : UIViewController <MapOverlayStoreDelegate>

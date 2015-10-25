@@ -13,12 +13,16 @@
 #import "RMUniversalAlert.h"
 
 @interface PositioningViewController : UIViewController <PositioningStageDelegate, UITextFieldDelegate>
-@property NSArray<PositioningStageViewController *> *stages;
+@property NSMutableArray<PositioningStageViewController *> *stages;
 
 - (void) didFinishedPositioning;
 - (void) didCanceledPositioning;
 - (void) willMoveFrom:(PositioningStageViewController *) current to:(PositioningStageViewController *) next;
 - (void) didMovedFrom:(PositioningStageViewController *) prev to:(PositioningStageViewController *) current;
+
+- (void) abortPositioning;
+- (void) removeStageAtIndex:(NSUInteger) idx;
+- (NSUInteger) currentStageIndex;
 
 - (NSArray<NSString *> *) validationErrors;
 

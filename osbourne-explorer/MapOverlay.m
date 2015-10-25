@@ -44,6 +44,7 @@
     }
 }
 
+- (void) unloadSharedResources {}
 - (void) cleanup {}
 
 @end
@@ -59,7 +60,7 @@
 
 - (void) encodeWithCoder:(NSCoder *)aCoder {
     [super encodeWithCoder:aCoder];
-    [aCoder encodeObject:self.title forKey:@"iconName"];
+    [aCoder encodeObject:self.iconName forKey:@"iconName"];
 }
 
 - (void) loadSharedResourcesCallback:(MapOverlayLoadCallback)cb {
@@ -108,9 +109,8 @@
     [super loadSharedResourcesCallback:^{
         if (self.imageSrc) {
             [MapOverlayStore.sharedResourcesLoadingQueue addOperationWithBlock:^{
-                NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-                NSString *documentsDirectory = [paths objectAtIndex:0];
-                image = [UIImage imageWithContentsOfFile:[documentsDirectory stringByAppendingString:self.imageSrc]];
+                [NSThread sleepForTimeInterval:1.0];
+                image = [UIImage imageWithContentsOfFile:[DocumentsDirectory pathFor:self.imageSrc]];
                 semitransparentImage = [self generateSemitransparentImage:self.image alpha:0.3f];
 
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
@@ -119,6 +119,13 @@
             }];
         }
     }];
+}
+
+- (void) unloadSharedResources {
+    image = [UIImage imageNamed:@"placeholder_overlay"];
+    semitransparentImage = [UIImage imageNamed:@"placeholder_overlay"];;
+
+    self.sharedResourcesLoaded = NO;
 }
 
 - (void) cleanup {
@@ -133,7 +140,7 @@
     CGRect imageRect = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
     [x drawInRect:imageRect blendMode:kCGBlendModeCopy alpha:alpha];
 
-    UIImage* outImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *outImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return outImage;
 }

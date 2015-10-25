@@ -16,6 +16,7 @@ typedef void(^RMUniversalAlertCompletionBlock)(RMUniversalAlert * __nonnull aler
 
 @interface RMUniversalAlert : NSObject
 
+
 + (nonnull instancetype)showAlertInViewController:(nonnull UIViewController *)viewController
                                         withTitle:(nullable NSString *)title
                                           message:(nullable NSString *)message
@@ -30,12 +31,20 @@ typedef void(^RMUniversalAlertCompletionBlock)(RMUniversalAlert * __nonnull aler
                                       cancelButtonTitle:(nullable NSString *)cancelButtonTitle
                                  destructiveButtonTitle:(nullable NSString *)destructiveButtonTitle
                                       otherButtonTitles:(nullable NSArray *)otherButtonTitles
+                                            popoverRect:(CGRect)rekt
                      popoverPresentationControllerBlock:(void(^ __nullable)(RMPopoverPresentationController * __nonnull popover))popoverPresentationControllerBlock
                                                tapBlock:(nullable RMUniversalAlertCompletionBlock)tapBlock;
+- (void) presentViewController:(UIViewController *) c;
+- (void) presentViewController:(UIViewController *) c expandHeightTo:(CGFloat) height;
 
 @property (readonly, nonatomic) BOOL visible;
 @property (readonly, nonatomic) NSInteger cancelButtonIndex;
 @property (readonly, nonatomic) NSInteger firstOtherButtonIndex;
 @property (readonly, nonatomic) NSInteger destructiveButtonIndex;
+
+
+@property (nonatomic) UIAlertController *alertController;
+@property (nonatomic) UIAlertView *alertView;
+@property (nonatomic) UIActionSheet *actionSheet;
 
 @end

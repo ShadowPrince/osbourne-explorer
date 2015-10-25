@@ -15,6 +15,11 @@
 @property PositioningStageViewController *activePSVC;
 //---
 @property IBOutlet NSLayoutConstraint *bottomLayoutConstraint;
+@property IBOutlet NSLayoutConstraint *controlBarHeightConstraint;
+
+@property CGFloat textFieldsHeight, controlBarHeight;
+@property NSArray<NSLayoutConstraint *> *textFieldHeightConstraints;
+@property NSArray<UIView *> *cursorButtons;
 @property IBOutlet UIView *stageView;
 @property IBOutlet UIButton *prevButton, *nextButton;
 @property IBOutlet UITextField *activePointXTextField, *activePointYTextField;
@@ -25,6 +30,14 @@
     [super viewDidLoad];
 
     self.stageIdx = 0;
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        self.controlBarHeight = 223.f;
+        self.controlBarHeightConstraint.constant = self.controlBarHeight;
+    } else {
+        self.controlBarHeight = self.controlBarHeightConstraint.constant;
+    }
 
     // binding control buttons
 
@@ -54,6 +67,14 @@
     self.activePointXTextField.delegate = self;
     self.activePointYTextField.delegate = self;
 
+    self.textFieldsHeight = [paneView viewWithTag:300].constraints.firstObject.constant;
+    self.textFieldHeightConstraints = @[[paneView viewWithTag:300].constraints.firstObject,
+                                        [paneView viewWithTag:301].constraints.firstObject, ];
+    self.cursorButtons = @[[paneView viewWithTag:100],
+                           [paneView viewWithTag:101],
+                           [paneView viewWithTag:102],
+                           [paneView viewWithTag:103], ];
+
     [self.activePointXTextField addTarget:self action:@selector(activePointTextfieldsChange:) forControlEvents:UIControlEventEditingDidEnd];
     [self.activePointYTextField addTarget:self action:@selector(activePointTextfieldsChange:) forControlEvents:UIControlEventEditingChanged];
 
@@ -68,6 +89,10 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [self presentStageAt:self.stageIdx];
+}
+
+- (BOOL) prefersStatusBarHidden {
+    return YES;
 }
 
 - (void) didFinishedPositioning {
@@ -100,15 +125,35 @@
     [self.stageView addSubview:controller.view];
     [controller didMoveToParentViewController:self];
     controller.delegate = self;
-    self.activePSVCTitleLabel.text = [NSString stringWithFormat:@"№%d/%d: %@", idx+1, self.stages.count, controller];
+    [self updateActivePositioningControllerTitleAt:idx+1 for:controller];
 
     [self didMovedFrom:self.activePSVC to:controller];
     self.activePSVC = controller;
 
-    if (idx == 0) {
-        self.prevButton.enabled = NO;
+    for (NSLayoutConstraint *constraint in self.textFieldHeightConstraints) {
+        if (self.activePSVC.prefersControlBarHidden) {
+            constraint.constant = 0.f;
+        } else {
+            constraint.constant = self.textFieldsHeight;
+        }
+    }
+
+    for (UIView *view in self.cursorButtons) {
+        view.hidden = self.activePSVC.prefersControlBarHidden;
+    }
+
+    if (self.activePSVC.prefersControlBarHidden) {
+        self.controlBarHeightConstraint.constant = self.controlBarHeight / 1.5;
     } else {
-        self.prevButton.enabled = YES;
+        self.controlBarHeightConstraint.constant = self.controlBarHeight;
+    }
+
+    [self.view setNeedsLayout];
+
+    if (idx == 0) {
+        [self.prevButton setTitle:NSLocalizedString(@"Abort", @"PVC button") forState:UIControlStateNormal];
+    } else {
+        [self.prevButton setTitle:NSLocalizedString(@"Back", @"PVC button") forState:UIControlStateNormal];
     }
 
     if (idx == self.stages.count - 1) {
@@ -119,6 +164,22 @@
 
     self.activePointXTextField.text = @"";
     self.activePointYTextField.text = @"";
+}
+
+- (void) removeStageAtIndex:(NSUInteger)idx {
+    if (self.stageIdx < idx)
+        self.stageIdx--;
+
+    [self.stages removeObjectAtIndex:idx];
+    [self updateActivePositioningControllerTitleAt:self.stageIdx for:self.activePSVC];
+}
+
+- (NSUInteger) currentStageIndex {
+    return self.stageIdx;
+}
+
+- (void) abortPositioning {
+    [self abortAction];
 }
 
 #pragma mark - stage delegate
@@ -134,6 +195,20 @@
     if (self.stageIdx > 0) {
         self.stageIdx--;
         [self presentStageAt:self.stageIdx];
+    } else {
+        [RMUniversalAlert showActionSheetInViewController:self
+                                                withTitle:NSLocalizedString(@"Notice", @"PVC finish alert")
+                                                  message:NSLocalizedString(@"Are you sure you want to abort positioning?", @"PVC cancel alert")
+                                        cancelButtonTitle:NSLocalizedString(@"Cancel", @"PVC finish alert")
+                                   destructiveButtonTitle:NSLocalizedString(@"Abort", @"PVC finish alert")
+                                        otherButtonTitles:nil
+                                              popoverRect:CGRectMake(10, self.view.frame.size.height - 10, 0, 0)
+                       popoverPresentationControllerBlock:nil
+                                                 tapBlock:^(RMUniversalAlert * _Nonnull alert, NSInteger buttonIndex) {
+                                                     if (buttonIndex == alert.destructiveButtonIndex) {
+                                                         [self abortAction];
+                                                     }
+                                                 }];
     }
 }
 
@@ -147,21 +222,7 @@
                                   otherButtonTitles:nil
                                            tapBlock:nil];
     } else {
-        if (self.stageIdx == 0) {
-            [RMUniversalAlert showActionSheetInViewController:self
-                                                    withTitle:NSLocalizedString(@"Notice", @"PVC finish alert")
-                                                      message:NSLocalizedString(@"Are you sure you want to abort positioning?", @"PVC cancel alert")
-                                            cancelButtonTitle:NSLocalizedString(@"Cancel", @"PVC finish alert")
-                                       destructiveButtonTitle:NSLocalizedString(@"Abort", @"PVC finish alert")
-                                            otherButtonTitles:nil
-                                                  popoverRect:CGRectMake(10, self.view.frame.size.height - 10, 0, 0)
-                           popoverPresentationControllerBlock:nil
-                                                     tapBlock:^(RMUniversalAlert * _Nonnull alert, NSInteger buttonIndex) {
-                                                         if (buttonIndex == alert.destructiveButtonIndex) {
-                                                             [self cancelAction];
-                                                         }
-                                                     }];
-        } else if (self.stageIdx < self.stages.count - 1) {
+        if (self.stageIdx < self.stages.count - 1) {
             self.stageIdx++;
             [self presentStageAt:self.stageIdx];
         } else {
@@ -199,8 +260,9 @@
 
 }
 
-- (void) cancelAction {
+- (void) abortAction {
     [self didCanceledPositioning];
+    [self performSegueWithIdentifier:@"abortUnwind" sender:self];
 }
 
 #pragma mark cursor movement
@@ -225,6 +287,10 @@
 #pragma mark - helper methods
 - (CLLocationCoordinate2D) pointFromTextfields {
     return CLLocationCoordinate2DMake(self.activePointYTextField.text.doubleValue, self.activePointXTextField.text.doubleValue);
+}
+
+- (void) updateActivePositioningControllerTitleAt:(NSUInteger) idx for:(PositioningStageViewController *) controller {
+    self.activePSVCTitleLabel.text = [NSString stringWithFormat:@"№%d/%d: %@", idx, self.stages.count, controller];
 }
 
 #pragma mark - keyboard

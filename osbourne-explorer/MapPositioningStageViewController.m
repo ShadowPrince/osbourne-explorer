@@ -7,7 +7,7 @@
 //
 
 #import "MapPositioningStageViewController.h"
-#define CURSOR_STEP 0.000002
+#define CURSOR_STEP 0.0002
 
 @interface MapPositioningStageViewController ()
 @property IBOutlet GMSMapView *mapView;

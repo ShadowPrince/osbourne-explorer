@@ -16,20 +16,57 @@
 
 @end@implementation OverlayViewController
 
+- (void) didReceiveMemoryWarning {
+    self.overlaysHidden = YES;
+    [self.store.allOverlays enumerateObjectsUsingBlock:^(MapOverlay * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.store settingsForOverlay:obj].hidden = YES;
+        [self.store didUpdatedOverlay:obj];
+    }];
+
+    [self.store requestSharedResourcesUnloading];
+    [RMUniversalAlert showAlertInViewController:self
+                                      withTitle:@"Memory issue"
+                                        message:@"Overlays was hided due to memory issue. Try following steps: \n - hide/show application\n - restart application"
+                              cancelButtonTitle:@"Ok"
+                         destructiveButtonTitle:nil
+                              otherButtonTitles:nil
+                                       tapBlock:nil];
+}
+
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    self.gMapOverlays = [NSMutableDictionary new];
+}
+
 - (void) setStore:(MapOverlayStore *) store {
     _store = store;
 
+    [self.gMapView clear];
     [self.gMapOverlays enumerateKeysAndObjectsUsingBlock:^(MapOverlay * _Nonnull key, GMSOverlay * _Nonnull obj, BOOL * _Nonnull stop) {
         obj.map = nil;
     }];
-    self.gMapOverlays = [NSMutableDictionary new];
+    [self.gMapOverlays removeAllObjects];
 
     [self.store registerDelegate:self];
     [self.store requestSharedResourcesLoading];
+}
+
+- (void) requestSharedResourcesLoading {
     [self.store.allOverlays enumerateObjectsUsingBlock:^(MapOverlay * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self insertGOverlay:obj];
         [self updateGOverlayForOverlay:obj withSettings:[self.store settingsForOverlay:obj]];
     }];
+}
+
+- (void) requestSharedResourcesUnloading {
+    [self.gMapView clear];
+    [self.gMapOverlays enumerateKeysAndObjectsUsingBlock:^(MapOverlay * _Nonnull key, GMSOverlay * _Nonnull obj, BOOL * _Nonnull stop) {
+        if ([key isKindOfClass:[GroundOverlay class]]) {
+            GMSGroundOverlay *gOverlay = (GMSGroundOverlay *) obj;
+            gOverlay.icon = nil;
+        }
+    }];
+    [self.gMapOverlays removeAllObjects];
 }
 
 - (void) addMarketAt:(CLLocationCoordinate2D) coord {
@@ -50,6 +87,7 @@
 }
 
 - (void) updateGOverlayForOverlay:(MapOverlay *) uncasted_overlay withSettings:(MapOverlaySettings *) settings {
+    //@TODO: called too often
     if ([uncasted_overlay isKindOfClass:[GroundOverlay class]]) {
         GroundOverlay *overlay = (GroundOverlay *) uncasted_overlay;
         GMSGroundOverlay *gOverlay = (GMSGroundOverlay *) self.gMapOverlays[overlay];
@@ -62,14 +100,15 @@
         // settings
         if (settings.hidden) {
             gOverlay.map = nil;
+            gOverlay.icon = nil;
         } else {
             gOverlay.map = self.gMapView;
-        }
 
-        if (settings.semiTransparent) {
-            gOverlay.icon = overlay.semitransparentImage;
-        } else {
-            gOverlay.icon = overlay.image;
+            if (settings.semiTransparent) {
+                gOverlay.icon = overlay.semitransparentImage;
+            } else {
+                gOverlay.icon = overlay.image;
+            }
         }
     } else if ([uncasted_overlay isKindOfClass:[MarkerOverlay class]]) {
         MarkerOverlay *overlay = (MarkerOverlay *) uncasted_overlay;
@@ -106,6 +145,9 @@
 }
 
 - (void) didUpdatedOverlay:(MapOverlay *)overlay {
+    if (!self.gMapOverlays[overlay])
+        [self insertGOverlay:overlay];
+    
     [self updateGOverlayForOverlay:overlay
                       withSettings:[self.store settingsForOverlay:overlay]];
 }

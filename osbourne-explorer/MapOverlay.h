@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "DocumentsDirectory.h"
+
 typedef void (^MapOverlayLoadCallback)(void);
 
 @interface MapOverlay : NSObject<NSCoding, NSCopying>
@@ -17,6 +19,7 @@ typedef void (^MapOverlayLoadCallback)(void);
 @property BOOL sharedResourcesLoaded;
 
 - (void) loadSharedResourcesCallback:(MapOverlayLoadCallback) cb;
+- (void) unloadSharedResources;
 - (void) cleanup;
 @end
 

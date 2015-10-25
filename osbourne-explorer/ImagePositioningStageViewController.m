@@ -14,10 +14,19 @@
 
 @end@implementation ImagePositioningStageViewController
 
-- (void) viewDidLoad {
-    [super viewDidLoad];
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 
-    self.image = self.image;
+    self.imageView.image = self.image;
+    self.scrollView.zoomScale = self.scrollView.frame.size.width / self.image.size.width;
+}
+
+- (void) setImage:(UIImage *)image {
+    _image = image;
+
+    self.imageView.image = self.image;
+    self.scrollView.zoomScale = self.scrollView.frame.size.width / self.image.size.width;
+    self.scrollView.contentOffset = CGPointZero;
 }
 
 - (void) didSelectedPoint:(CGPoint)p {
@@ -40,14 +49,6 @@
 
 - (NSString *) description {
     return @"Select point on map";
-}
-
-- (void) setImage:(UIImage *)img {
-    _image = img;
-
-    self.imageView.image = img;
-    self.scrollView.zoomScale = 0.1f;
-    // @TODO: zoom scale
 }
 
 @end

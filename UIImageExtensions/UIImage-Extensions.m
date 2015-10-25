@@ -195,8 +195,8 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
 {   
    // calculate the size of the rotated view's containing box for our drawing space
    UIView *rotatedViewBox = [[UIView alloc] initWithFrame:CGRectMake(0,0,self.size.width, self.size.height)];
-//   CGAffineTransform t = CGAffineTransformMakeRotation(DegreesToRadians(degrees));
-//   rotatedViewBox.transform = t;
+   CGAffineTransform t = CGAffineTransformMakeRotation(DegreesToRadians(degrees));
+   rotatedViewBox.transform = t;
    CGSize rotatedSize = rotatedViewBox.frame.size;
    
    // Create the bitmap context
@@ -218,5 +218,26 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
    return newImage;
    
 }
+
+
+- (UIImage *) imageCroppedBy:(CGRect)rect {
+    rect = CGRectMake(rect.origin.x*self.scale,
+                      rect.origin.y*self.scale,
+                      rect.size.width*self.scale,
+                      rect.size.height*self.scale);
+
+    CGImageRef imageRef = CGImageCreateWithImageInRect([self CGImage], rect);
+    UIImage *result = [UIImage imageWithCGImage:imageRef
+                                          scale:self.scale
+                                    orientation:self.imageOrientation];
+
+    // result still retaining imageRef, so we need this trick to completely get rid of original image
+    UIImage *flushedResult = [UIImage imageWithData:UIImagePNGRepresentation(result)];
+
+    CGImageRelease(imageRef);
+    return flushedResult;
+}
+
+
 
 @end;

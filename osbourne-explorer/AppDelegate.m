@@ -10,16 +10,33 @@
 #import "OverlayViewController.h"
 #import "MMDrawerController.h"
 
+void uncaughtExceptionHandler(NSException *exception) {
+    NSLog(@"CRASH: %@", exception);
+    NSLog(@"Stack Trace: %@", [exception callStackSymbols]);
+    // Internal error reporting
+}
+
 @interface AppDelegate ()
 
 @end@implementation AppDelegate
 
 - (BOOL) application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
     [GMSServices provideAPIKey:@"AIzaSyDtHMS51p_ihmIOKWLDT8_GOyRtyXpL0cg"];
+    //@TODO: comment out
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    return YES;
+}
+
+- (BOOL) application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder {
+    return YES;
+}
+
+- (BOOL) application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder {
     return YES;
 }
 
@@ -29,12 +46,11 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[MapOverlayStore sharedInstance] requestSharedResourcesUnloading];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [[MapOverlayStore sharedInstance] requestSharedResourcesLoading];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

@@ -38,6 +38,10 @@
     [self.tableView reloadData];
 }
 
+- (void) didRemovedOverlay:(MapOverlay *)overlay {
+    [self.tableView reloadData];
+}
+
 #pragma mark - table view
 #pragma mark datasource
 
@@ -52,7 +56,7 @@
         case SECTION_MARKERS:
             return [self filterGroundOverlaysOfClass:[MarkerOverlay class]].count;
         case SECTION_CONTROLS:
-            return 2;
+            return 3;
         default:
             return 0;
     }
@@ -72,7 +76,7 @@
         [cell populate:overlay settings:[self.store settingsForOverlay:overlay]];
         return cell;
     } else if (indexPath.section == SECTION_CONTROLS) {
-        return [tableView dequeueReusableCellWithIdentifier:@[@"newOverlayCell", @"newMarkerCell"][indexPath.row]];
+        return [tableView dequeueReusableCellWithIdentifier:@[@"newOverlayCell", @"newMarkerCell", @"settingsCell"][indexPath.row]];
     } else {
         return nil;
     }
@@ -102,6 +106,9 @@
             case 1:
                 segueId = @"newMarker";
                 break;
+            case 2:
+                segueId = @"settings";
+                break;
         }
     }
 
@@ -110,11 +117,23 @@
 
 - (NSArray<UITableViewRowAction *> *) tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     MapOverlay *mapOverlay = [self mapOverlayOn:indexPath];
+    if (!mapOverlay)
+        return @[];
+
     MapOverlaySettings *overlaySettings = [self.store settingsForOverlay:mapOverlay];
 
     NSMutableArray<UITableViewRowAction *> *actions = [NSMutableArray new];
 
     if (indexPath.section == SECTION_MARKERS || indexPath.section == SECTION_GROUND_OVERLAYS) {
+        UITableViewRowAction *removeAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
+                                                                                title:NSLocalizedString(@"Remove", @"navmenu table action")
+                                                                              handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+                                                                                  MapOverlay *ov = [self mapOverlayOn:indexPath];
+                                                                                  [self.store removeMapOverlay:ov];
+                                                                              }];
+        removeAction.backgroundColor = [UIColor redColor];
+        [actions addObject:removeAction];
+
         NSArray *hiddenToggleTitles = @[NSLocalizedString(@"Hide", @"navmenu table action"), NSLocalizedString(@"Show", @"navmenu table action")];
         UITableViewRowAction *toggleHiddenAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
                                                                                       title:hiddenToggleTitles[overlaySettings.hidden]

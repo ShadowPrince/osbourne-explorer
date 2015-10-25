@@ -13,6 +13,10 @@
 @property BOOL pointSet;
 @end@implementation PositioningStageViewController
 
+- (void) viewDidAppear:(BOOL)animated {
+    [self.delegate didMovePositionTo:self.absolutePosition];
+}
+
 - (void) movePositionAbsolute:(CLLocationCoordinate2D)p {
     self.point = p;
     self.pointSet = YES;
@@ -36,6 +40,10 @@
 
 - (BOOL) isValid {
     return self.pointSet;
+}
+
+- (BOOL) prefersControlBarHidden {
+    return NO;
 }
 
 @end

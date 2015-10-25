@@ -11,10 +11,14 @@
 		F3032BFB1BCE484800133643 /* ImagePositioningView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3032BFA1BCE484800133643 /* ImagePositioningView.m */; settings = {ASSET_TAGS = (); }; };
 		F30368F51BC7FE63002AECA8 /* NavigationMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30368F41BC7FE62002AECA8 /* NavigationMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F30368F81BC8009E002AECA8 /* MapOverlayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F30368F71BC8009E002AECA8 /* MapOverlayTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		F31D0F261BD6AB6700CA3A6B /* MarkerPositioningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31D0F251BD6AB6700CA3A6B /* MarkerPositioningViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F31D0F291BD6AD4C00CA3A6B /* MarkerSummaryPositioningStageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31D0F281BD6AD4C00CA3A6B /* MarkerSummaryPositioningStageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F31D0F2C1BD6BA3C00CA3A6B /* GroundOverlayFileSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31D0F2B1BD6BA3C00CA3A6B /* GroundOverlayFileSelectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F31D0F301BD6BAC000CA3A6B /* DocumentsDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = F31D0F2F1BD6BAC000CA3A6B /* DocumentsDirectory.m */; settings = {ASSET_TAGS = (); }; };
+		F31D0F331BD6BD6D00CA3A6B /* DGFastImageSize.m in Sources */ = {isa = PBXBuildFile; fileRef = F31D0F321BD6BD6D00CA3A6B /* DGFastImageSize.m */; settings = {ASSET_TAGS = (); }; };
 		F32ABF391BC7A3430070C1F2 /* MapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = F32ABF381BC7A3430070C1F2 /* MapOverlay.m */; settings = {ASSET_TAGS = (); }; };
 		F32ABF3C1BC7A3CB0070C1F2 /* MapOverlayStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F32ABF3B1BC7A3CB0070C1F2 /* MapOverlayStore.m */; settings = {ASSET_TAGS = (); }; };
 		F331C2341BD4D53800CF366B /* UIImage-Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F331C2331BD4D53800CF366B /* UIImage-Extensions.m */; settings = {ASSET_TAGS = (); }; };
-		F331C2371BD4D9B100CF366B /* DebugView.m in Sources */ = {isa = PBXBuildFile; fileRef = F331C2361BD4D9B100CF366B /* DebugView.m */; settings = {ASSET_TAGS = (); }; };
 		F349FE131BC69F7600B1F54F /* NavigationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F349FE121BC69F7600B1F54F /* NavigationMapViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F349FE181BC6A75700B1F54F /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F349FE171BC6A75700B1F54F /* NavigationViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F349FE1B1BC6B36500B1F54F /* ForcedNavbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F349FE1A1BC6B36500B1F54F /* ForcedNavbarViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -28,9 +32,12 @@
 		F3A424701BCD065D00566BE8 /* PositioningStageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A4246F1BCD065D00566BE8 /* PositioningStageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F3A424741BCD085200566BE8 /* MapPositioningStageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A424731BCD085200566BE8 /* MapPositioningStageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F3A424771BCD0B8300566BE8 /* PositioningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A424761BCD0B8300566BE8 /* PositioningViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F3A4247A1BCD0D1D00566BE8 /* MarkerPositioningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A424791BCD0D1D00566BE8 /* MarkerPositioningViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F3A4247A1BCD0D1D00566BE8 /* GroundOverlayPositioningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A424791BCD0D1D00566BE8 /* GroundOverlayPositioningViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F3A4247E1BCE45DE00566BE8 /* ImagePositioningStageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A4247D1BCE45DE00566BE8 /* ImagePositioningStageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F3B9232A1BD8D76F00A81594 /* ImageResizingStageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B923291BD8D76F00A81594 /* ImageResizingStageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F3C861C41BD2A6EB006274E4 /* BasicVector.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C861C21BD2A6EB006274E4 /* BasicVector.m */; settings = {ASSET_TAGS = (); }; };
+		F3EA21A01BDA2D78008C634A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3EA219F1BDA2D78008C634A /* QuartzCore.framework */; };
+		F3EA21A31BDA6DC1008C634A /* GroundOverlaySummaryPositioningStageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EA21A21BDA6DC1008C634A /* GroundOverlaySummaryPositioningStageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F3EA415C1BC69F0D00897633 /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EA415A1BC69F0D00897633 /* OverlayViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F3EA415D1BC69F0D00897633 /* OverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3EA415B1BC69F0D00897633 /* OverlayViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -45,14 +52,22 @@
 		F30368F41BC7FE62002AECA8 /* NavigationMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationMenuViewController.m; sourceTree = "<group>"; };
 		F30368F61BC8009E002AECA8 /* MapOverlayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlayTableViewCell.h; sourceTree = "<group>"; };
 		F30368F71BC8009E002AECA8 /* MapOverlayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlayTableViewCell.m; sourceTree = "<group>"; };
+		F31D0F241BD6AB6700CA3A6B /* MarkerPositioningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerPositioningViewController.h; sourceTree = "<group>"; };
+		F31D0F251BD6AB6700CA3A6B /* MarkerPositioningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerPositioningViewController.m; sourceTree = "<group>"; };
+		F31D0F271BD6AD4C00CA3A6B /* MarkerSummaryPositioningStageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerSummaryPositioningStageViewController.h; sourceTree = "<group>"; };
+		F31D0F281BD6AD4C00CA3A6B /* MarkerSummaryPositioningStageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerSummaryPositioningStageViewController.m; sourceTree = "<group>"; };
+		F31D0F2A1BD6BA3C00CA3A6B /* GroundOverlayFileSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroundOverlayFileSelectionViewController.h; sourceTree = "<group>"; };
+		F31D0F2B1BD6BA3C00CA3A6B /* GroundOverlayFileSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundOverlayFileSelectionViewController.m; sourceTree = "<group>"; };
+		F31D0F2E1BD6BAC000CA3A6B /* DocumentsDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentsDirectory.h; sourceTree = "<group>"; };
+		F31D0F2F1BD6BAC000CA3A6B /* DocumentsDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentsDirectory.m; sourceTree = "<group>"; };
+		F31D0F311BD6BD6D00CA3A6B /* DGFastImageSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DGFastImageSize.h; path = "DGFastImageSize-master/DGFastImageSize.h"; sourceTree = "<group>"; };
+		F31D0F321BD6BD6D00CA3A6B /* DGFastImageSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DGFastImageSize.m; path = "DGFastImageSize-master/DGFastImageSize.m"; sourceTree = "<group>"; };
 		F32ABF371BC7A3430070C1F2 /* MapOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlay.h; sourceTree = "<group>"; };
 		F32ABF381BC7A3430070C1F2 /* MapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlay.m; sourceTree = "<group>"; };
 		F32ABF3A1BC7A3CB0070C1F2 /* MapOverlayStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlayStore.h; sourceTree = "<group>"; };
 		F32ABF3B1BC7A3CB0070C1F2 /* MapOverlayStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlayStore.m; sourceTree = "<group>"; };
 		F331C2321BD4D53800CF366B /* UIImage-Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage-Extensions.h"; path = "UIImageExtensions/UIImage-Extensions.h"; sourceTree = "<group>"; };
 		F331C2331BD4D53800CF366B /* UIImage-Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage-Extensions.m"; path = "UIImageExtensions/UIImage-Extensions.m"; sourceTree = "<group>"; };
-		F331C2351BD4D9B100CF366B /* DebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugView.h; sourceTree = "<group>"; };
-		F331C2361BD4D9B100CF366B /* DebugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugView.m; sourceTree = "<group>"; };
 		F349FE111BC69F7600B1F54F /* NavigationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationMapViewController.h; sourceTree = "<group>"; };
 		F349FE121BC69F7600B1F54F /* NavigationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationMapViewController.m; sourceTree = "<group>"; };
 		F349FE161BC6A75700B1F54F /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
@@ -77,12 +92,17 @@
 		F3A424731BCD085200566BE8 /* MapPositioningStageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPositioningStageViewController.m; sourceTree = "<group>"; };
 		F3A424751BCD0B8300566BE8 /* PositioningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositioningViewController.h; sourceTree = "<group>"; };
 		F3A424761BCD0B8300566BE8 /* PositioningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositioningViewController.m; sourceTree = "<group>"; };
-		F3A424781BCD0D1D00566BE8 /* MarkerPositioningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerPositioningViewController.h; sourceTree = "<group>"; };
-		F3A424791BCD0D1D00566BE8 /* MarkerPositioningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerPositioningViewController.m; sourceTree = "<group>"; };
+		F3A424781BCD0D1D00566BE8 /* GroundOverlayPositioningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroundOverlayPositioningViewController.h; sourceTree = "<group>"; };
+		F3A424791BCD0D1D00566BE8 /* GroundOverlayPositioningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundOverlayPositioningViewController.m; sourceTree = "<group>"; };
 		F3A4247C1BCE45DE00566BE8 /* ImagePositioningStageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePositioningStageViewController.h; sourceTree = "<group>"; };
 		F3A4247D1BCE45DE00566BE8 /* ImagePositioningStageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePositioningStageViewController.m; sourceTree = "<group>"; };
+		F3B923281BD8D76F00A81594 /* ImageResizingStageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageResizingStageViewController.h; sourceTree = "<group>"; };
+		F3B923291BD8D76F00A81594 /* ImageResizingStageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageResizingStageViewController.m; sourceTree = "<group>"; };
 		F3C861C21BD2A6EB006274E4 /* BasicVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicVector.m; sourceTree = "<group>"; };
 		F3C861C31BD2A6EB006274E4 /* BasicVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicVector.h; sourceTree = "<group>"; };
+		F3EA219F1BDA2D78008C634A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F3EA21A11BDA6DC1008C634A /* GroundOverlaySummaryPositioningStageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroundOverlaySummaryPositioningStageViewController.h; sourceTree = "<group>"; };
+		F3EA21A21BDA6DC1008C634A /* GroundOverlaySummaryPositioningStageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundOverlaySummaryPositioningStageViewController.m; sourceTree = "<group>"; };
 		F3EA41591BC69F0D00897633 /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayViewController.h; sourceTree = "<group>"; };
 		F3EA415A1BC69F0D00897633 /* OverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayViewController.m; sourceTree = "<group>"; };
 		F3EA415B1BC69F0D00897633 /* OverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayViewController.xib; sourceTree = "<group>"; };
@@ -93,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3EA21A01BDA2D78008C634A /* QuartzCore.framework in Frameworks */,
 				46F665105151A05FD8C705C1 /* libPods-osbourne-explorer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +133,7 @@
 		D7A265B0663BE3094800B2C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3EA219F1BDA2D78008C634A /* QuartzCore.framework */,
 				81967E7DBFC9DFA8B2B4CDEE /* libPods-osbourne-explorer.a */,
 			);
 			name = Frameworks;
@@ -132,6 +154,28 @@
 			name = NavigationMenu;
 			sourceTree = "<group>";
 		};
+		F31D0F2D1BD6BA4600CA3A6B /* FileSelection */ = {
+			isa = PBXGroup;
+			children = (
+				F31D0F2A1BD6BA3C00CA3A6B /* GroundOverlayFileSelectionViewController.h */,
+				F31D0F2B1BD6BA3C00CA3A6B /* GroundOverlayFileSelectionViewController.m */,
+				F31D0F2E1BD6BAC000CA3A6B /* DocumentsDirectory.h */,
+				F31D0F2F1BD6BAC000CA3A6B /* DocumentsDirectory.m */,
+			);
+			name = FileSelection;
+			sourceTree = "<group>";
+		};
+		F31D0F341BD6BD7100CA3A6B /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				F31D0F311BD6BD6D00CA3A6B /* DGFastImageSize.h */,
+				F31D0F321BD6BD6D00CA3A6B /* DGFastImageSize.m */,
+				F331C2321BD4D53800CF366B /* UIImage-Extensions.h */,
+				F331C2331BD4D53800CF366B /* UIImage-Extensions.m */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
 		F32ABF3D1BC7B2CD0070C1F2 /* MapOverlay */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,8 +190,7 @@
 		F380B11C1BC69DBC00C5090A = {
 			isa = PBXGroup;
 			children = (
-				F331C2321BD4D53800CF366B /* UIImage-Extensions.h */,
-				F331C2331BD4D53800CF366B /* UIImage-Extensions.m */,
+				F31D0F341BD6BD7100CA3A6B /* libs */,
 				F380B1271BC69DBC00C5090A /* osbourne-explorer */,
 				F380B1261BC69DBC00C5090A /* Products */,
 				82608236DBC486A4DAD8F79B /* Pods */,
@@ -172,6 +215,7 @@
 				F3A4247B1BCD358200566BE8 /* Navigation */,
 				F30368F91BC800A2002AECA8 /* NavigationMenu */,
 				F3A424711BCD066100566BE8 /* Positioning */,
+				F31D0F2D1BD6BA4600CA3A6B /* FileSelection */,
 				F3EA415B1BC69F0D00897633 /* OverlayViewController.xib */,
 				F380B1311BC69DBC00C5090A /* Main.storyboard */,
 				F380B1281BC69DBC00C5090A /* Supporting Files */,
@@ -203,14 +247,20 @@
 				F3A424731BCD085200566BE8 /* MapPositioningStageViewController.m */,
 				F3A4247C1BCE45DE00566BE8 /* ImagePositioningStageViewController.h */,
 				F3A4247D1BCE45DE00566BE8 /* ImagePositioningStageViewController.m */,
+				F3B923281BD8D76F00A81594 /* ImageResizingStageViewController.h */,
+				F3B923291BD8D76F00A81594 /* ImageResizingStageViewController.m */,
+				F31D0F271BD6AD4C00CA3A6B /* MarkerSummaryPositioningStageViewController.h */,
+				F31D0F281BD6AD4C00CA3A6B /* MarkerSummaryPositioningStageViewController.m */,
+				F3EA21A11BDA6DC1008C634A /* GroundOverlaySummaryPositioningStageViewController.h */,
+				F3EA21A21BDA6DC1008C634A /* GroundOverlaySummaryPositioningStageViewController.m */,
 				F3032BF91BCE484800133643 /* ImagePositioningView.h */,
 				F3032BFA1BCE484800133643 /* ImagePositioningView.m */,
 				F3A424751BCD0B8300566BE8 /* PositioningViewController.h */,
 				F3A424761BCD0B8300566BE8 /* PositioningViewController.m */,
-				F3A424781BCD0D1D00566BE8 /* MarkerPositioningViewController.h */,
-				F3A424791BCD0D1D00566BE8 /* MarkerPositioningViewController.m */,
-				F331C2351BD4D9B100CF366B /* DebugView.h */,
-				F331C2361BD4D9B100CF366B /* DebugView.m */,
+				F3A424781BCD0D1D00566BE8 /* GroundOverlayPositioningViewController.h */,
+				F3A424791BCD0D1D00566BE8 /* GroundOverlayPositioningViewController.m */,
+				F31D0F241BD6AB6700CA3A6B /* MarkerPositioningViewController.h */,
+				F31D0F251BD6AB6700CA3A6B /* MarkerPositioningViewController.m */,
 			);
 			name = Positioning;
 			sourceTree = "<group>";
@@ -336,23 +386,29 @@
 			files = (
 				F3032BFB1BCE484800133643 /* ImagePositioningView.m in Sources */,
 				F331C2341BD4D53800CF366B /* UIImage-Extensions.m in Sources */,
-				F3A4247A1BCD0D1D00566BE8 /* MarkerPositioningViewController.m in Sources */,
+				F3A4247A1BCD0D1D00566BE8 /* GroundOverlayPositioningViewController.m in Sources */,
 				F3A424771BCD0B8300566BE8 /* PositioningViewController.m in Sources */,
 				F3A424701BCD065D00566BE8 /* PositioningStageViewController.m in Sources */,
+				F31D0F331BD6BD6D00CA3A6B /* DGFastImageSize.m in Sources */,
+				F31D0F261BD6AB6700CA3A6B /* MarkerPositioningViewController.m in Sources */,
+				F31D0F301BD6BAC000CA3A6B /* DocumentsDirectory.m in Sources */,
 				F349FE131BC69F7600B1F54F /* NavigationMapViewController.m in Sources */,
 				F32ABF3C1BC7A3CB0070C1F2 /* MapOverlayStore.m in Sources */,
-				F331C2371BD4D9B100CF366B /* DebugView.m in Sources */,
 				F380B12D1BC69DBC00C5090A /* AppDelegate.m in Sources */,
 				F349FE181BC6A75700B1F54F /* NavigationViewController.m in Sources */,
+				F31D0F2C1BD6BA3C00CA3A6B /* GroundOverlayFileSelectionViewController.m in Sources */,
 				F3A4247E1BCE45DE00566BE8 /* ImagePositioningStageViewController.m in Sources */,
 				F380B12A1BC69DBC00C5090A /* main.m in Sources */,
 				F30368F81BC8009E002AECA8 /* MapOverlayTableViewCell.m in Sources */,
+				F3B9232A1BD8D76F00A81594 /* ImageResizingStageViewController.m in Sources */,
 				F3A4246D1BCBB62800566BE8 /* MarkerOverlayInfoViewController.m in Sources */,
+				F3EA21A31BDA6DC1008C634A /* GroundOverlaySummaryPositioningStageViewController.m in Sources */,
 				F3C861C41BD2A6EB006274E4 /* BasicVector.m in Sources */,
 				F3EA415C1BC69F0D00897633 /* OverlayViewController.m in Sources */,
 				F30368F51BC7FE63002AECA8 /* NavigationMenuViewController.m in Sources */,
 				F349FE1B1BC6B36500B1F54F /* ForcedNavbarViewController.m in Sources */,
 				F32ABF391BC7A3430070C1F2 /* MapOverlay.m in Sources */,
+				F31D0F291BD6AD4C00CA3A6B /* MarkerSummaryPositioningStageViewController.m in Sources */,
 				F3A424741BCD085200566BE8 /* MapPositioningStageViewController.m in Sources */,
 				F3A4246A1BC92ECF00566BE8 /* GroundOverlayInfoViewController.m in Sources */,
 			);
