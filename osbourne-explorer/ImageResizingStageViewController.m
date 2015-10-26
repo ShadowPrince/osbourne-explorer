@@ -25,8 +25,19 @@
     return self.imageView;
 }
 
-- (BOOL) isValid {
-    return YES;
+- (NSArray<NSString *> *) validationErrors {
+    CGRect targetRect = self.targetRect;
+
+    int px = targetRect.size.width * targetRect.size.height;
+    if ([SettingsController restrictionsEnabled] && px > 1500*1500) {
+        return @[NSLocalizedString(@"Resized image is too big, select smaller area", @"ImageResizing SVC error")];
+    } else {
+        return nil;
+    }
+}
+
+- (void) setContentInset:(UIEdgeInsets)inset {
+    self.scrollView.contentInset = inset;
 }
 
 - (CGRect) targetRect {

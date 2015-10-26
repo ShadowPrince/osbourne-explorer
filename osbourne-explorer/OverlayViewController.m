@@ -9,6 +9,7 @@
 #import "OverlayViewController.h"
 
 @interface OverlayViewController ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomGuide;
 
 @property NSMutableDictionary<MapOverlay *, GMSOverlay *> *gMapOverlays;
 
@@ -23,6 +24,7 @@
         [self.store didUpdatedOverlay:obj];
     }];
 
+    self.gMapView.myLocationEnabled = YES;
     [self.store requestSharedResourcesUnloading];
     [RMUniversalAlert showAlertInViewController:self
                                       withTitle:@"Memory issue"
@@ -36,6 +38,13 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     self.gMapOverlays = [NSMutableDictionary new];
+    self.gMapView.myLocationEnabled = YES;
+}
+
+- (void) setContentInset:(UIEdgeInsets)inset {
+    self.bottomGuide.constant = inset.bottom;
+    self.gMapView.padding = inset;
+    [self.view setNeedsLayout];
 }
 
 - (void) setStore:(MapOverlayStore *) store {
@@ -87,7 +96,7 @@
 }
 
 - (void) updateGOverlayForOverlay:(MapOverlay *) uncasted_overlay withSettings:(MapOverlaySettings *) settings {
-    //@TODO: called too often
+    //@TODO: called too often 
     if ([uncasted_overlay isKindOfClass:[GroundOverlay class]]) {
         GroundOverlay *overlay = (GroundOverlay *) uncasted_overlay;
         GMSGroundOverlay *gOverlay = (GMSGroundOverlay *) self.gMapOverlays[overlay];
@@ -180,7 +189,8 @@
 }
 
 - (IBAction)gpsAction:(id)sender {
-    self.gMapView.camera = [GMSCameraPosition cameraWithLatitude:51.280 longitude:32.555 zoom:11.442];
+    //self.gMapView.camera = [GMSCameraPosition cameraWithLatitude:51.280 longitude:32.555 zoom:11.442];
+    NSLog(@"%@", self.gMapView.myLocation);
 }
 
 - (void) dealloc {

@@ -47,6 +47,10 @@
 - (void) unloadSharedResources {}
 - (void) cleanup {}
 
+- (CLLocationCoordinate2D) locationCoordinate {
+    return CLLocationCoordinate2DMake(self.lat1, self.lon1);
+}
+
 @end
 
 @implementation MarkerOverlay
@@ -111,7 +115,7 @@
             [MapOverlayStore.sharedResourcesLoadingQueue addOperationWithBlock:^{
                 [NSThread sleepForTimeInterval:1.0];
                 image = [UIImage imageWithContentsOfFile:[DocumentsDirectory pathFor:self.imageSrc]];
-                semitransparentImage = [self generateSemitransparentImage:self.image alpha:0.3f];
+                semitransparentImage = [self generateSemitransparentImage:self.image alpha:0.5f];
 
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                     cb();

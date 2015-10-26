@@ -19,21 +19,21 @@
     [super viewDidLoad];
 
     self.queue = [NSOperationQueue new];
-
-    /*
-    [self.stages[0] movePositionAbsolute:CLLocationCoordinate2DMake(2000, 1000.0)];
-    [self.stages[1] movePositionAbsolute:CLLocationCoordinate2DMake(51.265087381806666, 32.549720518290997)];
-    [self.stages[2] movePositionAbsolute:CLLocationCoordinate2DMake(2405, 2424)];
-    [self.stages[3] movePositionAbsolute:CLLocationCoordinate2DMake(51.261464194422324, 32.564449198544025)];
-    [self didFinishedPositioning];
-     */
 }
 
 - (void) didReceiveMemoryWarning {
     if (self.currentStageIndex > 0) {
         [self removeStageAtIndex:0];
     } else {
-        //@TODO: image is too big even for resizing
+        [RMUniversalAlert showAlertInViewController:self
+                                          withTitle:NSLocalizedString(@"Error", @"PVC error")
+                                            message:NSLocalizedString(@"Image is too big for positioning. Try following:\n - restart app\n - resize image to make it smaller", @"PVC error")
+                                  cancelButtonTitle:NSLocalizedString(@"Ok", @"PVC error button")
+                             destructiveButtonTitle:nil
+                                  otherButtonTitles:nil
+                                           tapBlock:^(RMUniversalAlert * _Nonnull alert, NSInteger buttonIndex) {
+                                               [self abortPositioning];
+                                           }];
     }
 }
 
@@ -150,8 +150,8 @@
 
 }
 
-- (void) willMoveFrom:(PositioningStageViewController *)prev to:(PositioningStageViewController *)current {
-    [super willMoveFrom:prev to:current];
+- (void) didMovedFrom:(PositioningStageViewController *)prev to:(PositioningStageViewController *)current {
+    [super didMovedFrom:prev to:current];
 
     if ([prev isKindOfClass:[MapPositioningStageViewController class]]) {
         self.mapStageSharedCamera = [(MapPositioningStageViewController *) prev camera];
@@ -160,6 +160,11 @@
     if ([current isKindOfClass:[MapPositioningStageViewController class]]) {
         [(MapPositioningStageViewController *) current setCamera:self.mapStageSharedCamera];
     }
+}
+
+- (void) willMoveFrom:(PositioningStageViewController *)prev to:(PositioningStageViewController *)current {
+    [super willMoveFrom:prev to:current];
+
 
     if ([prev isKindOfClass:[ImageResizingStageViewController class]]) {
         ImageResizingStageViewController *stage = (ImageResizingStageViewController *) prev;

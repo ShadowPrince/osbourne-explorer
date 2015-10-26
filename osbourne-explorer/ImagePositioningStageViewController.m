@@ -29,6 +29,10 @@
     self.scrollView.contentOffset = CGPointZero;
 }
 
+- (void) setContentInset:(UIEdgeInsets)inset {
+    self.scrollView.contentInset = inset;
+}
+
 - (void) didSelectedPoint:(CGPoint)p {
     [super movePositionAbsolute:CLLocationCoordinate2DMake(p.y, p.x)];
     [self.delegate didMovePositionTo:self.absolutePosition];

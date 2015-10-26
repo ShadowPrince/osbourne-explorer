@@ -11,6 +11,8 @@
 
 #import "DocumentsDirectory.h"
 
+@import GoogleMaps;
+
 typedef void (^MapOverlayLoadCallback)(void);
 
 @interface MapOverlay : NSObject<NSCoding, NSCopying>
@@ -18,6 +20,7 @@ typedef void (^MapOverlayLoadCallback)(void);
 @property NSString *title;
 @property BOOL sharedResourcesLoaded;
 
+- (CLLocationCoordinate2D) locationCoordinate;
 - (void) loadSharedResourcesCallback:(MapOverlayLoadCallback) cb;
 - (void) unloadSharedResources;
 - (void) cleanup;

@@ -42,6 +42,7 @@
     // binding control buttons
 
     UIView *paneView = [(UIViewController *) self.childViewControllers.lastObject view];
+
     UIButton *b = nil;
     b = [paneView viewWithTag:100];
     [b addTarget:self action:@selector(upButtonAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -121,8 +122,9 @@
     [self willMoveFrom:self.activePSVC to:controller];
 
     [self addChildViewController:controller];
-    controller.view.frame = self.stageView.frame;
+    controller.view.frame = CGRectMake(0, 0, self.stageView.frame.size.width, self.stageView.frame.size.height);
     [self.stageView addSubview:controller.view];
+    [controller setContentInset:UIEdgeInsetsMake(0, 0, self.controlBarHeight, 0)];
     [controller didMoveToParentViewController:self];
     controller.delegate = self;
     [self updateActivePositioningControllerTitleAt:idx+1 for:controller];
@@ -213,10 +215,11 @@
 }
 
 - (IBAction)nextButtonAction:(id)sender {
-    if (![self.activePSVC isValid]) {
+    NSArray<NSString *> *errors = self.activePSVC.validationErrors;
+    if (errors) {
         [RMUniversalAlert showAlertInViewController:self
                                           withTitle:NSLocalizedString(@"Error", @"alert")
-                                            message:NSLocalizedString(@"Select point", @"alert")
+                                            message:[errors componentsJoinedByString:@"\n"]
                                   cancelButtonTitle:NSLocalizedString(@"Ok", @"alert")
                              destructiveButtonTitle:nil
                                   otherButtonTitles:nil

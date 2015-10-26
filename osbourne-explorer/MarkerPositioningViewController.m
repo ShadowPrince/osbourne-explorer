@@ -34,4 +34,7 @@
     [self performSegueWithIdentifier:@"finishUnwind" sender:nil];
 }
 
+- (void) didCanceledPositioning {
+}
+
 @end

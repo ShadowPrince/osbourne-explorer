@@ -38,8 +38,12 @@
     return self.point;
 }
 
-- (BOOL) isValid {
-    return self.pointSet;
+- (NSArray<NSString *> *) validationErrors {
+    return self.pointSet ? nil : @[NSLocalizedString(@"Select point", @"PSVC error")];
+}
+
+- (void) setContentInset:(UIEdgeInsets)inset {
+
 }
 
 - (BOOL) prefersControlBarHidden {

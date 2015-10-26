@@ -21,6 +21,7 @@ void uncaughtExceptionHandler(NSException *exception) {
 @end@implementation AppDelegate
 
 - (BOOL) application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
+    [SettingsController sync];
     [GMSServices provideAPIKey:@"AIzaSyDtHMS51p_ihmIOKWLDT8_GOyRtyXpL0cg"];
     //@TODO: comment out
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);

@@ -3,10 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverlayViewController">
             <connections>
+                <outlet property="bottomGuide" destination="WKU-Ee-9IQ" id="HUl-I8-vGl"/>
                 <outlet property="gMapView" destination="38N-Bs-FRR" id="kal-ha-tNl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,50 +23,74 @@
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYL-RX-t7o">
-                    <rect key="frame" x="270" y="440" width="50" height="40"/>
+                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYL-RX-t7o">
+                    <rect key="frame" x="282" y="442" width="30" height="30"/>
                     <animations/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="50" id="52f-lk-jJU"/>
-                        <constraint firstAttribute="height" constant="40" id="hFv-Or-5F1"/>
+                        <constraint firstAttribute="width" constant="30" id="52f-lk-jJU"/>
+                        <constraint firstAttribute="width" secondItem="FYL-RX-t7o" secondAttribute="height" multiplier="1:1" id="e1a-Ok-Oue"/>
+                        <constraint firstAttribute="height" constant="30" id="hFv-Or-5F1"/>
                     </constraints>
-                    <state key="normal" title="Ovrl."/>
+                    <state key="normal" title="Ovrl." image="overlays_icon"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="hFv-Or-5F1"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="overlaysToggleAction:" destination="-1" eventType="touchUpInside" id="fUD-8o-HOc"/>
                     </connections>
                 </button>
-                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIn-Sh-KdM">
-                    <rect key="frame" x="270" y="400" width="50" height="40"/>
+                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIn-Sh-KdM">
+                    <rect key="frame" x="282" y="396" width="30" height="30"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="g7v-5p-3CE"/>
-                        <constraint firstAttribute="height" constant="40" id="pLD-eB-AwR"/>
+                        <constraint firstAttribute="height" constant="50" id="pLD-eB-AwR"/>
                     </constraints>
-                    <state key="normal" title="Semitr."/>
+                    <state key="normal" title="Semitr." image="semitransparent_icon"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="g7v-5p-3CE"/>
+                            <exclude reference="pLD-eB-AwR"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="semitransparentToggleAction:" destination="-1" eventType="touchUpInside" id="giM-63-w7Z"/>
                     </connections>
                 </button>
-                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npg-Ag-0YH">
-                    <rect key="frame" x="211" y="440" width="51" height="40"/>
+                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npg-Ag-0YH">
+                    <rect key="frame" x="236" y="442" width="30" height="30"/>
                     <animations/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="51" id="8ev-LR-cyC"/>
-                        <constraint firstAttribute="height" constant="40" id="xcs-1t-gBm"/>
+                        <constraint firstAttribute="width" constant="50" id="8ev-LR-cyC"/>
+                        <constraint firstAttribute="height" constant="50" id="xcs-1t-gBm"/>
                     </constraints>
-                    <state key="normal" title="Sat/top"/>
+                    <state key="normal" title="Sat/top" image="map_type_icon"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="8ev-LR-cyC"/>
+                            <exclude reference="xcs-1t-gBm"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="mapTypeToggleAction:" destination="-1" eventType="touchUpInside" id="hhS-iZ-40L"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N48-9l-KRF">
-                    <rect key="frame" x="8" y="400" width="30" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N48-9l-KRF">
+                    <rect key="frame" x="8" y="396" width="30" height="30"/>
                     <animations/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="gDG-Hx-AMK"/>
-                        <constraint firstAttribute="width" constant="30" id="nWo-rn-iXW"/>
+                        <constraint firstAttribute="height" constant="50" id="gDG-Hx-AMK"/>
+                        <constraint firstAttribute="width" constant="50" id="nWo-rn-iXW"/>
                     </constraints>
-                    <state key="normal" title="GPS"/>
+                    <state key="normal" title="GPS" image="gps_icon"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="gDG-Hx-AMK"/>
+                            <exclude reference="nWo-rn-iXW"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="gpsAction:" destination="-1" eventType="touchUpInside" id="ts2-6S-vhp"/>
                     </connections>
@@ -73,21 +99,33 @@
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="FYL-RX-t7o" secondAttribute="bottom" id="WKU-Ee-9IQ"/>
+                <constraint firstItem="TIn-Sh-KdM" firstAttribute="width" secondItem="FYL-RX-t7o" secondAttribute="width" id="Fge-Dp-nUv"/>
+                <constraint firstItem="N48-9l-KRF" firstAttribute="height" secondItem="FYL-RX-t7o" secondAttribute="height" id="FtH-Bh-Blh"/>
+                <constraint firstItem="npg-Ag-0YH" firstAttribute="height" secondItem="FYL-RX-t7o" secondAttribute="height" id="KEu-aJ-Wpb"/>
+                <constraint firstAttribute="bottom" secondItem="FYL-RX-t7o" secondAttribute="bottom" constant="8" id="WKU-Ee-9IQ"/>
                 <constraint firstItem="FYL-RX-t7o" firstAttribute="trailing" secondItem="TIn-Sh-KdM" secondAttribute="trailing" id="WmF-7U-Sbf"/>
                 <constraint firstAttribute="bottom" secondItem="38N-Bs-FRR" secondAttribute="bottom" id="Yps-MB-290"/>
-                <constraint firstItem="npg-Ag-0YH" firstAttribute="top" secondItem="TIn-Sh-KdM" secondAttribute="bottom" id="dnu-Ez-weJ"/>
+                <constraint firstItem="npg-Ag-0YH" firstAttribute="top" secondItem="TIn-Sh-KdM" secondAttribute="bottom" constant="16" id="dnu-Ez-weJ"/>
                 <constraint firstAttribute="trailing" secondItem="38N-Bs-FRR" secondAttribute="trailing" id="gZp-QZ-bOw"/>
-                <constraint firstAttribute="trailing" secondItem="FYL-RX-t7o" secondAttribute="trailing" id="hUB-bE-zME"/>
+                <constraint firstAttribute="trailing" secondItem="FYL-RX-t7o" secondAttribute="trailing" constant="8" id="hUB-bE-zME"/>
+                <constraint firstItem="TIn-Sh-KdM" firstAttribute="height" secondItem="FYL-RX-t7o" secondAttribute="height" id="hpZ-fC-Tun"/>
+                <constraint firstItem="npg-Ag-0YH" firstAttribute="width" secondItem="FYL-RX-t7o" secondAttribute="width" id="jRS-IT-2bu"/>
                 <constraint firstItem="38N-Bs-FRR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="o6v-Aj-2Hs"/>
                 <constraint firstItem="N48-9l-KRF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="pLd-cX-wBW"/>
                 <constraint firstItem="TIn-Sh-KdM" firstAttribute="centerY" secondItem="N48-9l-KRF" secondAttribute="centerY" id="pVS-JY-5Zd"/>
+                <constraint firstItem="N48-9l-KRF" firstAttribute="width" secondItem="FYL-RX-t7o" secondAttribute="width" id="qbb-I3-Gnp"/>
                 <constraint firstItem="FYL-RX-t7o" firstAttribute="bottom" secondItem="npg-Ag-0YH" secondAttribute="bottom" id="rs8-Yw-bn8"/>
                 <constraint firstItem="38N-Bs-FRR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tPV-wE-BN1"/>
-                <constraint firstItem="FYL-RX-t7o" firstAttribute="leading" secondItem="npg-Ag-0YH" secondAttribute="trailing" constant="8" id="xE1-Ob-p4h"/>
+                <constraint firstItem="FYL-RX-t7o" firstAttribute="leading" secondItem="npg-Ag-0YH" secondAttribute="trailing" constant="16" id="xE1-Ob-p4h"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
         <customObject id="qUc-zi-Vsb"/>
     </objects>
+    <resources>
+        <image name="gps_icon" width="50" height="50"/>
+        <image name="map_type_icon" width="50" height="50"/>
+        <image name="overlays_icon" width="50" height="50"/>
+        <image name="semitransparent_icon" width="50" height="50"/>
+    </resources>
 </document>

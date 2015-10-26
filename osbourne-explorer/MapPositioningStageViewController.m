@@ -38,6 +38,10 @@
     [self movePositionAbsolute:coordinate];
 }
 
+- (void) setContentInset:(UIEdgeInsets)inset {
+    [(OverlayViewController *) self.childViewControllers.lastObject setContentInset:inset];
+}
+
 - (NSString *) description {
     return NSLocalizedString(@"Select corresponding point", @"SVC title");
 }

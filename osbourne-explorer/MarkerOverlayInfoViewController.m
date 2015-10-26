@@ -9,6 +9,8 @@
 #import "MarkerOverlayInfoViewController.h"
 
 @interface MarkerOverlayInfoViewController ()
+@property (weak) IBOutlet UILabel *nameLabel;
+
 @property OverlayViewController *overlayController;
 @end
 
@@ -19,6 +21,10 @@
 
     self.overlayController = (OverlayViewController *) self.childViewControllers.lastObject;
     self.overlayController.store = [MapOverlayStore singleobjectInstanceWith:self.marker];
+
+    [self.overlayController.gMapView animateToLocation:self.marker.locationCoordinate];
+    self.nameLabel.text = self.marker.title;
+    [self.overlayController.gMapView animateToZoom:11.f];
 }
 
 @end

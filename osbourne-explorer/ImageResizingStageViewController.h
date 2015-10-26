@@ -10,6 +10,7 @@
 
 #import "UIImage-Extensions.h"
 
+#import "SettingsController.h"
 #import "PositioningStageViewController.h"
 
 @interface ImageResizingStageViewController : PositioningStageViewController <UIScrollViewDelegate>

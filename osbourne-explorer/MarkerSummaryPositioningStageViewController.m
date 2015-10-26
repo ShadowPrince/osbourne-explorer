@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *iconsCollectionView;
 
 @property NSArray<NSString *> *iconNames;
-@property NSArray<UIImage *> *icons;
+@property NSMutableArray<UIImage *> *icons;
 @end@implementation MarkerSummaryPositioningStageViewController
 
 - (void) viewDidLoad {
@@ -23,9 +23,14 @@
     self.nameTextField.returnKeyType = UIReturnKeyDone;
     self.nameTextField.delegate = self;
 
-    self.iconNames = @[@"marker_icon", @"green_marker"];
+    self.iconNames = @[@"marker_icon", @"green_marker", @"red_marker", @"yellow_marker", @"violet_marker", ];
     self.markerIconNameValue = self.iconNames.firstObject;
-    self.icons = @[[UIImage imageNamed:@"marker_icon"], [UIImage imageNamed:@"green_marker"]];
+
+    self.icons = [NSMutableArray new];
+    [self.iconNames enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.icons addObject:[UIImage imageNamed:obj]];
+    }];
+
     self.iconsCollectionView.allowsMultipleSelection = NO;
 
 }
@@ -34,8 +39,8 @@
     return self.nameTextField.text;
 }
 
-- (BOOL) isValid {
-    return YES;
+- (NSArray<NSString *> *) validationErrors {
+    return nil;
 }
 
 - (BOOL) prefersControlBarHidden {

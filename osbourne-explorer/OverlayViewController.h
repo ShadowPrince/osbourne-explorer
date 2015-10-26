@@ -17,4 +17,6 @@
 @property (weak, nonatomic) IBOutlet GMSMapView *gMapView;
 @property (nonatomic) MapOverlayStore *store;
 
+- (void) setContentInset:(UIEdgeInsets) inset;
+
 @end

@@ -21,8 +21,9 @@
 @property (weak) NSObject<PositioningStageDelegate> *delegate;
 
 - (BOOL) prefersControlBarHidden;
+- (void) setContentInset:(UIEdgeInsets)inset;
 
-- (BOOL) isValid;
+- (NSArray<NSString *> *) validationErrors;
 
 - (CLLocationCoordinate2D) absolutePosition;
 - (void) movePositionRelative:(CLLocationCoordinate2D) p;

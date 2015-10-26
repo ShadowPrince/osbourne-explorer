@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BasicVector.h"
 @import GoogleMaps;
+
+#import "SettingsController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -23,8 +23,8 @@
     return self.nameTextField.text;
 }
 
-- (BOOL) isValid {
-    return YES;
+- (NSArray<NSString *> *) validationErrors {
+    return nil;
 }
 
 - (BOOL) prefersControlBarHidden {
