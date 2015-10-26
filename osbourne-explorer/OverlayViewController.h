@@ -13,7 +13,8 @@
 
 #import "MapOverlayStore.h"
 
-@interface OverlayViewController : UIViewController <MapOverlayStoreDelegate>
+@interface OverlayViewController : UIViewController <MapOverlayStoreDelegate, CLLocationManagerDelegate>
+@property CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet GMSMapView *gMapView;
 @property (nonatomic) MapOverlayStore *store;
 

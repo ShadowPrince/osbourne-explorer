@@ -1462,7 +1462,7 @@
     <resources>
         <image name="add_marker" width="50" height="50"/>
         <image name="add_overlay" width="50" height="50"/>
-        <image name="green_marker" width="14" height="25"/>
+        <image name="green_marker" width="21" height="38"/>
         <image name="overlay_icon" width="50" height="50"/>
         <image name="settings" width="50" height="50"/>
     </resources>

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "NavigationMapViewController.h"
 
-@interface NavigationViewController : UIViewController
+@interface NavigationViewController : UIViewController <CLLocationManagerDelegate>
 
 @end

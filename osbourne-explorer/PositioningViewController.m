@@ -41,6 +41,7 @@
 
     // binding control buttons
 
+
     UIView *paneView = [(UIViewController *) self.childViewControllers.lastObject view];
 
     UIButton *b = nil;
@@ -76,8 +77,10 @@
                            [paneView viewWithTag:102],
                            [paneView viewWithTag:103], ];
 
+
     [self.activePointXTextField addTarget:self action:@selector(activePointTextfieldsChange:) forControlEvents:UIControlEventEditingDidEnd];
     [self.activePointYTextField addTarget:self action:@selector(activePointTextfieldsChange:) forControlEvents:UIControlEventEditingChanged];
+
 
 
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -198,6 +201,7 @@
         self.stageIdx--;
         [self presentStageAt:self.stageIdx];
     } else {
+        __weak PositioningViewController *_self = self;
         [RMUniversalAlert showActionSheetInViewController:self
                                                 withTitle:NSLocalizedString(@"Notice", @"PVC finish alert")
                                                   message:NSLocalizedString(@"Are you sure you want to abort positioning?", @"PVC cancel alert")
@@ -208,7 +212,7 @@
                        popoverPresentationControllerBlock:nil
                                                  tapBlock:^(RMUniversalAlert * _Nonnull alert, NSInteger buttonIndex) {
                                                      if (buttonIndex == alert.destructiveButtonIndex) {
-                                                         [self abortAction];
+                                                         [_self abortAction];
                                                      }
                                                  }];
     }

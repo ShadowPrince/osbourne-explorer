@@ -18,6 +18,7 @@
     [super viewDidLoad];
     self.images = [NSMutableArray new];
 
+    NSLog(@"Using %@ as base path.", [DocumentsDirectory documentsDirectoryPath]);
     for (NSString *filename in [[NSFileManager defaultManager] enumeratorAtPath:[DocumentsDirectory documentsDirectoryPath]]) {
         if ([filename hasPrefix:@"."] || [filename isEqualToString:@"database.overlays"] || [filename isEqualToString:@"database.overlay-settings"])
             continue;

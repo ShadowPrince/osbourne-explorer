@@ -189,8 +189,29 @@
 }
 
 - (IBAction)gpsAction:(id)sender {
-    //self.gMapView.camera = [GMSCameraPosition cameraWithLatitude:51.280 longitude:32.555 zoom:11.442];
-    NSLog(@"%@", self.gMapView.myLocation);
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    if (status == kCLAuthorizationStatusDenied) {
+        [RMUniversalAlert showAlertInViewController:self
+                                          withTitle:NSLocalizedString(@"Error", @"gpsAction alert")
+                                            message:NSLocalizedString(@"GPS authorization denied. Check location settings for the app, allow location access", @"gpsAction alert")
+                                  cancelButtonTitle:NSLocalizedString(@"Ok", @"gpsAction alert")
+                             destructiveButtonTitle:nil
+                                  otherButtonTitles:nil
+                                           tapBlock:nil];
+    } else if (status == kCLAuthorizationStatusRestricted) {
+    } else if (status == kCLAuthorizationStatusNotDetermined) {
+        self.locationManager = [CLLocationManager new];
+        self.locationManager.delegate = self;
+        [self.locationManager requestAlwaysAuthorization];
+    } else if (status == kCLAuthorizationStatusAuthorizedAlways) {
+        [self.gMapView animateToLocation:self.gMapView.myLocation.coordinate];
+        if (self.gMapView.camera.zoom < 15.f)
+            [self.gMapView animateToZoom:15.f];
+    }
+}
+
+- (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    NSLog(@"@%", locations);
 }
 
 - (void) dealloc {

@@ -47,6 +47,8 @@
                                        tapBlock:nil]
      presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"progressbar"]];
 
+
+
     [self.queue addOperationWithBlock:^{
         ImageResizingStageViewController *rs = [self.storyboard instantiateViewControllerWithIdentifier:@"imageResizingStage"];
         rs.image = [UIImage imageWithContentsOfFile:[DocumentsDirectory pathFor:[@"/" stringByAppendingString:self.imageName]]];
@@ -71,7 +73,6 @@
             }];
         }];
     }];
-
 }
 
 - (void) didCanceledPositioning {
@@ -199,6 +200,10 @@
 - (NSArray<NSString *> *) validationErrors {
     //@TODO: check for invalid points
     return nil;
+}
+
+- (void) dealloc {
+    //@TODO: check it
 }
 
 @end
