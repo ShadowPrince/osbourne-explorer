@@ -233,6 +233,7 @@
             self.stageIdx++;
             [self presentStageAt:self.stageIdx];
         } else {
+            __weak PositioningViewController *_self = self;
             [RMUniversalAlert showActionSheetInViewController:self
                                                     withTitle:NSLocalizedString(@"Notice", @"PVC finish alert")
                                                       message:NSLocalizedString(@"Are you sure you want to finish positioning?", @"PVC finish alert")
@@ -243,7 +244,7 @@
                            popoverPresentationControllerBlock:nil
                                                      tapBlock:^(RMUniversalAlert * _Nonnull alert, NSInteger buttonIndex) {
                                                          if (buttonIndex == alert.destructiveButtonIndex) {
-                                                             [self finishAction];
+                                                             [_self finishAction];
                                                          }
                                                      }];
         }

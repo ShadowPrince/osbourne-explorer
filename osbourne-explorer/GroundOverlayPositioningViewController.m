@@ -25,6 +25,7 @@
     if (self.currentStageIndex > 0) {
         [self removeStageAtIndex:0];
     } else {
+        __weak GroundOverlayPositioningViewController *_self = self;
         [RMUniversalAlert showAlertInViewController:self
                                           withTitle:NSLocalizedString(@"Error", @"PVC error")
                                             message:NSLocalizedString(@"Image is too big for positioning. Try following:\n - restart app\n - resize image to make it smaller", @"PVC error")
@@ -32,7 +33,7 @@
                              destructiveButtonTitle:nil
                                   otherButtonTitles:nil
                                            tapBlock:^(RMUniversalAlert * _Nonnull alert, NSInteger buttonIndex) {
-                                               [self abortPositioning];
+                                               [_self abortPositioning];
                                            }];
     }
 }
