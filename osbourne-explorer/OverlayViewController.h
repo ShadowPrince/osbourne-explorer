@@ -17,6 +17,7 @@
 @property CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet GMSMapView *gMapView;
 @property (nonatomic) MapOverlayStore *store;
+@property (nonatomic) BOOL sharedResourcesUnloadedDueToMemory;
 
 - (void) setContentInset:(UIEdgeInsets) inset;
 

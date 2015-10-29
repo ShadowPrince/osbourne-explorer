@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MapOverlayStore.h"
 
-#import "GroundOverlayInfoViewController.h"
-#import "MarkerOverlayInfoViewController.h"
+#import "MapOverlayInfoViewController.h"
 #import "MapOverlayTableViewCell.h"
 
 @interface NavigationMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MapOverlayStoreDelegate>

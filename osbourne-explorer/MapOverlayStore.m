@@ -154,6 +154,11 @@
     return self.mapOverlaySettings[idx];
 }
 
+- (void) setSettings:(MapOverlaySettings *)settings forOverlay:(MapOverlay *)overlay {
+    NSUInteger idx = [self.mapOverlays indexOfObject:overlay];
+    self.mapOverlaySettings[idx] = settings;
+}
+
 - (void) insertMapOverlay:(MapOverlay *)overlay {
     MapOverlaySettings *settings = [MapOverlaySettings new];
     [self.mapOverlays addObject:overlay];
@@ -172,8 +177,9 @@
     [self.mapOverlays removeObject:overlay];
     [self.mapOverlaySettings removeObjectAtIndex:idx];
 
-    [self fireDidRemovedOverlay:overlay];
     [self save];
+
+    [self fireDidRemovedOverlay:overlay];
 }
 
 - (void) moveOverlayFrom:(NSUInteger) from to:(NSUInteger) to {

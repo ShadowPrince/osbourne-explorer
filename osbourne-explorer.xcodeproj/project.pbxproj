@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		46F665105151A05FD8C705C1 /* libPods-osbourne-explorer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81967E7DBFC9DFA8B2B4CDEE /* libPods-osbourne-explorer.a */; };
+		6E470E3540F31A8F9825CEF7 /* libPods-OsExplorer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED9674584FCA05FA1724E29 /* libPods-OsExplorer.a */; };
 		F3032BFB1BCE484800133643 /* ImagePositioningView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3032BFA1BCE484800133643 /* ImagePositioningView.m */; settings = {ASSET_TAGS = (); }; };
 		F30368F51BC7FE63002AECA8 /* NavigationMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30368F41BC7FE62002AECA8 /* NavigationMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F30368F81BC8009E002AECA8 /* MapOverlayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F30368F71BC8009E002AECA8 /* MapOverlayTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -23,6 +24,9 @@
 		F349FE131BC69F7600B1F54F /* NavigationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F349FE121BC69F7600B1F54F /* NavigationMapViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F349FE181BC6A75700B1F54F /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F349FE171BC6A75700B1F54F /* NavigationViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F349FE1B1BC6B36500B1F54F /* ForcedNavbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F349FE1A1BC6B36500B1F54F /* ForcedNavbarViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F34C10AD1BE229D200F214F6 /* MapOverlayInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F34C10AC1BE229D200F214F6 /* MapOverlayInfoViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F34C10B21BE23A2700F214F6 /* RMPopoverPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F34C10AF1BE23A2700F214F6 /* RMPopoverPresentationController.m */; settings = {ASSET_TAGS = (); }; };
+		F34C10B31BE23A2700F214F6 /* RMUniversalAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F34C10B11BE23A2700F214F6 /* RMUniversalAlert.m */; settings = {ASSET_TAGS = (); }; };
 		F380B12A1BC69DBC00C5090A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F380B1291BC69DBC00C5090A /* main.m */; };
 		F380B12D1BC69DBC00C5090A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F380B12C1BC69DBC00C5090A /* AppDelegate.m */; };
 		F380B1331BC69DBC00C5090A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F380B1311BC69DBC00C5090A /* Main.storyboard */; };
@@ -46,7 +50,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23374892681C446EF952DC52 /* Pods-OsExplorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OsExplorer.release.xcconfig"; path = "Pods/Target Support Files/Pods-OsExplorer/Pods-OsExplorer.release.xcconfig"; sourceTree = "<group>"; };
+		28274243F0F7420385688BA7 /* Pods-OsExplorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OsExplorer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OsExplorer/Pods-OsExplorer.debug.xcconfig"; sourceTree = "<group>"; };
 		3D8E1B462C66FA6DB21F53AA /* Pods-osbourne-explorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osbourne-explorer.release.xcconfig"; path = "Pods/Target Support Files/Pods-osbourne-explorer/Pods-osbourne-explorer.release.xcconfig"; sourceTree = "<group>"; };
+		3ED9674584FCA05FA1724E29 /* libPods-OsExplorer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OsExplorer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81967E7DBFC9DFA8B2B4CDEE /* libPods-osbourne-explorer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osbourne-explorer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9695166B5EE6D7D651241E /* Pods-osbourne-explorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osbourne-explorer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-osbourne-explorer/Pods-osbourne-explorer.debug.xcconfig"; sourceTree = "<group>"; };
 		F3032BF91BCE484800133643 /* ImagePositioningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePositioningView.h; sourceTree = "<group>"; };
@@ -79,7 +86,13 @@
 		F349FE171BC6A75700B1F54F /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 		F349FE191BC6B36500B1F54F /* ForcedNavbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForcedNavbarViewController.h; sourceTree = "<group>"; };
 		F349FE1A1BC6B36500B1F54F /* ForcedNavbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForcedNavbarViewController.m; sourceTree = "<group>"; };
-		F380B1251BC69DBC00C5090A /* osbourne-explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "osbourne-explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F34C10AB1BE229D200F214F6 /* MapOverlayInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlayInfoViewController.h; sourceTree = "<group>"; };
+		F34C10AC1BE229D200F214F6 /* MapOverlayInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlayInfoViewController.m; sourceTree = "<group>"; };
+		F34C10AE1BE23A2700F214F6 /* RMPopoverPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMPopoverPresentationController.h; path = RMUniversalAlert/RMPopoverPresentationController.h; sourceTree = "<group>"; };
+		F34C10AF1BE23A2700F214F6 /* RMPopoverPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMPopoverPresentationController.m; path = RMUniversalAlert/RMPopoverPresentationController.m; sourceTree = "<group>"; };
+		F34C10B01BE23A2700F214F6 /* RMUniversalAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMUniversalAlert.h; path = RMUniversalAlert/RMUniversalAlert.h; sourceTree = "<group>"; };
+		F34C10B11BE23A2700F214F6 /* RMUniversalAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMUniversalAlert.m; path = RMUniversalAlert/RMUniversalAlert.m; sourceTree = "<group>"; };
+		F380B1251BC69DBC00C5090A /* OsExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OsExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F380B1291BC69DBC00C5090A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F380B12B1BC69DBC00C5090A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F380B12C1BC69DBC00C5090A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -124,6 +137,7 @@
 				F38F70BB1BDED33700E907C0 /* CoreLocation.framework in Frameworks */,
 				F3EA21A01BDA2D78008C634A /* QuartzCore.framework in Frameworks */,
 				46F665105151A05FD8C705C1 /* libPods-osbourne-explorer.a in Frameworks */,
+				6E470E3540F31A8F9825CEF7 /* libPods-OsExplorer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +149,8 @@
 			children = (
 				DB9695166B5EE6D7D651241E /* Pods-osbourne-explorer.debug.xcconfig */,
 				3D8E1B462C66FA6DB21F53AA /* Pods-osbourne-explorer.release.xcconfig */,
+				28274243F0F7420385688BA7 /* Pods-OsExplorer.debug.xcconfig */,
+				23374892681C446EF952DC52 /* Pods-OsExplorer.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -145,6 +161,7 @@
 				F38F70BA1BDED33700E907C0 /* CoreLocation.framework */,
 				F3EA219F1BDA2D78008C634A /* QuartzCore.framework */,
 				81967E7DBFC9DFA8B2B4CDEE /* libPods-osbourne-explorer.a */,
+				3ED9674584FCA05FA1724E29 /* libPods-OsExplorer.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,6 +173,8 @@
 				F30368F41BC7FE62002AECA8 /* NavigationMenuViewController.m */,
 				F30368F61BC8009E002AECA8 /* MapOverlayTableViewCell.h */,
 				F30368F71BC8009E002AECA8 /* MapOverlayTableViewCell.m */,
+				F34C10AB1BE229D200F214F6 /* MapOverlayInfoViewController.h */,
+				F34C10AC1BE229D200F214F6 /* MapOverlayInfoViewController.m */,
 				F3A424681BC92ECF00566BE8 /* GroundOverlayInfoViewController.h */,
 				F3A424691BC92ECF00566BE8 /* GroundOverlayInfoViewController.m */,
 				F3A4246B1BCBB62800566BE8 /* MarkerOverlayInfoViewController.h */,
@@ -186,6 +205,10 @@
 				F31D0F321BD6BD6D00CA3A6B /* DGFastImageSize.m */,
 				F331C2321BD4D53800CF366B /* UIImage-Extensions.h */,
 				F331C2331BD4D53800CF366B /* UIImage-Extensions.m */,
+				F34C10AE1BE23A2700F214F6 /* RMPopoverPresentationController.h */,
+				F34C10AF1BE23A2700F214F6 /* RMPopoverPresentationController.m */,
+				F34C10B01BE23A2700F214F6 /* RMUniversalAlert.h */,
+				F34C10B11BE23A2700F214F6 /* RMUniversalAlert.m */,
 			);
 			name = libs;
 			sourceTree = "<group>";
@@ -215,7 +238,7 @@
 		F380B1261BC69DBC00C5090A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F380B1251BC69DBC00C5090A /* osbourne-explorer.app */,
+				F380B1251BC69DBC00C5090A /* OsExplorer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,9 +318,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F380B1241BC69DBC00C5090A /* osbourne-explorer */ = {
+		F380B1241BC69DBC00C5090A /* OsExplorer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F380B13C1BC69DBC00C5090A /* Build configuration list for PBXNativeTarget "osbourne-explorer" */;
+			buildConfigurationList = F380B13C1BC69DBC00C5090A /* Build configuration list for PBXNativeTarget "OsExplorer" */;
 			buildPhases = (
 				70CBABAF117158E70BC806C7 /* Check Pods Manifest.lock */,
 				F380B1211BC69DBC00C5090A /* Sources */,
@@ -309,9 +332,9 @@
 			);
 			dependencies = (
 			);
-			name = "osbourne-explorer";
+			name = OsExplorer;
 			productName = "osbourne-explorer";
-			productReference = F380B1251BC69DBC00C5090A /* osbourne-explorer.app */;
+			productReference = F380B1251BC69DBC00C5090A /* OsExplorer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -325,6 +348,7 @@
 				TargetAttributes = {
 					F380B1241BC69DBC00C5090A = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = T7SD4W2ENW;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 0;
@@ -346,7 +370,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F380B1241BC69DBC00C5090A /* osbourne-explorer */,
+				F380B1241BC69DBC00C5090A /* OsExplorer */,
 			);
 		};
 /* End PBXProject section */
@@ -378,7 +402,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-osbourne-explorer/Pods-osbourne-explorer-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OsExplorer/Pods-OsExplorer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		70CBABAF117158E70BC806C7 /* Check Pods Manifest.lock */ = {
@@ -423,13 +447,16 @@
 				F32FF7EA1BDE5B5100BDE6E6 /* SettingsController.m in Sources */,
 				F3B9232A1BD8D76F00A81594 /* ImageResizingStageViewController.m in Sources */,
 				F3A4246D1BCBB62800566BE8 /* MarkerOverlayInfoViewController.m in Sources */,
+				F34C10AD1BE229D200F214F6 /* MapOverlayInfoViewController.m in Sources */,
 				F3EA21A31BDA6DC1008C634A /* GroundOverlaySummaryPositioningStageViewController.m in Sources */,
 				F3C861C41BD2A6EB006274E4 /* BasicVector.m in Sources */,
 				F3EA415C1BC69F0D00897633 /* OverlayViewController.m in Sources */,
 				F30368F51BC7FE63002AECA8 /* NavigationMenuViewController.m in Sources */,
 				F349FE1B1BC6B36500B1F54F /* ForcedNavbarViewController.m in Sources */,
+				F34C10B21BE23A2700F214F6 /* RMPopoverPresentationController.m in Sources */,
 				F32ABF391BC7A3430070C1F2 /* MapOverlay.m in Sources */,
 				F31D0F291BD6AD4C00CA3A6B /* MarkerSummaryPositioningStageViewController.m in Sources */,
+				F34C10B31BE23A2700F214F6 /* RMUniversalAlert.m in Sources */,
 				F3A424741BCD085200566BE8 /* MapPositioningStageViewController.m in Sources */,
 				F3A4246A1BC92ECF00566BE8 /* GroundOverlayInfoViewController.m in Sources */,
 			);
@@ -541,9 +568,10 @@
 		};
 		F380B13D1BC69DBC00C5090A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB9695166B5EE6D7D651241E /* Pods-osbourne-explorer.debug.xcconfig */;
+			baseConfigurationReference = 28274243F0F7420385688BA7 /* Pods-OsExplorer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "osbourne-explorer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -555,9 +583,10 @@
 		};
 		F380B13E1BC69DBC00C5090A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D8E1B462C66FA6DB21F53AA /* Pods-osbourne-explorer.release.xcconfig */;
+			baseConfigurationReference = 23374892681C446EF952DC52 /* Pods-OsExplorer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "osbourne-explorer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -579,7 +608,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F380B13C1BC69DBC00C5090A /* Build configuration list for PBXNativeTarget "osbourne-explorer" */ = {
+		F380B13C1BC69DBC00C5090A /* Build configuration list for PBXNativeTarget "OsExplorer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F380B13D1BC69DBC00C5090A /* Debug */,

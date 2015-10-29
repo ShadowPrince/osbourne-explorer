@@ -26,6 +26,20 @@
     self.overlayController.store = store;
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    if (self.overlayController.sharedResourcesUnloadedDueToMemory) {
+        [RMUniversalAlert showAlertInViewController:self
+                                          withTitle:NSLocalizedString(@"Memory issue", @"memory issue alert")
+                                            message:NSLocalizedString(@"Overlays was hided due to memory issue. Try following steps: \n - hide/show application\n - restart application", @"memory issue alert")
+                                  cancelButtonTitle:@"Ok"
+                             destructiveButtonTitle:nil
+                                  otherButtonTitles:nil
+                                           tapBlock:nil];
+    }
+}
+
 - (void) decodeRestorableStateWithCoder:(NSCoder *)coder {
     GMSCameraPosition *gCamera = [GMSCameraPosition cameraWithLatitude:[coder decodeDoubleForKey:@"camera_lat"]
                                                              longitude:[coder decodeDoubleForKey:@"camera_lon"]

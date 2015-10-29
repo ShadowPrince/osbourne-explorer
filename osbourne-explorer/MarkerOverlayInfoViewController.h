@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "MapOverlayStore.h"
 
+#import "MapOverlayInfoViewController.h"
 #import "ForcedNavbarViewController.h"
 #import "OverlayViewController.h"
 
-@interface MarkerOverlayInfoViewController : ForcedNavbarViewController
-@property MarkerOverlay *marker;
+@interface MarkerOverlayInfoViewController : MapOverlayInfoViewController
+
 @end

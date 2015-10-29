@@ -24,21 +24,21 @@
         [self.store didUpdatedOverlay:obj];
     }];
 
-    self.gMapView.myLocationEnabled = YES;
     [self.store requestSharedResourcesUnloading];
-    [RMUniversalAlert showAlertInViewController:self
-                                      withTitle:@"Memory issue"
-                                        message:@"Overlays was hided due to memory issue. Try following steps: \n - hide/show application\n - restart application"
-                              cancelButtonTitle:@"Ok"
-                         destructiveButtonTitle:nil
-                              otherButtonTitles:nil
-                                       tapBlock:nil];
+    self.sharedResourcesUnloadedDueToMemory = YES;
 }
 
 - (void) viewDidLoad {
     [super viewDidLoad];
     self.gMapOverlays = [NSMutableDictionary new];
     self.gMapView.myLocationEnabled = YES;
+}
+
+- (BOOL) sharedResourcesUnloadedDueToMemory {
+    BOOL value = _sharedResourcesUnloadedDueToMemory;
+    self.sharedResourcesUnloadedDueToMemory = NO;
+
+    return value;
 }
 
 - (void) setContentInset:(UIEdgeInsets)inset {
@@ -211,10 +211,11 @@
 }
 
 - (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
-    NSLog(@"@%", locations);
+
 }
 
 - (void) dealloc {
+    [self.store removeDelegate:self];
     NSLog(@"%@ dealloc", self);
 }
 

@@ -7,164 +7,142 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02CDBAEB0CACCD4B3B408D4E61D99A41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AC64FFDC7426D7138611EF3A67B3C8 /* Foundation.framework */; };
+		0072E5C8D0DB8422DF7E20E16BF03901 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C6F797D9C9764F16FB09DDA8766F2F /* Foundation.framework */; };
+		02CDBAEB0CACCD4B3B408D4E61D99A41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C6F797D9C9764F16FB09DDA8766F2F /* Foundation.framework */; };
+		052CAA3AC1CCB1626DA0FD110EC67DAF /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = D70ED46FD54B0D022E38F503232298C4 /* UIViewController+MMDrawerController.h */; };
+		0C301634FF3DE79FEE235D911A2BA95F /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BC9C99BA8318787899C3E3B35D6022 /* MMDrawerController.m */; };
 		0F94523BE85BC0C60EBD16BED6CE98CA /* UIActionSheet+Blocks.h in Headers */ = {isa = PBXBuildFile; fileRef = F52BAE693E8F7AC0084E74119D48FD56 /* UIActionSheet+Blocks.h */; };
-		255F6852E868922CF1FB30D5A9A963D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AC64FFDC7426D7138611EF3A67B3C8 /* Foundation.framework */; };
+		246DEDEC6657913949EB468C227D42DE /* UITableView-NXEmptyView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 880E1E73927BD20286C69835466D1BC7 /* UITableView-NXEmptyView-dummy.m */; };
+		255F6852E868922CF1FB30D5A9A963D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C6F797D9C9764F16FB09DDA8766F2F /* Foundation.framework */; };
+		2A5207F7A5CF35EC45068442A50A69E7 /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E2DBAC6C86AAE165C91BF56BEA31FC6 /* MMDrawerBarButtonItem.h */; };
 		4073C5CDAD0AB45D7DFA65567CF2AFA4 /* UIAlertController+Blocks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0604F44EE33A2E12A6041DC260830F /* UIAlertController+Blocks-dummy.m */; };
-		4869C0F274B189C9476CE01D6F17141A /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 442146FBAB890E700BAD4BFEEC0E31BC /* MMDrawerController.h */; };
-		506BFE408DDF4AF01A756DA99FAAFA7E /* RMPopoverPresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = A995812772B9752E9382877E3F9B1BC6 /* RMPopoverPresentationController.h */; };
-		51148C84634182AC8DB9C50553284966 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C2ACD8E77D968643FACE90A92206C4 /* UIViewController+MMDrawerController.m */; };
-		66392DBBDAF1396AE92D28085CA31290 /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = EF9B9350D6492D7EF4188576ED56F295 /* UIViewController+MMDrawerController.h */; };
-		6D08434E7EEC7A37585BC49CBF06A4EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AC64FFDC7426D7138611EF3A67B3C8 /* Foundation.framework */; };
+		44932A0B179D1A877F28885E8135B791 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D319F1C445E1C41E86A35A6881D75FE /* UIKit.framework */; };
+		616298E8AE70626C6FB778E76B56465A /* Pods-OsExplorer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2DA031395AF64E3D898079B3EAB987 /* Pods-OsExplorer-dummy.m */; };
+		735E2C275978CE6FF9CFD27EFB5CF119 /* UITableView+NXEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC57013CD3DCD58B352F4C9E2DB4DAB /* UITableView+NXEmptyView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		798D7DFEFF934DB5F3AE80E974F7BDAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C6F797D9C9764F16FB09DDA8766F2F /* Foundation.framework */; };
 		7A304FD5B084AAE118003445226CD294 /* UIAlertView+Blocks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD29456D9BA88859B9057244101F43A1 /* UIAlertView+Blocks-dummy.m */; };
-		7BD232502BB801F719022B8A4CD26BB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AC64FFDC7426D7138611EF3A67B3C8 /* Foundation.framework */; };
-		826D85B452A9449CD93BB99A5AA7F9FF /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = B3068275C9EBADE3495F6D710EE6DA33 /* MMDrawerController+Subclass.h */; };
-		83E1BD36E71AA978BC7206BE79B24C85 /* RMPopoverPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1C9C6E857FEECA912770D92D0DF4E5 /* RMPopoverPresentationController.m */; };
-		912CAC60251B6AD180187CF9540342DF /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A92C4E0564D5D16B929E5C2ACD455 /* MMDrawerVisualState.m */; };
-		931EC45EF551EF3F2114AB6B3BF7CA56 /* MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C12793F9FEE6E5A80D510101AA7B75 /* MMDrawerController-dummy.m */; };
+		7BD232502BB801F719022B8A4CD26BB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C6F797D9C9764F16FB09DDA8766F2F /* Foundation.framework */; };
+		7F861FFFE9893E3DF4FB1BA8D404ECEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C6F797D9C9764F16FB09DDA8766F2F /* Foundation.framework */; };
+		8B62F301B400205283E1ADA2A436CF77 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BB919818EE2B0A6DBB2C0ADB7345B /* MMDrawerVisualState.m */; };
+		8E5F7AE2D7E2C24D23B887ADF1DFFF05 /* MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 046B9C200C20E4A4E8BCE5C74E45335C /* MMDrawerController-dummy.m */; };
 		955D21C3885D6992336E2B9F6528DD9A /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA949A3C75A24199DD28956824A77E5 /* UIAlertView+Blocks.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		9AD0F3910F607C5608AC8BB127D23572 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 3311F4E4B21A5932E4E7810697AE44A4 /* UIAlertController+Blocks.m */; };
-		9AD1CB7CF433ACC8D634B014930DF5B6 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C2FF938D0C14BA1BE1BA68DB7C5AAA /* MMDrawerController.m */; };
-		A84A5E81434E1F7101E3C7DC2568FEFB /* RMUniversalAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D180BE83BB1FA75FFD8920CBD46B9D0 /* RMUniversalAlert-dummy.m */; };
-		A891A4B4AA32F54C100C6CC0B6BE37CC /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EC51AC63DCDD34B45484703A8408711C /* MMDrawerBarButtonItem.m */; };
-		B46B997D0D0BCAA3038648B93BA60B84 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F39A4FED99373C776FA40C47402FA6 /* QuartzCore.framework */; };
-		B50E2AF3EB3EF35D89B4E0D9DEE86BB1 /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 909C8CE5EE9724941BA7720FDAA320DD /* MMDrawerBarButtonItem.h */; };
+		AD1D8A0AE6AA1536E204F8D0B9A253A0 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D724EB24E07AD8E3ADA6D743183F672C /* MMDrawerBarButtonItem.m */; };
 		BB563BFE6381CB9770CCD97656F42444 /* UIActionSheet+Blocks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D78AA3866C38BE571959710D51E514 /* UIActionSheet+Blocks-dummy.m */; };
+		C6F6FF6F8E97703772B9F821DD218DAA /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A1B080CBC97258795DB7D4C5AF32D /* UIViewController+MMDrawerController.m */; };
 		CB46CD033516CC4354F76118AB51D7A5 /* UIAlertView+Blocks.h in Headers */ = {isa = PBXBuildFile; fileRef = C962CA6FECD0AD628C4A89D458E6164B /* UIAlertView+Blocks.h */; };
+		CD836549043FC4B0764CB37AF2163595 /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = 83C54F01AB19EB15FB3B11649C465AC1 /* MMDrawerVisualState.h */; };
 		D4A6E2F13B81DCCC4005D1D21DDC3943 /* UIAlertController+Blocks.h in Headers */ = {isa = PBXBuildFile; fileRef = B9B2E1834E6B5836D8E399621EBFD465 /* UIAlertController+Blocks.h */; };
 		D66430C3651C54B075FA06A31E2A73AD /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB44C52DDB245764216E8BE24D5EE57 /* UIActionSheet+Blocks.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D840AD700CC97A5059F9D7EAA9680B2A /* Pods-osbourne-explorer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C583BA680643D97CF63AC5D58390F /* Pods-osbourne-explorer-dummy.m */; };
-		DCD6E6F8C243E1022A2899ECE74D787D /* RMUniversalAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 249644C94DD444726E2062C609A6BD6E /* RMUniversalAlert.h */; };
-		DE5D2C5E367DC149F4C1F1FA2C67839F /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = C1C4B73138680D3523EC13276DB3DA1A /* MMDrawerVisualState.h */; };
-		E7B9FE620FA5286AD0FF14D6635B11A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AC64FFDC7426D7138611EF3A67B3C8 /* Foundation.framework */; };
-		E9547AEE2A4609947B581DEF9E0975F5 /* RMUniversalAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA7B1FF6E3178032ECA7B769637D020 /* RMUniversalAlert.m */; };
-		EA4F671AA21835A0B74B94A07B3F1B5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AC64FFDC7426D7138611EF3A67B3C8 /* Foundation.framework */; };
+		ED88B41D93D285A2BE05082B4A71AF83 /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = E69C0029717A7292C4DF5C9302B17E18 /* MMDrawerController.h */; };
+		F15C3A26158D678A0B7F1398C920BF4D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CC408D3DE3ADBB3E30009CBCBA7980 /* QuartzCore.framework */; };
+		F4E3F51BE235DD33A95A8D8885FA62BD /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 42B14349920EA5A3BD9B4FB601BA541B /* MMDrawerController+Subclass.h */; };
+		F6F72BCAE3692649DE111932FE33127D /* UITableView+NXEmptyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 19FB26D7C5F97CCF8257D4233F989FCF /* UITableView+NXEmptyView.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2A0F1985E3C67EDF10EA4024281939D4 /* PBXContainerItemProxy */ = {
+		1C46AEC52A15E8EB8126DB2093E74375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D51604217FD9306BA054A000F88CE4FE;
+			remoteInfo = "UIAlertView+Blocks";
+		};
+		642EE17498C2F03A2F38F4B4468E73A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4215BA75171B132BC45DC30B63C91282;
+			remoteInfo = "UITableView-NXEmptyView";
+		};
+		70BCADFB99E9D618930A420D633C87A2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = ACA39E0C8C610ED17D1EED33F06C685F;
 			remoteInfo = "UIActionSheet+Blocks";
 		};
-		60304CBAC6A1CE83D1CE96F1DC1AF40C /* PBXContainerItemProxy */ = {
+		DAB847DD45BC40F42D891AA9F6DEBF99 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 91CE01D9C05AE211FC3D6E341DB95BFD;
 			remoteInfo = "UIAlertController+Blocks";
 		};
-		74CBB63D17D976B9949D6B7D7027A2E1 /* PBXContainerItemProxy */ = {
+		F7D0A484C60681254F7B5028558A0502 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3CE5D85348602DCA18FF3DDB1E82A570;
+			remoteGlobalIDString = 0B122AA241414997C7D30E63259656B7;
 			remoteInfo = MMDrawerController;
-		};
-		C356AC9AC664E42D17F35A984953E8E8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 68E4D9547002CB114427668A9167E206;
-			remoteInfo = RMUniversalAlert;
-		};
-		D12458E733EA76078BAC1B3C83E17FAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D51604217FD9306BA054A000F88CE4FE;
-			remoteInfo = "UIAlertView+Blocks";
-		};
-		DD03B654D38420A9DC208772E5F352AD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D51604217FD9306BA054A000F88CE4FE;
-			remoteInfo = "UIAlertView+Blocks";
-		};
-		EDFD47F8C6AEF68C2D257F7AAA651EC1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ACA39E0C8C610ED17D1EED33F06C685F;
-			remoteInfo = "UIActionSheet+Blocks";
-		};
-		F345EAD899455E161BEEE7E30C3BE556 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 91CE01D9C05AE211FC3D6E341DB95BFD;
-			remoteInfo = "UIAlertController+Blocks";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		249644C94DD444726E2062C609A6BD6E /* RMUniversalAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RMUniversalAlert.h; sourceTree = "<group>"; };
-		254C1D605E13177530940341CDF13C4A /* libPods-osbourne-explorer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osbourne-explorer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B0A92C4E0564D5D16B929E5C2ACD455 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
+		046B9C200C20E4A4E8BCE5C74E45335C /* MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMDrawerController-dummy.m"; sourceTree = "<group>"; };
+		070FE94C23FA99627D34B6DE20AE9419 /* UIActionSheet+Blocks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks-prefix.pch"; sourceTree = "<group>"; };
+		13123946FABB3C887767814894797D48 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		19FB26D7C5F97CCF8257D4233F989FCF /* UITableView+NXEmptyView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+NXEmptyView.h"; path = "UITableView+NXEmptyView/UITableView+NXEmptyView.h"; sourceTree = "<group>"; };
+		1E2DBAC6C86AAE165C91BF56BEA31FC6 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		285C5186AA0FCBE9D79AD9FE1B6A9E44 /* UITableView-NXEmptyView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UITableView-NXEmptyView-Private.xcconfig"; sourceTree = "<group>"; };
 		2DA949A3C75A24199DD28956824A77E5 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
-		2F539CBA43996A2D1982E33E2C0F83F9 /* Pods-osbourne-explorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-osbourne-explorer.release.xcconfig"; sourceTree = "<group>"; };
 		3311F4E4B21A5932E4E7810697AE44A4 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
-		391164CD49F5746FF36C46D4986BF6B3 /* UIAlertView+Blocks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks-prefix.pch"; sourceTree = "<group>"; };
+		3B010E29A31C34EAFCB106C6D2D0C8E1 /* UITableView-NXEmptyView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UITableView-NXEmptyView.xcconfig"; sourceTree = "<group>"; };
 		3B0604F44EE33A2E12A6041DC260830F /* UIAlertController+Blocks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks-dummy.m"; sourceTree = "<group>"; };
-		41484EE2A36096A0297DF11F0F6CEA21 /* RMUniversalAlert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RMUniversalAlert-prefix.pch"; sourceTree = "<group>"; };
-		41C2ACD8E77D968643FACE90A92206C4 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
-		442146FBAB890E700BAD4BFEEC0E31BC /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
+		3BC9C7B4F35D5F3ABBC1318514AEA61A /* UIActionSheet+Blocks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIActionSheet+Blocks.xcconfig"; sourceTree = "<group>"; };
+		42B14349920EA5A3BD9B4FB601BA541B /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
 		49D78AA3866C38BE571959710D51E514 /* UIActionSheet+Blocks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks-dummy.m"; sourceTree = "<group>"; };
 		4C1F25677429EB16FFEC4D4EE680DF5A /* libUIAlertView+Blocks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUIAlertView+Blocks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D938E533844035F8D2C7B17FB40036D /* MMDrawerController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MMDrawerController-Private.xcconfig"; sourceTree = "<group>"; };
-		4E1C9C6E857FEECA912770D92D0DF4E5 /* RMPopoverPresentationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RMPopoverPresentationController.m; sourceTree = "<group>"; };
 		4E6D93078642DB0FAAFF99F8AEEF0BA7 /* UIAlertView+Blocks-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIAlertView+Blocks-Private.xcconfig"; sourceTree = "<group>"; };
-		5D180BE83BB1FA75FFD8920CBD46B9D0 /* RMUniversalAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RMUniversalAlert-dummy.m"; sourceTree = "<group>"; };
+		504AE7AE2402E4374955DAD7D053B0E0 /* Pods-OsExplorer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OsExplorer-acknowledgements.plist"; sourceTree = "<group>"; };
+		51E511D7C2876F5D1BF9E4400B6E1BC6 /* MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMDrawerController.xcconfig; sourceTree = "<group>"; };
+		57A66F0A2641367FA26FE1193BAB0AF3 /* UIAlertController+Blocks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIAlertController+Blocks.xcconfig"; sourceTree = "<group>"; };
+		57FF1341BBA7772E4D3915E784D49ACC /* Pods-OsExplorer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OsExplorer-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5F36B09795940E5719D78D6FA8B91881 /* UIAlertController+Blocks-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIAlertController+Blocks-Private.xcconfig"; sourceTree = "<group>"; };
-		5F5FBCFAD2796C8E33452248F970F912 /* RMUniversalAlert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RMUniversalAlert.xcconfig; sourceTree = "<group>"; };
-		64D465499E5D7C0DFD4B6D4147E9A764 /* UIActionSheet+Blocks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks-prefix.pch"; sourceTree = "<group>"; };
-		6ABAC5338E3771B6C3D9673DD783D813 /* UIAlertController+Blocks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks-prefix.pch"; sourceTree = "<group>"; };
-		6D5C583BA680643D97CF63AC5D58390F /* Pods-osbourne-explorer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-osbourne-explorer-dummy.m"; sourceTree = "<group>"; };
-		6DD2B5FC84501EEFC4DD106760BAB370 /* libRMUniversalAlert.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRMUniversalAlert.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		67BC9C99BA8318787899C3E3B35D6022 /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
+		6FC57013CD3DCD58B352F4C9E2DB4DAB /* UITableView+NXEmptyView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+NXEmptyView.m"; path = "UITableView+NXEmptyView/UITableView+NXEmptyView.m"; sourceTree = "<group>"; };
 		70A3BB5146CC111B8261AC8D1E4F1F09 /* libUIAlertController+Blocks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUIAlertController+Blocks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CF594C0FCB118C18C2877000FDB22BA /* UIAlertView+Blocks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIAlertView+Blocks.xcconfig"; sourceTree = "<group>"; };
-		878F80B24271E270515690F75AFA2D64 /* UIActionSheet+Blocks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIActionSheet+Blocks.xcconfig"; sourceTree = "<group>"; };
+		75C6F797D9C9764F16FB09DDA8766F2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7A0F18A95E2F810822E2AFC9D80F4C7A /* UIAlertView+Blocks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIAlertView+Blocks.xcconfig"; sourceTree = "<group>"; };
+		7B29385E56D9418FA74CBE6930FD8DD8 /* MMDrawerController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MMDrawerController-Private.xcconfig"; sourceTree = "<group>"; };
+		7EF0318F02653D5D5C1C00382D89AADC /* MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
+		8277070B883C99CC4F34C115D9B03177 /* libMMDrawerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMMDrawerController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		83C54F01AB19EB15FB3B11649C465AC1 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
+		84102DD5A44EB11E96A7FCDB941F0CA9 /* UIAlertView+Blocks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks-prefix.pch"; sourceTree = "<group>"; };
+		880E1E73927BD20286C69835466D1BC7 /* UITableView-NXEmptyView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITableView-NXEmptyView-dummy.m"; sourceTree = "<group>"; };
+		8B1A1B080CBC97258795DB7D4C5AF32D /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		8BD50D6231FA6F3A54531993141962F7 /* libUIActionSheet+Blocks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUIActionSheet+Blocks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		909C8CE5EE9724941BA7720FDAA320DD /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
-		9448BBF94573AD21A8C62AD34BFEEFED /* MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
-		98A7C9E3500C623EE46936FDAE8C8E45 /* Pods-osbourne-explorer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-osbourne-explorer-resources.sh"; sourceTree = "<group>"; };
-		A7C12793F9FEE6E5A80D510101AA7B75 /* MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMDrawerController-dummy.m"; sourceTree = "<group>"; };
-		A995812772B9752E9382877E3F9B1BC6 /* RMPopoverPresentationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RMPopoverPresentationController.h; sourceTree = "<group>"; };
-		B3068275C9EBADE3495F6D710EE6DA33 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
-		B341FC8D4AF76DD46169BA5966E8F988 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		B6C2FF938D0C14BA1BE1BA68DB7C5AAA /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
-		B8782ABADA481C1B8C3FED1B3CAC17A9 /* RMUniversalAlert-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "RMUniversalAlert-Private.xcconfig"; sourceTree = "<group>"; };
+		8D319F1C445E1C41E86A35A6881D75FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		9EC28D0077AF7E46F0C72BAC906DFA06 /* Pods-OsExplorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OsExplorer.debug.xcconfig"; sourceTree = "<group>"; };
+		AEAA879358FD2BE632D7C7DBB5A063FB /* libPods-OsExplorer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OsExplorer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B2E1834E6B5836D8E399621EBFD465 /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C1C4B73138680D3523EC13276DB3DA1A /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
-		C1DE2552F2503F6BA20D0751B4F296A1 /* MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMDrawerController.xcconfig; sourceTree = "<group>"; };
+		C1BA3851F6337F1CC4AAAB4E7E4429DF /* Pods-OsExplorer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OsExplorer-resources.sh"; sourceTree = "<group>"; };
+		C42305A303847ADE749E1C59BF71A775 /* UITableView-NXEmptyView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITableView-NXEmptyView-prefix.pch"; sourceTree = "<group>"; };
 		C962CA6FECD0AD628C4A89D458E6164B /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
-		CCDA173F9D3BC94B248BCA329C68FB8D /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		CD29456D9BA88859B9057244101F43A1 /* UIAlertView+Blocks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks-dummy.m"; sourceTree = "<group>"; };
-		CD855594865CC7CD4831CFA69CED119E /* Pods-osbourne-explorer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-osbourne-explorer-acknowledgements.plist"; sourceTree = "<group>"; };
-		CDA7B1FF6E3178032ECA7B769637D020 /* RMUniversalAlert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RMUniversalAlert.m; sourceTree = "<group>"; };
+		CE8BB919818EE2B0A6DBB2C0ADB7345B /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
+		D70ED46FD54B0D022E38F503232298C4 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		D724EB24E07AD8E3ADA6D743183F672C /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
 		DA6B3FD5196F433C726F0B6BF33C970D /* UIActionSheet+Blocks-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIActionSheet+Blocks-Private.xcconfig"; sourceTree = "<group>"; };
-		DCCE5C485699E11796FED0E740A08C4D /* Pods-osbourne-explorer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-osbourne-explorer-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E09C868E0C50924B3F71691D3B357C21 /* libMMDrawerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMMDrawerController.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1AC64FFDC7426D7138611EF3A67B3C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E3B619A4F022670C0261AF87B52792B9 /* libUITableView-NXEmptyView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUITableView-NXEmptyView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3CC408D3DE3ADBB3E30009CBCBA7980 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		E65B237CD9E1F24947730908A076B186 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		E69C0029717A7292C4DF5C9302B17E18 /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
+		EA2DA031395AF64E3D898079B3EAB987 /* Pods-OsExplorer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OsExplorer-dummy.m"; sourceTree = "<group>"; };
 		EAB44C52DDB245764216E8BE24D5EE57 /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
-		EC51AC63DCDD34B45484703A8408711C /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
-		EF9B9350D6492D7EF4188576ED56F295 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
-		F3F39A4FED99373C776FA40C47402FA6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		F453CCB1A9DFCC83C0591D109155ADAA /* Pods-osbourne-explorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-osbourne-explorer.debug.xcconfig"; sourceTree = "<group>"; };
+		F32332C837FD03EA6CF773B14346A6DE /* UIAlertController+Blocks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks-prefix.pch"; sourceTree = "<group>"; };
 		F52BAE693E8F7AC0084E74119D48FD56 /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
-		F8E853D70BBF3BFC76E6CF44ABE8788D /* UIAlertController+Blocks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIAlertController+Blocks.xcconfig"; sourceTree = "<group>"; };
+		FDD3F160857E03418086FFC5413E54C2 /* Pods-OsExplorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OsExplorer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		292AFC5CF8C3B261A532D552DE3B74ED /* Frameworks */ = {
+		21D4CBD235D83B357BEACD41DCE0F562 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D08434E7EEC7A37585BC49CBF06A4EE /* Foundation.framework in Frameworks */,
+				0072E5C8D0DB8422DF7E20E16BF03901 /* Foundation.framework in Frameworks */,
+				44932A0B179D1A877F28885E8135B791 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +151,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				02CDBAEB0CACCD4B3B408D4E61D99A41 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9244974DC3978B9DEC4F339C006B4C44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F861FFFE9893E3DF4FB1BA8D404ECEA /* Foundation.framework in Frameworks */,
+				F15C3A26158D678A0B7F1398C920BF4D /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,219 +179,188 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD902C88532068894A7FB83E99BEF59B /* Frameworks */ = {
+		DF683D50E687B507F8AEAA2853C72660 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA4F671AA21835A0B74B94A07B3F1B5A /* Foundation.framework in Frameworks */,
-				B46B997D0D0BCAA3038648B93BA60B84 /* QuartzCore.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7CFEB61BDCA4A019C57E5D7F7E62D0C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7B9FE620FA5286AD0FF14D6635B11A8 /* Foundation.framework in Frameworks */,
+				798D7DFEFF934DB5F3AE80E974F7BDAD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00FC04B06EEF8A155D545C321FDCC389 /* iOS */ = {
+		0E19812194C64DA7994607639D94F59A /* MMDrawerBarButtonItem */ = {
 			isa = PBXGroup;
 			children = (
-				E1AC64FFDC7426D7138611EF3A67B3C8 /* Foundation.framework */,
-				F3F39A4FED99373C776FA40C47402FA6 /* QuartzCore.framework */,
+				1E2DBAC6C86AAE165C91BF56BEA31FC6 /* MMDrawerBarButtonItem.h */,
+				D724EB24E07AD8E3ADA6D743183F672C /* MMDrawerBarButtonItem.m */,
 			);
-			name = iOS;
+			name = MMDrawerBarButtonItem;
 			sourceTree = "<group>";
 		};
-		07F84E90959B86CFC6A6DED8A5745B7A /* Frameworks */ = {
+		1188258956970BA2400A1AD6739A9FF0 /* GoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
-				CCDA173F9D3BC94B248BCA329C68FB8D /* GoogleMaps.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		09B4661CBC32C208117F92A2E92FBDB5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7CF594C0FCB118C18C2877000FDB22BA /* UIAlertView+Blocks.xcconfig */,
-				4E6D93078642DB0FAAFF99F8AEEF0BA7 /* UIAlertView+Blocks-Private.xcconfig */,
-				CD29456D9BA88859B9057244101F43A1 /* UIAlertView+Blocks-dummy.m */,
-				391164CD49F5746FF36C46D4986BF6B3 /* UIAlertView+Blocks-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/UIAlertView+Blocks";
-			sourceTree = "<group>";
-		};
-		17FD07D2178B19EE0E32ACA0C5BD28E5 /* UIAlertController+Blocks */ = {
-			isa = PBXGroup;
-			children = (
-				B9B2E1834E6B5836D8E399621EBFD465 /* UIAlertController+Blocks.h */,
-				3311F4E4B21A5932E4E7810697AE44A4 /* UIAlertController+Blocks.m */,
-				9BC88B48468CF49FC3CB9B872BAD8D21 /* Support Files */,
-			);
-			path = "UIAlertController+Blocks";
-			sourceTree = "<group>";
-		};
-		2B603173FE03CB9EDFE53FAFBA8F7E55 /* GoogleMaps */ = {
-			isa = PBXGroup;
-			children = (
-				07F84E90959B86CFC6A6DED8A5745B7A /* Frameworks */,
-				C58AA988CDA55C670E742B9DE8D837FE /* Resources */,
+				2A77922A7160151E556F0178DC9AAE07 /* Frameworks */,
+				B6F9F50CAB63C020AC4038A164D061E5 /* Resources */,
 			);
 			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
-		3A63EEC3F54C129345A23F9CB69B3E4C /* Core */ = {
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				442146FBAB890E700BAD4BFEEC0E31BC /* MMDrawerController.h */,
-				B6C2FF938D0C14BA1BE1BA68DB7C5AAA /* MMDrawerController.m */,
-				EF9B9350D6492D7EF4188576ED56F295 /* UIViewController+MMDrawerController.h */,
-				41C2ACD8E77D968643FACE90A92206C4 /* UIViewController+MMDrawerController.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		40215D5ABE3475DF996190556CABDFBF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2B603173FE03CB9EDFE53FAFBA8F7E55 /* GoogleMaps */,
-				6A010659A179B64FA4E344BFF11D46E8 /* MMDrawerController */,
-				6C3E2B15E7E93DA16AE2F978C36CC821 /* RMUniversalAlert */,
-				7192A9283260BC4F91A119D72D1BD07E /* UIActionSheet+Blocks */,
-				17FD07D2178B19EE0E32ACA0C5BD28E5 /* UIAlertController+Blocks */,
-				D51A7A64372792FBF9B8F8D0212A5709 /* UIAlertView+Blocks */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				00FC04B06EEF8A155D545C321FDCC389 /* iOS */,
+				64F024328420545A9A70B81EC0160AA9 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6A010659A179B64FA4E344BFF11D46E8 /* MMDrawerController */ = {
+		1E450A02F024EE134F974CA38657E0F8 /* UIAlertView+Blocks */ = {
 			isa = PBXGroup;
 			children = (
-				3A63EEC3F54C129345A23F9CB69B3E4C /* Core */,
-				8054DAAD0E5F6D80A4C71EB937F0C08F /* MMDrawerBarButtonItem */,
-				8DFD88BBB192D9D237272D29D6578E3C /* MMDrawerVisualStates */,
-				EAA2200E42C5C9E555BEADF587A3F9C6 /* Subclass */,
-				F5D829B71D4050CD03EA489EE2D160A3 /* Support Files */,
+				C962CA6FECD0AD628C4A89D458E6164B /* UIAlertView+Blocks.h */,
+				2DA949A3C75A24199DD28956824A77E5 /* UIAlertView+Blocks.m */,
+				DA0835CB0960A3DF8A3DE65C41F28A16 /* Support Files */,
 			);
-			path = MMDrawerController;
+			path = "UIAlertView+Blocks";
 			sourceTree = "<group>";
 		};
-		6C3E2B15E7E93DA16AE2F978C36CC821 /* RMUniversalAlert */ = {
+		220F7BA3E740AEC1DC35EB8EE2B30621 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A995812772B9752E9382877E3F9B1BC6 /* RMPopoverPresentationController.h */,
-				4E1C9C6E857FEECA912770D92D0DF4E5 /* RMPopoverPresentationController.m */,
-				249644C94DD444726E2062C609A6BD6E /* RMUniversalAlert.h */,
-				CDA7B1FF6E3178032ECA7B769637D020 /* RMUniversalAlert.m */,
-				B73510431A6E5F1DD3081062D60E4E00 /* Support Files */,
+				3BC9C7B4F35D5F3ABBC1318514AEA61A /* UIActionSheet+Blocks.xcconfig */,
+				DA6B3FD5196F433C726F0B6BF33C970D /* UIActionSheet+Blocks-Private.xcconfig */,
+				49D78AA3866C38BE571959710D51E514 /* UIActionSheet+Blocks-dummy.m */,
+				070FE94C23FA99627D34B6DE20AE9419 /* UIActionSheet+Blocks-prefix.pch */,
 			);
-			path = RMUniversalAlert;
+			name = "Support Files";
+			path = "../Target Support Files/UIActionSheet+Blocks";
 			sourceTree = "<group>";
 		};
-		7192A9283260BC4F91A119D72D1BD07E /* UIActionSheet+Blocks */ = {
+		246EECAE45486316C94F14F4B98725E2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				57A66F0A2641367FA26FE1193BAB0AF3 /* UIAlertController+Blocks.xcconfig */,
+				5F36B09795940E5719D78D6FA8B91881 /* UIAlertController+Blocks-Private.xcconfig */,
+				3B0604F44EE33A2E12A6041DC260830F /* UIAlertController+Blocks-dummy.m */,
+				F32332C837FD03EA6CF773B14346A6DE /* UIAlertController+Blocks-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIAlertController+Blocks";
+			sourceTree = "<group>";
+		};
+		26DF014D7729387EAC1F9472E7DD71B6 /* UIActionSheet+Blocks */ = {
 			isa = PBXGroup;
 			children = (
 				F52BAE693E8F7AC0084E74119D48FD56 /* UIActionSheet+Blocks.h */,
 				EAB44C52DDB245764216E8BE24D5EE57 /* UIActionSheet+Blocks.m */,
-				EEAF366A4A8E304C59DBB757345042B4 /* Support Files */,
+				220F7BA3E740AEC1DC35EB8EE2B30621 /* Support Files */,
 			);
 			path = "UIActionSheet+Blocks";
 			sourceTree = "<group>";
 		};
-		7B638032E8D549588821EABB730F7CB2 /* Pods-osbourne-explorer */ = {
+		2A77922A7160151E556F0178DC9AAE07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DCCE5C485699E11796FED0E740A08C4D /* Pods-osbourne-explorer-acknowledgements.markdown */,
-				CD855594865CC7CD4831CFA69CED119E /* Pods-osbourne-explorer-acknowledgements.plist */,
-				6D5C583BA680643D97CF63AC5D58390F /* Pods-osbourne-explorer-dummy.m */,
-				98A7C9E3500C623EE46936FDAE8C8E45 /* Pods-osbourne-explorer-resources.sh */,
-				F453CCB1A9DFCC83C0591D109155ADAA /* Pods-osbourne-explorer.debug.xcconfig */,
-				2F539CBA43996A2D1982E33E2C0F83F9 /* Pods-osbourne-explorer.release.xcconfig */,
+				E65B237CD9E1F24947730908A076B186 /* GoogleMaps.framework */,
 			);
-			name = "Pods-osbourne-explorer";
-			path = "Target Support Files/Pods-osbourne-explorer";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BAB7F8A38C92DB4ADFDDC87D47EF818 /* UITableView-NXEmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				19FB26D7C5F97CCF8257D4233F989FCF /* UITableView+NXEmptyView.h */,
+				6FC57013CD3DCD58B352F4C9E2DB4DAB /* UITableView+NXEmptyView.m */,
+				FDC250F5A532771780731A22C154BCCD /* Support Files */,
+			);
+			path = "UITableView-NXEmptyView";
+			sourceTree = "<group>";
+		};
+		64F024328420545A9A70B81EC0160AA9 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				75C6F797D9C9764F16FB09DDA8766F2F /* Foundation.framework */,
+				E3CC408D3DE3ADBB3E30009CBCBA7980 /* QuartzCore.framework */,
+				8D319F1C445E1C41E86A35A6881D75FE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		79DA0F9EB84B8E39D7898F46DEDC63F1 /* MMDrawerVisualStates */ = {
+			isa = PBXGroup;
+			children = (
+				83C54F01AB19EB15FB3B11649C465AC1 /* MMDrawerVisualState.h */,
+				CE8BB919818EE2B0A6DBB2C0ADB7345B /* MMDrawerVisualState.m */,
+			);
+			name = MMDrawerVisualStates;
+			sourceTree = "<group>";
+		};
+		7AE5329817389FA34F11F360DAEDDF5D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				51E511D7C2876F5D1BF9E4400B6E1BC6 /* MMDrawerController.xcconfig */,
+				7B29385E56D9418FA74CBE6930FD8DD8 /* MMDrawerController-Private.xcconfig */,
+				046B9C200C20E4A4E8BCE5C74E45335C /* MMDrawerController-dummy.m */,
+				7EF0318F02653D5D5C1C00382D89AADC /* MMDrawerController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MMDrawerController";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				40215D5ABE3475DF996190556CABDFBF /* Pods */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				D5207316C9837096041227E1E07CE0EF /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
-				A60FCE07FA2A4DD498798A283237946A /* Targets Support Files */,
+				B063C4C5B827C7985573A0D4BFB5524A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8054DAAD0E5F6D80A4C71EB937F0C08F /* MMDrawerBarButtonItem */ = {
+		7FD9A19DBAB28B19C2B306EA59ADC068 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				909C8CE5EE9724941BA7720FDAA320DD /* MMDrawerBarButtonItem.h */,
-				EC51AC63DCDD34B45484703A8408711C /* MMDrawerBarButtonItem.m */,
+				E69C0029717A7292C4DF5C9302B17E18 /* MMDrawerController.h */,
+				67BC9C99BA8318787899C3E3B35D6022 /* MMDrawerController.m */,
+				D70ED46FD54B0D022E38F503232298C4 /* UIViewController+MMDrawerController.h */,
+				8B1A1B080CBC97258795DB7D4C5AF32D /* UIViewController+MMDrawerController.m */,
 			);
-			name = MMDrawerBarButtonItem;
+			name = Core;
 			sourceTree = "<group>";
 		};
-		8DFD88BBB192D9D237272D29D6578E3C /* MMDrawerVisualStates */ = {
+		8C9E25D19A8D88848D6B59207BADEA42 /* Subclass */ = {
 			isa = PBXGroup;
 			children = (
-				C1C4B73138680D3523EC13276DB3DA1A /* MMDrawerVisualState.h */,
-				2B0A92C4E0564D5D16B929E5C2ACD455 /* MMDrawerVisualState.m */,
+				42B14349920EA5A3BD9B4FB601BA541B /* MMDrawerController+Subclass.h */,
 			);
-			name = MMDrawerVisualStates;
+			name = Subclass;
 			sourceTree = "<group>";
 		};
-		9BC88B48468CF49FC3CB9B872BAD8D21 /* Support Files */ = {
+		A608E42CA941A26F54D3AB33424CDE5E /* UIAlertController+Blocks */ = {
 			isa = PBXGroup;
 			children = (
-				F8E853D70BBF3BFC76E6CF44ABE8788D /* UIAlertController+Blocks.xcconfig */,
-				5F36B09795940E5719D78D6FA8B91881 /* UIAlertController+Blocks-Private.xcconfig */,
-				3B0604F44EE33A2E12A6041DC260830F /* UIAlertController+Blocks-dummy.m */,
-				6ABAC5338E3771B6C3D9673DD783D813 /* UIAlertController+Blocks-prefix.pch */,
+				B9B2E1834E6B5836D8E399621EBFD465 /* UIAlertController+Blocks.h */,
+				3311F4E4B21A5932E4E7810697AE44A4 /* UIAlertController+Blocks.m */,
+				246EECAE45486316C94F14F4B98725E2 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/UIAlertController+Blocks";
+			path = "UIAlertController+Blocks";
 			sourceTree = "<group>";
 		};
-		A60FCE07FA2A4DD498798A283237946A /* Targets Support Files */ = {
+		B063C4C5B827C7985573A0D4BFB5524A /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7B638032E8D549588821EABB730F7CB2 /* Pods-osbourne-explorer */,
+				F094AE751F9F8E3A04B41B51F261CEE2 /* Pods-OsExplorer */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B73510431A6E5F1DD3081062D60E4E00 /* Support Files */ = {
+		B6F9F50CAB63C020AC4038A164D061E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5F5FBCFAD2796C8E33452248F970F912 /* RMUniversalAlert.xcconfig */,
-				B8782ABADA481C1B8C3FED1B3CAC17A9 /* RMUniversalAlert-Private.xcconfig */,
-				5D180BE83BB1FA75FFD8920CBD46B9D0 /* RMUniversalAlert-dummy.m */,
-				41484EE2A36096A0297DF11F0F6CEA21 /* RMUniversalAlert-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/RMUniversalAlert";
-			sourceTree = "<group>";
-		};
-		C58AA988CDA55C670E742B9DE8D837FE /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				B341FC8D4AF76DD46169BA5966E8F988 /* GoogleMaps.bundle */,
+				13123946FABB3C887767814894797D48 /* GoogleMaps.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -412,75 +368,107 @@
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E09C868E0C50924B3F71691D3B357C21 /* libMMDrawerController.a */,
-				254C1D605E13177530940341CDF13C4A /* libPods-osbourne-explorer.a */,
-				6DD2B5FC84501EEFC4DD106760BAB370 /* libRMUniversalAlert.a */,
+				8277070B883C99CC4F34C115D9B03177 /* libMMDrawerController.a */,
+				AEAA879358FD2BE632D7C7DBB5A063FB /* libPods-OsExplorer.a */,
 				8BD50D6231FA6F3A54531993141962F7 /* libUIActionSheet+Blocks.a */,
 				70A3BB5146CC111B8261AC8D1E4F1F09 /* libUIAlertController+Blocks.a */,
 				4C1F25677429EB16FFEC4D4EE680DF5A /* libUIAlertView+Blocks.a */,
+				E3B619A4F022670C0261AF87B52792B9 /* libUITableView-NXEmptyView.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D51A7A64372792FBF9B8F8D0212A5709 /* UIAlertView+Blocks */ = {
+		CFBA198ED8A90FD4F5820C96303673B5 /* MMDrawerController */ = {
 			isa = PBXGroup;
 			children = (
-				C962CA6FECD0AD628C4A89D458E6164B /* UIAlertView+Blocks.h */,
-				2DA949A3C75A24199DD28956824A77E5 /* UIAlertView+Blocks.m */,
-				09B4661CBC32C208117F92A2E92FBDB5 /* Support Files */,
+				7FD9A19DBAB28B19C2B306EA59ADC068 /* Core */,
+				0E19812194C64DA7994607639D94F59A /* MMDrawerBarButtonItem */,
+				79DA0F9EB84B8E39D7898F46DEDC63F1 /* MMDrawerVisualStates */,
+				8C9E25D19A8D88848D6B59207BADEA42 /* Subclass */,
+				7AE5329817389FA34F11F360DAEDDF5D /* Support Files */,
 			);
-			path = "UIAlertView+Blocks";
+			path = MMDrawerController;
 			sourceTree = "<group>";
 		};
-		EAA2200E42C5C9E555BEADF587A3F9C6 /* Subclass */ = {
+		D5207316C9837096041227E1E07CE0EF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B3068275C9EBADE3495F6D710EE6DA33 /* MMDrawerController+Subclass.h */,
+				1188258956970BA2400A1AD6739A9FF0 /* GoogleMaps */,
+				CFBA198ED8A90FD4F5820C96303673B5 /* MMDrawerController */,
+				26DF014D7729387EAC1F9472E7DD71B6 /* UIActionSheet+Blocks */,
+				A608E42CA941A26F54D3AB33424CDE5E /* UIAlertController+Blocks */,
+				1E450A02F024EE134F974CA38657E0F8 /* UIAlertView+Blocks */,
+				3BAB7F8A38C92DB4ADFDDC87D47EF818 /* UITableView-NXEmptyView */,
 			);
-			name = Subclass;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		EEAF366A4A8E304C59DBB757345042B4 /* Support Files */ = {
+		DA0835CB0960A3DF8A3DE65C41F28A16 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				878F80B24271E270515690F75AFA2D64 /* UIActionSheet+Blocks.xcconfig */,
-				DA6B3FD5196F433C726F0B6BF33C970D /* UIActionSheet+Blocks-Private.xcconfig */,
-				49D78AA3866C38BE571959710D51E514 /* UIActionSheet+Blocks-dummy.m */,
-				64D465499E5D7C0DFD4B6D4147E9A764 /* UIActionSheet+Blocks-prefix.pch */,
+				7A0F18A95E2F810822E2AFC9D80F4C7A /* UIAlertView+Blocks.xcconfig */,
+				4E6D93078642DB0FAAFF99F8AEEF0BA7 /* UIAlertView+Blocks-Private.xcconfig */,
+				CD29456D9BA88859B9057244101F43A1 /* UIAlertView+Blocks-dummy.m */,
+				84102DD5A44EB11E96A7FCDB941F0CA9 /* UIAlertView+Blocks-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/UIActionSheet+Blocks";
+			path = "../Target Support Files/UIAlertView+Blocks";
 			sourceTree = "<group>";
 		};
-		F5D829B71D4050CD03EA489EE2D160A3 /* Support Files */ = {
+		F094AE751F9F8E3A04B41B51F261CEE2 /* Pods-OsExplorer */ = {
 			isa = PBXGroup;
 			children = (
-				C1DE2552F2503F6BA20D0751B4F296A1 /* MMDrawerController.xcconfig */,
-				4D938E533844035F8D2C7B17FB40036D /* MMDrawerController-Private.xcconfig */,
-				A7C12793F9FEE6E5A80D510101AA7B75 /* MMDrawerController-dummy.m */,
-				9448BBF94573AD21A8C62AD34BFEEFED /* MMDrawerController-prefix.pch */,
+				57FF1341BBA7772E4D3915E784D49ACC /* Pods-OsExplorer-acknowledgements.markdown */,
+				504AE7AE2402E4374955DAD7D053B0E0 /* Pods-OsExplorer-acknowledgements.plist */,
+				EA2DA031395AF64E3D898079B3EAB987 /* Pods-OsExplorer-dummy.m */,
+				C1BA3851F6337F1CC4AAAB4E7E4429DF /* Pods-OsExplorer-resources.sh */,
+				9EC28D0077AF7E46F0C72BAC906DFA06 /* Pods-OsExplorer.debug.xcconfig */,
+				FDD3F160857E03418086FFC5413E54C2 /* Pods-OsExplorer.release.xcconfig */,
+			);
+			name = "Pods-OsExplorer";
+			path = "Target Support Files/Pods-OsExplorer";
+			sourceTree = "<group>";
+		};
+		FDC250F5A532771780731A22C154BCCD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B010E29A31C34EAFCB106C6D2D0C8E1 /* UITableView-NXEmptyView.xcconfig */,
+				285C5186AA0FCBE9D79AD9FE1B6A9E44 /* UITableView-NXEmptyView-Private.xcconfig */,
+				880E1E73927BD20286C69835466D1BC7 /* UITableView-NXEmptyView-dummy.m */,
+				C42305A303847ADE749E1C59BF71A775 /* UITableView-NXEmptyView-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/MMDrawerController";
+			path = "../Target Support Files/UITableView-NXEmptyView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		062CDB93273DE717E317890DA2B809B2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A5207F7A5CF35EC45068442A50A69E7 /* MMDrawerBarButtonItem.h in Headers */,
+				F4E3F51BE235DD33A95A8D8885FA62BD /* MMDrawerController+Subclass.h in Headers */,
+				ED88B41D93D285A2BE05082B4A71AF83 /* MMDrawerController.h in Headers */,
+				CD836549043FC4B0764CB37AF2163595 /* MMDrawerVisualState.h in Headers */,
+				052CAA3AC1CCB1626DA0FD110EC67DAF /* UIViewController+MMDrawerController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C2703E98C00B8C61BE44E06CE1A791A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6F72BCAE3692649DE111932FE33127D /* UITableView+NXEmptyView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6C8273EC7FF4584EDBC22A50E81271C6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D4A6E2F13B81DCCC4005D1D21DDC3943 /* UIAlertController+Blocks.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8090F576EA633F89B1B7381A3A51CDB6 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				506BFE408DDF4AF01A756DA99FAAFA7E /* RMPopoverPresentationController.h in Headers */,
-				DCD6E6F8C243E1022A2899ECE74D787D /* RMUniversalAlert.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,28 +488,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C4190EB291EC3D5BBF5ADC924403B7D5 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B50E2AF3EB3EF35D89B4E0D9DEE86BB1 /* MMDrawerBarButtonItem.h in Headers */,
-				826D85B452A9449CD93BB99A5AA7F9FF /* MMDrawerController+Subclass.h in Headers */,
-				4869C0F274B189C9476CE01D6F17141A /* MMDrawerController.h in Headers */,
-				DE5D2C5E367DC149F4C1F1FA2C67839F /* MMDrawerVisualState.h in Headers */,
-				66392DBBDAF1396AE92D28085CA31290 /* UIViewController+MMDrawerController.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3CE5D85348602DCA18FF3DDB1E82A570 /* MMDrawerController */ = {
+		0B122AA241414997C7D30E63259656B7 /* MMDrawerController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F2BD0B7BA73D47334B6981110911C5E /* Build configuration list for PBXNativeTarget "MMDrawerController" */;
+			buildConfigurationList = 937578CFB5D2A46B8D7155F9E472E148 /* Build configuration list for PBXNativeTarget "MMDrawerController" */;
 			buildPhases = (
-				19973DE6951DC042B0AB9E601E2EDD87 /* Sources */,
-				AD902C88532068894A7FB83E99BEF59B /* Frameworks */,
-				C4190EB291EC3D5BBF5ADC924403B7D5 /* Headers */,
+				40EE30A629569DB09082640263A230E2 /* Sources */,
+				9244974DC3978B9DEC4F339C006B4C44 /* Frameworks */,
+				062CDB93273DE717E317890DA2B809B2 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -529,48 +505,45 @@
 			);
 			name = MMDrawerController;
 			productName = MMDrawerController;
-			productReference = E09C868E0C50924B3F71691D3B357C21 /* libMMDrawerController.a */;
+			productReference = 8277070B883C99CC4F34C115D9B03177 /* libMMDrawerController.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		44E1033186CB2AD99AFB43372E7842DC /* Pods-osbourne-explorer */ = {
+		4215BA75171B132BC45DC30B63C91282 /* UITableView-NXEmptyView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 807DD5E2323DF095BAFC15B459DE2902 /* Build configuration list for PBXNativeTarget "Pods-osbourne-explorer" */;
+			buildConfigurationList = FB72E4D99C486E0083A8B15C2CDD93BF /* Build configuration list for PBXNativeTarget "UITableView-NXEmptyView" */;
 			buildPhases = (
-				B1681A94808F1556CF6305C360709BDA /* Sources */,
-				292AFC5CF8C3B261A532D552DE3B74ED /* Frameworks */,
+				5C41B34F8920CF224A7478CD51BDC3DF /* Sources */,
+				21D4CBD235D83B357BEACD41DCE0F562 /* Frameworks */,
+				1C2703E98C00B8C61BE44E06CE1A791A /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				29A7ED0C680008BC792F873F48253F75 /* PBXTargetDependency */,
-				FAD877F835F3C2607B8DAFD7DA414213 /* PBXTargetDependency */,
-				84594FAD900411030A7CB13077A9A9F4 /* PBXTargetDependency */,
-				CE5E2305822D93D94229D8E3CC305ED3 /* PBXTargetDependency */,
-				680507D923907202AE38347EB759867A /* PBXTargetDependency */,
 			);
-			name = "Pods-osbourne-explorer";
-			productName = "Pods-osbourne-explorer";
-			productReference = 254C1D605E13177530940341CDF13C4A /* libPods-osbourne-explorer.a */;
+			name = "UITableView-NXEmptyView";
+			productName = "UITableView-NXEmptyView";
+			productReference = E3B619A4F022670C0261AF87B52792B9 /* libUITableView-NXEmptyView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		68E4D9547002CB114427668A9167E206 /* RMUniversalAlert */ = {
+		8CE6B3BF9F8644AA72FCF9D915A4CB77 /* Pods-OsExplorer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FB963F883855E010A78CCE39138A3F7 /* Build configuration list for PBXNativeTarget "RMUniversalAlert" */;
+			buildConfigurationList = 095ECD2C66E3107F22A28F8E1D2D94BC /* Build configuration list for PBXNativeTarget "Pods-OsExplorer" */;
 			buildPhases = (
-				43FE5CB95615F15D0C3779F1B81EF8ED /* Sources */,
-				F7CFEB61BDCA4A019C57E5D7F7E62D0C /* Frameworks */,
-				8090F576EA633F89B1B7381A3A51CDB6 /* Headers */,
+				A5BE4115687D05C79A60301B7758D87A /* Sources */,
+				DF683D50E687B507F8AEAA2853C72660 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7C408C05CA24F9EE6D35B5E283F67067 /* PBXTargetDependency */,
-				20F96D4E3333813234D3A21CCC0385F2 /* PBXTargetDependency */,
-				937FCB2FBCF750203B5C9F49FF312E61 /* PBXTargetDependency */,
+				AF00FC71BC370DE249A721FD789A7BF4 /* PBXTargetDependency */,
+				B9B7268727A9996B44E5B77FD52075D3 /* PBXTargetDependency */,
+				09743F1B5200A2ACFCAFD366BBC670B3 /* PBXTargetDependency */,
+				E79A26E114D6D9877DF5004C4236BA73 /* PBXTargetDependency */,
+				6D61965716A0DE83415D779B563AD2F5 /* PBXTargetDependency */,
 			);
-			name = RMUniversalAlert;
-			productName = RMUniversalAlert;
-			productReference = 6DD2B5FC84501EEFC4DD106760BAB370 /* libRMUniversalAlert.a */;
+			name = "Pods-OsExplorer";
+			productName = "Pods-OsExplorer";
+			productReference = AEAA879358FD2BE632D7C7DBB5A063FB /* libPods-OsExplorer.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		91CE01D9C05AE211FC3D6E341DB95BFD /* UIAlertController+Blocks */ = {
@@ -645,12 +618,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3CE5D85348602DCA18FF3DDB1E82A570 /* MMDrawerController */,
-				44E1033186CB2AD99AFB43372E7842DC /* Pods-osbourne-explorer */,
-				68E4D9547002CB114427668A9167E206 /* RMUniversalAlert */,
+				0B122AA241414997C7D30E63259656B7 /* MMDrawerController */,
+				8CE6B3BF9F8644AA72FCF9D915A4CB77 /* Pods-OsExplorer */,
 				ACA39E0C8C610ED17D1EED33F06C685F /* UIActionSheet+Blocks */,
 				91CE01D9C05AE211FC3D6E341DB95BFD /* UIAlertController+Blocks */,
 				D51604217FD9306BA054A000F88CE4FE /* UIAlertView+Blocks */,
+				4215BA75171B132BC45DC30B63C91282 /* UITableView-NXEmptyView */,
 			);
 		};
 /* End PBXProject section */
@@ -665,25 +638,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		19973DE6951DC042B0AB9E601E2EDD87 /* Sources */ = {
+		40EE30A629569DB09082640263A230E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A891A4B4AA32F54C100C6CC0B6BE37CC /* MMDrawerBarButtonItem.m in Sources */,
-				931EC45EF551EF3F2114AB6B3BF7CA56 /* MMDrawerController-dummy.m in Sources */,
-				9AD1CB7CF433ACC8D634B014930DF5B6 /* MMDrawerController.m in Sources */,
-				912CAC60251B6AD180187CF9540342DF /* MMDrawerVisualState.m in Sources */,
-				51148C84634182AC8DB9C50553284966 /* UIViewController+MMDrawerController.m in Sources */,
+				AD1D8A0AE6AA1536E204F8D0B9A253A0 /* MMDrawerBarButtonItem.m in Sources */,
+				8E5F7AE2D7E2C24D23B887ADF1DFFF05 /* MMDrawerController-dummy.m in Sources */,
+				0C301634FF3DE79FEE235D911A2BA95F /* MMDrawerController.m in Sources */,
+				8B62F301B400205283E1ADA2A436CF77 /* MMDrawerVisualState.m in Sources */,
+				C6F6FF6F8E97703772B9F821DD218DAA /* UIViewController+MMDrawerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		43FE5CB95615F15D0C3779F1B81EF8ED /* Sources */ = {
+		5C41B34F8920CF224A7478CD51BDC3DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83E1BD36E71AA978BC7206BE79B24C85 /* RMPopoverPresentationController.m in Sources */,
-				A84A5E81434E1F7101E3C7DC2568FEFB /* RMUniversalAlert-dummy.m in Sources */,
-				E9547AEE2A4609947B581DEF9E0975F5 /* RMUniversalAlert.m in Sources */,
+				735E2C275978CE6FF9CFD27EFB5CF119 /* UITableView+NXEmptyView.m in Sources */,
+				246DEDEC6657913949EB468C227D42DE /* UITableView-NXEmptyView-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,94 +677,60 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1681A94808F1556CF6305C360709BDA /* Sources */ = {
+		A5BE4115687D05C79A60301B7758D87A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D840AD700CC97A5059F9D7EAA9680B2A /* Pods-osbourne-explorer-dummy.m in Sources */,
+				616298E8AE70626C6FB778E76B56465A /* Pods-OsExplorer-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		20F96D4E3333813234D3A21CCC0385F2 /* PBXTargetDependency */ = {
+		09743F1B5200A2ACFCAFD366BBC670B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "UIAlertController+Blocks";
 			target = 91CE01D9C05AE211FC3D6E341DB95BFD /* UIAlertController+Blocks */;
-			targetProxy = F345EAD899455E161BEEE7E30C3BE556 /* PBXContainerItemProxy */;
+			targetProxy = DAB847DD45BC40F42D891AA9F6DEBF99 /* PBXContainerItemProxy */;
 		};
-		29A7ED0C680008BC792F873F48253F75 /* PBXTargetDependency */ = {
+		6D61965716A0DE83415D779B563AD2F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UITableView-NXEmptyView";
+			target = 4215BA75171B132BC45DC30B63C91282 /* UITableView-NXEmptyView */;
+			targetProxy = 642EE17498C2F03A2F38F4B4468E73A0 /* PBXContainerItemProxy */;
+		};
+		AF00FC71BC370DE249A721FD789A7BF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MMDrawerController;
-			target = 3CE5D85348602DCA18FF3DDB1E82A570 /* MMDrawerController */;
-			targetProxy = 74CBB63D17D976B9949D6B7D7027A2E1 /* PBXContainerItemProxy */;
+			target = 0B122AA241414997C7D30E63259656B7 /* MMDrawerController */;
+			targetProxy = F7D0A484C60681254F7B5028558A0502 /* PBXContainerItemProxy */;
 		};
-		680507D923907202AE38347EB759867A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "UIAlertView+Blocks";
-			target = D51604217FD9306BA054A000F88CE4FE /* UIAlertView+Blocks */;
-			targetProxy = DD03B654D38420A9DC208772E5F352AD /* PBXContainerItemProxy */;
-		};
-		7C408C05CA24F9EE6D35B5E283F67067 /* PBXTargetDependency */ = {
+		B9B7268727A9996B44E5B77FD52075D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "UIActionSheet+Blocks";
 			target = ACA39E0C8C610ED17D1EED33F06C685F /* UIActionSheet+Blocks */;
-			targetProxy = EDFD47F8C6AEF68C2D257F7AAA651EC1 /* PBXContainerItemProxy */;
+			targetProxy = 70BCADFB99E9D618930A420D633C87A2 /* PBXContainerItemProxy */;
 		};
-		84594FAD900411030A7CB13077A9A9F4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "UIActionSheet+Blocks";
-			target = ACA39E0C8C610ED17D1EED33F06C685F /* UIActionSheet+Blocks */;
-			targetProxy = 2A0F1985E3C67EDF10EA4024281939D4 /* PBXContainerItemProxy */;
-		};
-		937FCB2FBCF750203B5C9F49FF312E61 /* PBXTargetDependency */ = {
+		E79A26E114D6D9877DF5004C4236BA73 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "UIAlertView+Blocks";
 			target = D51604217FD9306BA054A000F88CE4FE /* UIAlertView+Blocks */;
-			targetProxy = D12458E733EA76078BAC1B3C83E17FAD /* PBXContainerItemProxy */;
-		};
-		CE5E2305822D93D94229D8E3CC305ED3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "UIAlertController+Blocks";
-			target = 91CE01D9C05AE211FC3D6E341DB95BFD /* UIAlertController+Blocks */;
-			targetProxy = 60304CBAC6A1CE83D1CE96F1DC1AF40C /* PBXContainerItemProxy */;
-		};
-		FAD877F835F3C2607B8DAFD7DA414213 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RMUniversalAlert;
-			target = 68E4D9547002CB114427668A9167E206 /* RMUniversalAlert */;
-			targetProxy = C356AC9AC664E42D17F35A984953E8E8 /* PBXContainerItemProxy */;
+			targetProxy = 1C46AEC52A15E8EB8126DB2093E74375 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		300EA00D09711ACEDF3A85278A22C7DE /* Release */ = {
+		00B544007A2AAACD49E79E43F96D741B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8782ABADA481C1B8C3FED1B3CAC17A9 /* RMUniversalAlert-Private.xcconfig */;
+			baseConfigurationReference = 9EC28D0077AF7E46F0C72BAC906DFA06 /* Pods-OsExplorer.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/RMUniversalAlert/RMUniversalAlert-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		4375C588B12019C4B085DE522884F53E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8782ABADA481C1B8C3FED1B3CAC17A9 /* RMUniversalAlert-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/RMUniversalAlert/RMUniversalAlert-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -815,44 +753,12 @@
 			};
 			name = Debug;
 		};
-		5176EB0FD3DB43159CCC237ED69A5A7D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F539CBA43996A2D1982E33E2C0F83F9 /* Pods-osbourne-explorer.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		53EDB37D72612C42BA18D18AA7F29433 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E6D93078642DB0FAAFF99F8AEEF0BA7 /* UIAlertView+Blocks-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/UIAlertView+Blocks/UIAlertView+Blocks-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		5D9167F00039862BC74DD359B3A02B75 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D938E533844035F8D2C7B17FB40036D /* MMDrawerController-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MMDrawerController/MMDrawerController-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -878,6 +784,22 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
+		};
+		9665F2CF0D0A10DB1DC716E77EFE9EC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 285C5186AA0FCBE9D79AD9FE1B6A9E44 /* UITableView-NXEmptyView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UITableView-NXEmptyView/UITableView-NXEmptyView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
 		};
 		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -918,9 +840,9 @@
 			};
 			name = Debug;
 		};
-		BF2FBB65F22B392F03BDE158851C560B /* Debug */ = {
+		B74792309500C02AD3F5EFFE705C76CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D938E533844035F8D2C7B17FB40036D /* MMDrawerController-Private.xcconfig */;
+			baseConfigurationReference = 7B29385E56D9418FA74CBE6930FD8DD8 /* MMDrawerController-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MMDrawerController/MMDrawerController-prefix.pch";
@@ -950,13 +872,13 @@
 			};
 			name = Debug;
 		};
-		CD5D8C0E3B4E88C8CF61D16A93817862 /* Debug */ = {
+		C83B42CC21F0EC7AF94876C410FD8B5E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F453CCB1A9DFCC83C0591D109155ADAA /* Pods-osbourne-explorer.debug.xcconfig */;
+			baseConfigurationReference = FDD3F160857E03418086FFC5413E54C2 /* Pods-OsExplorer.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -964,7 +886,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		D1D43DF9A99F1712E9CCF84D6655C092 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -997,6 +919,22 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		E269FF12F5EDFA8D42FD08A4F9AC9325 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B29385E56D9418FA74CBE6930FD8DD8 /* MMDrawerController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MMDrawerController/MMDrawerController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1032,9 +970,34 @@
 			};
 			name = Release;
 		};
+		FDECCB1BE04454834774825D692642FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 285C5186AA0FCBE9D79AD9FE1B6A9E44 /* UITableView-NXEmptyView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UITableView-NXEmptyView/UITableView-NXEmptyView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		095ECD2C66E3107F22A28F8E1D2D94BC /* Build configuration list for PBXNativeTarget "Pods-OsExplorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B544007A2AAACD49E79E43F96D741B /* Debug */,
+				C83B42CC21F0EC7AF94876C410FD8B5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		21C731742C025493879249D01BE003B6 /* Build configuration list for PBXNativeTarget "UIAlertController+Blocks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1049,15 +1012,6 @@
 			buildConfigurations = (
 				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
 				FB45FFD90572718D82AB9092B750F0CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5F2BD0B7BA73D47334B6981110911C5E /* Build configuration list for PBXNativeTarget "MMDrawerController" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF2FBB65F22B392F03BDE158851C560B /* Debug */,
-				5D9167F00039862BC74DD359B3A02B75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1080,20 +1034,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		807DD5E2323DF095BAFC15B459DE2902 /* Build configuration list for PBXNativeTarget "Pods-osbourne-explorer" */ = {
+		937578CFB5D2A46B8D7155F9E472E148 /* Build configuration list for PBXNativeTarget "MMDrawerController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD5D8C0E3B4E88C8CF61D16A93817862 /* Debug */,
-				5176EB0FD3DB43159CCC237ED69A5A7D /* Release */,
+				B74792309500C02AD3F5EFFE705C76CD /* Debug */,
+				E269FF12F5EDFA8D42FD08A4F9AC9325 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FB963F883855E010A78CCE39138A3F7 /* Build configuration list for PBXNativeTarget "RMUniversalAlert" */ = {
+		FB72E4D99C486E0083A8B15C2CDD93BF /* Build configuration list for PBXNativeTarget "UITableView-NXEmptyView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4375C588B12019C4B085DE522884F53E /* Debug */,
-				300EA00D09711ACEDF3A85278A22C7DE /* Release */,
+				9665F2CF0D0A10DB1DC716E77EFE9EC4 /* Debug */,
+				FDECCB1BE04454834774825D692642FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

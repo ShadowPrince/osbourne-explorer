@@ -42,6 +42,7 @@
 
 - (NSArray<MapOverlay *> *) allOverlays;
 - (MapOverlaySettings *) settingsForOverlay:(MapOverlay *) overlay;
+- (void) setSettings:(MapOverlaySettings *) settings forOverlay:(MapOverlay *) overlay;
 
 - (void) insertMapOverlay:(MapOverlay *) overlay;
 - (void) removeMapOverlay:(MapOverlay *) overlay;

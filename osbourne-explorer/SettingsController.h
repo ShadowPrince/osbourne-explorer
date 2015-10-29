@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "RMUniversalAlert.h"
+#import "DocumentsDirectory.h"
+#import "MapOverlayStore.h"
+
 #import "ForcedNavbarViewController.h"
 
 @interface SettingsController : ForcedNavbarViewController

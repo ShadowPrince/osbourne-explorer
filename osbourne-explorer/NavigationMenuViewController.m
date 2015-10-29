@@ -28,6 +28,9 @@
     [self.store registerDelegate:self];
 }
 
+- (IBAction) unwindFromInfo:(UIStoryboardSegue *) segue {
+}
+
 #pragma mark - store delegate
 
 - (void) didUpdatedOverlay:(MapOverlay *)overlay {
@@ -209,13 +212,15 @@
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"overlayInfo"]) {
-        [(GroundOverlayInfoViewController *) segue.destinationViewController setOverlay:(GroundOverlay *) sender];
-    } else if ([segue.identifier isEqualToString:@"markerInfo"]) {
-        [(MarkerOverlayInfoViewController *) segue.destinationViewController setMarker:(MarkerOverlay *) sender];
+    if ([segue.identifier isEqualToString:@"overlayInfo"] || [segue.identifier isEqualToString:@"markerInfo"]) {
+        [(MapOverlayInfoViewController *) segue.destinationViewController setOverlay:(MapOverlay * )sender];
     }
 
     [super prepareForSegue:segue sender:sender];
+}
+
+- (void) dealloc {
+    [self.store removeDelegate:self];
 }
 
 @end
