@@ -18,6 +18,7 @@
 
 + (void) sync;
 + (BOOL) restrictionsEnabled;
-
++ (BOOL) tutorialPassed;
++ (void) passTutorial;
 
 @end

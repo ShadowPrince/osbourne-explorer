@@ -111,12 +111,21 @@
 + (void) sync {
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"initial_setup"]) {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"initial_setup"];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"tutorial_passed"];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"overlay_size_restrictions"];
     }
 }
 
 + (BOOL) restrictionsEnabled {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"overlay_size_restrictions"];
+}
+
++ (BOOL) tutorialPassed {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"tutorial_passed"];
+}
+
++ (void) passTutorial {
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"tutorial_passed"];
 }
 
 @end

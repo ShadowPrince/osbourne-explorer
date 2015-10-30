@@ -42,6 +42,7 @@
 		F3A4247A1BCD0D1D00566BE8 /* GroundOverlayPositioningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A424791BCD0D1D00566BE8 /* GroundOverlayPositioningViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F3A4247E1BCE45DE00566BE8 /* ImagePositioningStageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A4247D1BCE45DE00566BE8 /* ImagePositioningStageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F3B9232A1BD8D76F00A81594 /* ImageResizingStageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B923291BD8D76F00A81594 /* ImageResizingStageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F3BE21611BE242BD004A90BD /* AboutAndLegalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BE21601BE242BD004A90BD /* AboutAndLegalViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F3C861C41BD2A6EB006274E4 /* BasicVector.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C861C21BD2A6EB006274E4 /* BasicVector.m */; settings = {ASSET_TAGS = (); }; };
 		F3EA21A01BDA2D78008C634A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3EA219F1BDA2D78008C634A /* QuartzCore.framework */; };
 		F3EA21A31BDA6DC1008C634A /* GroundOverlaySummaryPositioningStageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EA21A21BDA6DC1008C634A /* GroundOverlaySummaryPositioningStageViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -119,6 +120,8 @@
 		F3A4247D1BCE45DE00566BE8 /* ImagePositioningStageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePositioningStageViewController.m; sourceTree = "<group>"; };
 		F3B923281BD8D76F00A81594 /* ImageResizingStageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageResizingStageViewController.h; sourceTree = "<group>"; };
 		F3B923291BD8D76F00A81594 /* ImageResizingStageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageResizingStageViewController.m; sourceTree = "<group>"; };
+		F3BE215F1BE242BD004A90BD /* AboutAndLegalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutAndLegalViewController.h; sourceTree = "<group>"; };
+		F3BE21601BE242BD004A90BD /* AboutAndLegalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutAndLegalViewController.m; sourceTree = "<group>"; };
 		F3C861C21BD2A6EB006274E4 /* BasicVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicVector.m; sourceTree = "<group>"; };
 		F3C861C31BD2A6EB006274E4 /* BasicVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicVector.h; sourceTree = "<group>"; };
 		F3EA219F1BDA2D78008C634A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -179,8 +182,6 @@
 				F3A424691BC92ECF00566BE8 /* GroundOverlayInfoViewController.m */,
 				F3A4246B1BCBB62800566BE8 /* MarkerOverlayInfoViewController.h */,
 				F3A4246C1BCBB62800566BE8 /* MarkerOverlayInfoViewController.m */,
-				F32FF7E81BDE5B5100BDE6E6 /* SettingsController.h */,
-				F32FF7E91BDE5B5100BDE6E6 /* SettingsController.m */,
 			);
 			name = NavigationMenu;
 			sourceTree = "<group>";
@@ -253,6 +254,7 @@
 				F30368F91BC800A2002AECA8 /* NavigationMenu */,
 				F3A424711BCD066100566BE8 /* Positioning */,
 				F31D0F2D1BD6BA4600CA3A6B /* FileSelection */,
+				F3BE21621BE242C1004A90BD /* Settings */,
 				F3EA415B1BC69F0D00897633 /* OverlayViewController.xib */,
 				F380B1311BC69DBC00C5090A /* Main.storyboard */,
 				F380B1281BC69DBC00C5090A /* Supporting Files */,
@@ -313,6 +315,17 @@
 				F3EA415A1BC69F0D00897633 /* OverlayViewController.m */,
 			);
 			name = Navigation;
+			sourceTree = "<group>";
+		};
+		F3BE21621BE242C1004A90BD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F32FF7E81BDE5B5100BDE6E6 /* SettingsController.h */,
+				F32FF7E91BDE5B5100BDE6E6 /* SettingsController.m */,
+				F3BE215F1BE242BD004A90BD /* AboutAndLegalViewController.h */,
+				F3BE21601BE242BD004A90BD /* AboutAndLegalViewController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +447,7 @@
 				F3A424701BCD065D00566BE8 /* PositioningStageViewController.m in Sources */,
 				F31D0F331BD6BD6D00CA3A6B /* DGFastImageSize.m in Sources */,
 				F31D0F261BD6AB6700CA3A6B /* MarkerPositioningViewController.m in Sources */,
+				F3BE21611BE242BD004A90BD /* AboutAndLegalViewController.m in Sources */,
 				F31D0F301BD6BAC000CA3A6B /* DocumentsDirectory.m in Sources */,
 				F349FE131BC69F7600B1F54F /* NavigationMapViewController.m in Sources */,
 				F32ABF3C1BC7A3CB0070C1F2 /* MapOverlayStore.m in Sources */,
@@ -520,7 +534,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -558,7 +572,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -576,8 +590,52 @@
 				INFOPLIST_FILE = "osbourne-explorer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"MMDrawerController\"",
+					"-l\"UIActionSheet+Blocks\"",
+					"-l\"UIAlertController+Blocks\"",
+					"-l\"UIAlertView+Blocks\"",
+					"-l\"UITableView-NXEmptyView\"",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreBluetooth\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.shdwprince.osbourne-explorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s armv6";
 			};
 			name = Debug;
 		};
@@ -591,8 +649,52 @@
 				INFOPLIST_FILE = "osbourne-explorer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"MMDrawerController\"",
+					"-l\"UIActionSheet+Blocks\"",
+					"-l\"UIAlertController+Blocks\"",
+					"-l\"UIAlertView+Blocks\"",
+					"-l\"UITableView-NXEmptyView\"",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreBluetooth\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.shdwprince.osbourne-explorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s armv6";
 			};
 			name = Release;
 		};

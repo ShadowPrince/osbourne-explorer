@@ -30,6 +30,26 @@
     [self.drawer setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeTapCenterView];
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+
+    if (![SettingsController tutorialPassed]) {
+        UIViewController *tutorialController = [self.storyboard instantiateViewControllerWithIdentifier:@"tutorial"];
+        UIButton *button = (UIButton *) [tutorialController.view viewWithTag:1];
+        [button addTarget:self action:@selector(closeTutorial:) forControlEvents:UIControlEventTouchUpInside];
+
+        UIWebView *webView = (UIWebView *) [tutorialController.view viewWithTag:2];
+        webView.scrollView.contentInset = UIEdgeInsetsMake(44.f, 0, 0, 0);
+        [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://shadowprince.github.io/osbourne-explorer/tutorial.html"]]];
+
+        [self presentViewController:tutorialController animated:YES completion:nil];
+    }
+}
+
+- (void) closeTutorial:(id) button {
+    [SettingsController passTutorial];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 - (IBAction) unwindFromNewOverlay:(UIStoryboardSegue *) segue {
 
