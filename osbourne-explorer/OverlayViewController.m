@@ -189,6 +189,9 @@
 }
 
 - (IBAction)gpsAction:(id)sender {
+    self.gMapView.camera = [GMSCameraPosition cameraWithLatitude:51.273 longitude:32.576 zoom:13.f];
+    return;
+
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
     if (status == kCLAuthorizationStatusDenied) {
         [RMUniversalAlert showAlertInViewController:self
@@ -216,7 +219,6 @@
 
 - (void) dealloc {
     [self.store removeDelegate:self];
-    NSLog(@"%@ dealloc", self);
 }
 
 @end

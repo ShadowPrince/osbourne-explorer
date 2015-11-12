@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46F665105151A05FD8C705C1 /* libPods-osbourne-explorer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81967E7DBFC9DFA8B2B4CDEE /* libPods-osbourne-explorer.a */; };
 		6E470E3540F31A8F9825CEF7 /* libPods-OsExplorer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED9674584FCA05FA1724E29 /* libPods-OsExplorer.a */; };
 		F3032BFB1BCE484800133643 /* ImagePositioningView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3032BFA1BCE484800133643 /* ImagePositioningView.m */; settings = {ASSET_TAGS = (); }; };
 		F30368F51BC7FE63002AECA8 /* NavigationMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30368F41BC7FE62002AECA8 /* NavigationMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -139,7 +138,6 @@
 			files = (
 				F38F70BB1BDED33700E907C0 /* CoreLocation.framework in Frameworks */,
 				F3EA21A01BDA2D78008C634A /* QuartzCore.framework in Frameworks */,
-				46F665105151A05FD8C705C1 /* libPods-osbourne-explorer.a in Frameworks */,
 				6E470E3540F31A8F9825CEF7 /* libPods-OsExplorer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
