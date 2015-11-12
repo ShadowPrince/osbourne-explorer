@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            margin: 0.5em;
+        }
+        * {
+            margin: 0;
+            padding: 0:
+        }
+        p {
+            margin-bottom: 0.2em;
+        }
+        .clear {
+            overflow: auto;
+            width: 100%
+        }
+
+        h4 {
+            color: gray;
+            font-size: 2em;
+            margin-top: 0.5em;
+            margin-bottom: 0.2em;
+            text-transform: uppercase;
+        }
+        h5 {
+            color: gray;
+            font-size: 1em;
+            margin-top: 0.5em;
+            margin-bottom: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .shot {
+            width: 300px;
+        }
+
+        .shotbox {
+            width: 300px;
+        }
+
+        .shotbox div {
+            float: left;
+            border: 3px solid black;
+            height: 1em;
+            border-width: 0px 0px 0px 1px;
+            vertical-align: bottom;
+        }
+
+        .labelbox div {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    Welcome to Osbourne Explorer. App is designed to position small areas of external raster maps (called overlays once positioned) at google maps.
+
+    <h4>UI</h4>
+    <h5>Navigation screen:</h5>
+    <img class="shot" src="1.jpg" />
+    <div class="shotbox">
+        <div style="margin-left: 25px"></div>
+        <div style="margin-left: 200px"></div>
+        <div style="margin-left: 50px"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="labelbox">
+        <div style="margin-left: 20px">1</div>
+        <div style="margin-left: 195px">2</div>
+        <div style="margin-left:35px">3, 4</div>
+    </div>
+    <div class="clear"></div>
+    <p>
+        Buttons: <ol>
+            <li>Go to GPS position</li>
+            <li>Change google map type (sat/top)</li>
+            <li>Toggle all overlays transparency</li>
+            <li>Toggle all overlays visibility</li>
+        </ol>
+    </p>
+
+    <p>You can pull out the navigation menu by grabbing any of the buttons and dragging it to the left.</p>
+
+    <h5>Navigation menu:</h5>
+    <img class="shot" src="2.jpg" alt="" />
+    <p>
+        By touching overlay or marker name you can bring up additional menu which will reveal it's position.
+        <br>
+        You can drag any overlay or marker object to the left to reveal additional actions.
+    </p>
+
+    <h4>Positioning</h4>
+    
+    Map positioning done in 6 steps: <ol>
+        <li>Selecting image from iTunes shared folder</li>
+        <li>Cropping it</li>
+        <li>Selecting first bind point on raster map</li>
+        <li>Selecting the same point on google map</li>
+        <li>Selecting second bind point on raster map</li>
+        <li>Selecting the same point on google map</li>
+        <li>Checking &amp; modifying overlay metadata</li>
+    </ol>
+
+    <h5>Transfering &amp; selecting image</h5>
+    <p>
+        You can transfer raster map images (JPEG or PNG) directly in app's documents directory using iTunes.
+    </p>
+    <p>
+        Afterwards you select image after touching "Add new overlay".
+    </p>
+
+    <h5>Cropping images</h5>
+    <p>Select area of the image by scrolling and zooming. It's better to use smaller images since app is designed to position small areas.</p>
+
+    <h5>Selecting bind points</h5>
+    <p>
+        Next thing you do - selecting 2 pairs of binding points. You should select point on external map and select exact same point again, but on internal one. Repeat process one time again.
+    </p>
+    
+    <h4>Memory issues</h4>
+    <p>
+        If you're using big overlays, or using app on older devices, you may encounter memory issues. Tips to prevent/fix them: <ul>
+            <li>Use smaller overlays (crop images to smaller sizes)</li>
+            <li>Close application (using app switcher) and start it again</li>
+        </ul>
+    </p>
+
+    <h4>Settings</h4>
+    <p>
+        You can access settings by tapping on "Settings" entry in navigation menu. Several options are presented: <ul>
+            <li>Restrict overlay size - default to ON - if checked, overlay size is restricted to prevent memory issues.</li>
+            <li>Clean temp. files - sometimes overlays no longer presented in the app will leave temporary files. Use this option to cleanup them.</li>
+        </ul>
+    </p>
+</body>
+</html>
